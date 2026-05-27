@@ -608,3 +608,27 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - Current MVP recommendation:
   - treat the content bank as good enough for showcase use
   - next work should either expand the bank or begin Phase 6 private admin intelligence, rather than continue micro-editing the same 24 rows indefinitely
+
+## Latest bank expansion decisions (2026-05-27)
+- Completed bank expansion slice: `mmrm-content-05-bank-expansion-v2`
+- The live `launch-v1` bank now contains 48 active questions.
+- Expansion posture stayed intentionally narrow:
+  - keep the same `questions` table
+  - keep the same adaptive metadata contract
+  - keep gameplay on the existing 12-question visible run format
+- The main gain from this slice is replay depth:
+  - more candidate variety for hidden adaptation
+  - less repetition pressure in repeated showcase sessions
+  - better category coverage while preserving the same player-facing UX
+- Current bank shape after expansion:
+  - `easy = 18`
+  - `medium = 19`
+  - `hard = 11`
+  - `calm = 17`
+  - `neutral = 20`
+  - `spiky = 11`
+- Live verification confirms the expanded bank is active in Supabase:
+  - `ACTIVE_LAUNCH_V1_COUNT = 48`
+- Recommended next step:
+  - begin Phase 6 private admin intelligence implementation
+  - or run a focused live gameplay/content-quality sweep against the larger pool if we want one more showcase-facing refinement before that

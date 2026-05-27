@@ -673,3 +673,24 @@
   - `npm run content:bootstrap`
   - 24 active `launch-v1` rows remain live after recalibration
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-27 — `mmrm-content-05-bank-expansion-v2`
+- expanded the curated `launch-v1` bank from 24 to 48 active questions
+- kept the slice content-only:
+  - no gameplay rule changes
+  - no UI changes
+  - no schema changes
+- improved replay viability with broader category coverage and more live adaptive candidate variety
+- preserved the current content posture:
+  - manually curated only
+  - no authoring workflow
+  - no generated content
+- added new questions across the existing category set to avoid turning the bank into a one-topic or one-difficulty pool
+- updated content verification to assert the larger checked-in bank still preserves:
+  - full-run viability
+  - difficulty-band coverage
+  - pressure-tag coverage
+- re-bootstrapped the live bank successfully:
+  - `npm run content:bootstrap`
+  - 48 active `launch-v1` rows now load through the repository path
+- re-verified `npm test` and `npm run build`
