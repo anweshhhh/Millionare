@@ -1,0 +1,26 @@
+{
+  "name": "millionaire-mind-reader-mode",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "node --test src/game/game-state.test.ts src/game/question-catalog.test.ts src/game/adaptive-selection.test.ts src/lib/supabase/pending-run.test.ts src/domain/player-model.test.ts src/domain/adaptive-engine.test.ts src/domain/insights.test.ts src/domain/content.test.ts src/components/result-screen-view.test.ts",
+    "content:bootstrap": "node scripts/bootstrap-questions.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.101.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.0.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
+  }
+}
