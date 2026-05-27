@@ -1,27 +1,42 @@
 # Review Brief
 
 ## Slice
-`mmrm-content-05-bank-expansion-v2`
+`mmrm-phase6-02-admin-signal-derivation-foundation`
 
 ## Goal
-Expand the live `launch-v1` bank so the showcase MVP has materially better replay depth without changing visible gameplay.
+Implement the first private admin intelligence foundation as a pure deterministic backstage layer, without changing any player-facing surface.
 
 ## What changed
-- Expanded the checked-in `launch-v1` bank from 24 to 48 active questions.
-- Added new curated questions across the existing category set for broader replay coverage.
-- Preserved the current content contract and adaptive metadata shape.
-- Updated the content-bank test expectations to reflect the larger curated pool.
-- Re-bootstrapped the expanded bank into Supabase successfully.
+- Added a new pure domain module for private admin intelligence:
+  - question calibration reviews
+  - ambiguity / instability flags
+  - drop-off concentration by ending rank
+  - adaptation fairness review signals
+- Kept the output intentionally internal and confidence-banded:
+  - `review`
+  - `watch`
+  - `stable`
+  - `low-confidence`
+- Reused only existing evidence sources:
+  - persisted runs
+  - run question signals
+  - current question metadata
+  - optional player-model count context in the report summary
+- Added focused deterministic tests for:
+  - unstable-question detection
+  - sparse-sample low-confidence behavior
+  - missing legacy metadata tolerance
+  - drop-off hotspot detection
+  - harsh adaptive rebound detection
+  - compact report assembly
 
 ## Scope guard
-- No gameplay rule changes
-- No landing/result/gameplay UI expansion
-- No admin or authoring UI
+- No UI changes
 - No schema changes
+- No persistence-path changes
 - No new dependencies
+- No admin dashboard or report surface yet
 
 ## Verification
 - `npm test` passed
 - `npm run build` passed
-- `npm run content:bootstrap` passed
-- live Supabase verification confirmed `ACTIVE_LAUNCH_V1_COUNT = 48`

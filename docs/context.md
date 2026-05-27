@@ -632,3 +632,25 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - Recommended next step:
   - begin Phase 6 private admin intelligence implementation
   - or run a focused live gameplay/content-quality sweep against the larger pool if we want one more showcase-facing refinement before that
+
+## Latest Phase 6 implementation decisions (2026-05-27)
+- Completed Phase 6 foundation slice: `mmrm-phase6-02-admin-signal-derivation-foundation`
+- Phase 6 is now moving from planning into implementation, but it remains fully backstage:
+  - no player-facing UI changes
+  - no landing/result/gameplay expansion
+  - no admin dashboard surface yet
+- The first implementation pass is intentionally pure and deterministic:
+  - derive question-level calibration and ambiguity reviews from persisted behavioral evidence
+  - derive drop-off concentration by ending rank from saved runs
+  - derive adaptation fairness review signals from between-question transitions and current metadata
+- Internal output posture is conservative and admin-readable:
+  - `review`
+  - `watch`
+  - `stable`
+  - `low-confidence`
+- Historical compatibility is now an explicit consideration:
+  - older saved signals may not have matching live question metadata
+  - the admin layer tolerates that and still emits low-confidence/internal reviews instead of failing
+- Current recommended next step:
+  - wire a narrow internal report/output path for these hidden signals
+  - keep the player-facing product frozen while Phase 6 depth grows backstage

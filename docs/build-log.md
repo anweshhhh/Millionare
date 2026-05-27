@@ -694,3 +694,34 @@
   - `npm run content:bootstrap`
   - 48 active `launch-v1` rows now load through the repository path
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-27 — `mmrm-phase6-02-admin-signal-derivation-foundation`
+- completed the first private admin intelligence implementation slice as a pure backstage derivation layer
+- kept the slice intentionally narrow:
+  - no UI changes
+  - no schema changes
+  - no persistence-path changes
+  - no new dependencies
+- added a deterministic admin-intelligence domain module that derives:
+  - question calibration reviews
+  - ambiguity / instability flags
+  - drop-off concentration by ending rank
+  - adaptation fairness review signals
+- reused only existing evidence sources:
+  - persisted runs
+  - per-question behavioral signals
+  - current question metadata
+  - optional player-model count context in the report summary
+- kept outputs internal and review-oriented:
+  - `review`
+  - `watch`
+  - `stable`
+  - `low-confidence`
+- added focused tests for:
+  - unstable question detection
+  - sparse-sample low-confidence handling
+  - missing legacy metadata tolerance
+  - drop-off hotspot detection
+  - harsh rebound / repeated-category adaptive fairness review
+  - compact report assembly
+- re-verified `npm test` and `npm run build`
