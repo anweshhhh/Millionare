@@ -30,6 +30,7 @@ type AuthContextValue = {
   sendMagicLink: (email: string) => Promise<void>;
   persistCompletedRun: (run: PendingRunBridge) => Promise<void>;
   signOut: () => Promise<void>;
+  resetSaveState: () => void;
 };
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -237,6 +238,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
+  const resetSaveState = useCallback(() => {
+    setSaveState((current) =>
+      current.status === "idle" && current.runKey === null && current.message === null
+        ? current
+        : {
+            status: "idle",
+            runKey: null,
+            message: null
+          }
+    );
+  }, []);
+
   const value = useMemo<AuthContextValue>(
     () => ({
       isConfigured: isSupabaseConfigured(),
@@ -252,9 +265,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       closeAuthSheet,
       sendMagicLink,
       persistCompletedRun,
-      signOut
+      signOut,
+      resetSaveState
     }),
-    [closeAuthSheet, isAuthSheetOpen, isReady, openSaveSheet, persistCompletedRun, playerModel, profile, recentRuns, requestedEmail, saveState, session, signOut]
+    [closeAuthSheet, isAuthSheetOpen, isReady, openSaveSheet, persistCompletedRun, playerModel, profile, recentRuns, requestedEmail, resetSaveState, saveState, session, signOut]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

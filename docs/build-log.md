@@ -763,3 +763,21 @@
   - low-confidence adaptation fairness with thin transition counts
   - stronger high-confidence adaptation fairness scenarios
 - re-verified `npm test`, `npm run build`, and `npm run admin:intelligence -- --json`
+
+## 2026-05-27 — `mmrm-polish-01-showcase-hardening`
+- completed a narrow showcase hardening pass without expanding product scope
+- kept the slice fix-focused:
+  - no new features
+  - no new UI surfaces
+  - no schema changes
+- removed one stale UX behavior in the auth/save loop:
+  - cleared lingering save success/error messaging when a fresh run starts or replay begins
+  - prevents old result-state messaging from leaking into a new chair session
+- tightened one visible consistency detail:
+  - footer source copy now reflects the active gameplay catalog
+  - live bank runs show `Live Question Run`
+  - seeded fallback runs show `Seed Fallback Run`
+- re-verified core gates and backstage tooling:
+  - `npm test`
+  - `npm run build`
+  - `npm run admin:intelligence -- --json`

@@ -685,3 +685,17 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - the report still resolves to `low-confidence` instead of overclaiming
 - Current recommended next step:
   - stop expanding Phase 6 scope for now and move to final showcase hardening or focused content quality review
+
+## Latest showcase hardening decisions (2026-05-27)
+- Completed hardening slice: `mmrm-polish-01-showcase-hardening`
+- The current showcase baseline remains feature-stable, but a few high-value consistency issues have now been cleaned up.
+- Hardening changes in this slice:
+  - starting a fresh run now clears stale save success/error feedback from the previous result
+  - footer source copy now reflects whether gameplay is currently using the live Supabase bank or the seeded fallback
+- Product posture remains unchanged:
+  - no landing expansion
+  - no gameplay rule changes
+  - no new admin/player surfaces
+- Current recommendation:
+  - treat this build as the hardened showcase MVP baseline
+  - future work should be either broader content depth or truly new product scope, not more micro-polish on the same surface

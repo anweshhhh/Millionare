@@ -1,31 +1,24 @@
 # Review Brief
 
 ## Slice
-`mmrm-phase6-04-calibration-and-threshold-review`
+`mmrm-polish-01-showcase-hardening`
 
 ## Goal
-Calibrate the hidden private admin intelligence layer so it stays more trustworthy, deterministic, and conservative before any broader final-product polish.
+Run a narrow hardening pass on the showcase MVP so the existing product feels more consistent and trustworthy without expanding scope.
 
 ## What changed
-- Tuned Phase 6 thresholds to require stronger evidence before escalating signals.
-- Kept the hidden posture intentionally conservative:
-  - sparse samples remain `low-confidence`
-  - miss-only question patterns tend to surface as `watch`
-  - drop-off review calls now need stronger concentration
-  - adaptation fairness needs more transitions before a confident judgment
-- Expanded deterministic tests for:
-  - sparse-vs-strong question review cases
-  - watch-level drop-off concentration
-  - low-confidence adaptation fairness with thin transitions
-  - stronger adaptation fairness review scenarios
-- Re-verified the internal report command against live project data after calibration.
+- Cleared stale save success/error feedback when a fresh run starts or replay begins.
+- Made footer source copy reflect the actual active catalog:
+  - `Live Question Run` when Supabase-backed content is active
+  - `Seed Fallback Run` when the app is on the seeded safety path
+- Kept the slice tightly scoped to consistency and trust polish only.
 
 ## Scope guard
-- No player-facing UI changes
+- No new features
+- No new UI surfaces
 - No schema changes
-- No new dependencies
-- No admin dashboard work
-- No gameplay changes
+- No gameplay rule changes
+- No landing/result expansion
 
 ## Verification
 - `npm test` passed

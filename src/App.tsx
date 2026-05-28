@@ -54,7 +54,8 @@ export default function App() {
     openSaveSheet,
     closeAuthSheet,
     sendMagicLink,
-    persistCompletedRun
+    persistCompletedRun,
+    resetSaveState
   } =
     useAuth();
   const [availableCatalog, setAvailableCatalog] = useState<QuestionCatalog>(() => createSeedQuestionCatalog());
@@ -319,6 +320,7 @@ export default function App() {
   }, [bestReserve, correctCount, highestClearedRank, questionBehaviorSignals, runBehaviorSummary, runCatalog?.questionSetVersion, state.failureReason, state.outcome, state.phase, state.questionCount, state.runNumber]);
 
   const handleStartRun = () => {
+    resetSaveState();
     const nextCatalog = availableCatalog;
     setRunCatalog(nextCatalog);
     dispatch({
@@ -329,6 +331,7 @@ export default function App() {
   };
 
   const handleReplay = () => {
+    resetSaveState();
     const nextCatalog = availableCatalog;
     setRunCatalog(nextCatalog);
     dispatch({
@@ -353,6 +356,7 @@ export default function App() {
   ]
     .filter(Boolean)
     .join(" ");
+  const sourceLabel = activeCatalog.source === "supabase" ? "Live Question Run" : "Seed Fallback Run";
 
   return (
     <main className={appPhaseClassName}>
@@ -432,7 +436,7 @@ export default function App() {
       />
 
       <footer className="app-footer">
-        <span>Mind Reader Mode // Live Question Run</span>
+        <span>{`Mind Reader Mode // ${sourceLabel}`}</span>
         <span>{PROGRESSION_LADDER.length} rung pressure ladder</span>
       </footer>
     </main>
