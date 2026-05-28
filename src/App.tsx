@@ -29,6 +29,7 @@ import {
 } from "./game/game-state.ts";
 import { listActiveQuestions } from "./lib/supabase/repositories.ts";
 import { selectNextAdaptiveQuestionId } from "./game/adaptive-selection.ts";
+import { getRecentRunAvoidIds, storeRecentRunQuestionIds } from "./game/recent-run-memory.ts";
 import { QUESTION_SET_VERSION, SEEDED_QUESTIONS } from "./seed/questions.ts";
 import {
   createRunQuestionCatalog,
@@ -61,7 +62,7 @@ export default function App() {
     useAuth();
   const [availableCatalog, setAvailableCatalog] = useState<QuestionCatalog>(() => createSeedQuestionCatalog());
   const [runCatalog, setRunCatalog] = useState<QuestionCatalog | null>(null);
-  const recentRunQuestionIdsRef = useRef<string[]>([]);
+  const recentRunQuestionIdsRef = useRef<string[]>(getRecentRunAvoidIds());
   const runStartedAtRef = useRef<string | null>(null);
   const completedRunRef = useRef<PendingRunBridge | null>(null);
   const questionCaptureRef = useRef<TransientQuestionCapture | null>(null);
@@ -330,6 +331,7 @@ export default function App() {
     });
     setRunCatalog(nextCatalog);
     recentRunQuestionIdsRef.current = nextCatalog.questions.map((question) => question.id);
+    storeRecentRunQuestionIds(recentRunQuestionIdsRef.current);
     dispatch({
       type: "START_RUN",
       firstQuestionId: getInitialQuestionId(nextCatalog),
@@ -346,6 +348,7 @@ export default function App() {
     });
     setRunCatalog(nextCatalog);
     recentRunQuestionIdsRef.current = nextCatalog.questions.map((question) => question.id);
+    storeRecentRunQuestionIds(recentRunQuestionIdsRef.current);
     dispatch({
       type: "REPLAY",
       firstQuestionId: getInitialQuestionId(nextCatalog),

@@ -870,3 +870,17 @@
   - one-lifeline-per-question guardrail
   - seed run rotation by run seed
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-28 — `mmrm-game-04-persistent-replay-memory`
+- hardened replay variety by persisting recent run-question ids to browser storage
+- added a narrow run-memory helper:
+  - stores up to the last two run id sets
+  - returns deduped avoid ids for the next run sampling pass
+  - reads/writes both session and local storage for redirect/tab resilience
+- integrated persistent avoid ids into run start/replay catalog creation
+- kept scope narrow:
+  - no gameplay rule changes
+  - no UI changes
+  - no auth/persistence schema changes
+- added focused tests for recent-run memory behavior
+- re-verified `npm test` and `npm run build`

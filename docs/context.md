@@ -808,3 +808,15 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - seed fallback runs now rotate deterministically by run seed to reduce same-order replay feel
 - Current recommendation:
   - proceed to the next planned gameplay slice after local validation confirms expected lifeline feel
+
+## Latest persistent replay-memory decisions (2026-05-28)
+- Completed replay-variety hardening slice: `mmrm-game-04-persistent-replay-memory`
+- Replay anti-repeat now survives refresh/new-tab conditions:
+  - recent run question ids are persisted in browser storage
+  - next run sampling receives a deduped avoid set from the last two runs
+- This remains a hidden guardrail:
+  - no new player-facing UI
+  - no gameplay pacing changes
+  - no auth or data-model expansion
+- Current recommendation:
+  - run a local feel pass for repetition cadence, then finalize the gameplay MVP polish slice

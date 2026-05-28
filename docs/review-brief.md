@@ -1,25 +1,24 @@
 # Review Brief
 
 ## Slice
-`mmrm-game-03a-lifeline-and-rotation-fixes`
+`mmrm-game-04-persistent-replay-memory`
 
 ## Goal
-Fix reported lifeline behavior and replay-rotation regressions from the previous gameplay slice.
-
-## Findings
-- `50:50` was technically disabling options but not clearly presenting them as removed.
-- Lifelines could be stacked on the same question because there was no per-question usage lock.
-- Recent-run avoid ids were not applied in the difficulty-band pick path, allowing repeat leakage.
+Make replay anti-repeat behavior more reliable by persisting recent-run memory beyond in-memory refs.
 
 ## What changed
-- Added explicit eliminated-option rendering in hot-seat answer cards.
-- Added reducer-level `lifelineUsedOnCurrentQuestion` guard:
-  - blocks multiple lifelines on the same question
-  - resets on next question and on second-chance reset of the same question
-- Strengthened run sampling to apply avoid ids during band picks and fill picks.
-- Seed fallback run order now rotates deterministically by run seed.
+- Added a new run-memory helper at `src/game/recent-run-memory.ts`.
+- Memory now persists up to 2 prior run question-id sets in browser storage.
+- `Start Run` and `Replay` now hydrate avoid ids from persistent memory and store each new sampled run.
+- Sampling continues using existing guardrails; this slice hardens continuity across refresh/tab contexts.
+
+## Scope guard
+- No visible UI changes
+- No gameplay pacing/rule changes
+- No auth or persistence-schema changes
+- No new dependencies
 
 ## Verification
 - `npm test` passed
 - `npm run build` passed
-- Added regression tests for one-lifeline-per-question and seed run-order variation.
+- Added test coverage for capped recent-run memory and deduped avoid-id output.
