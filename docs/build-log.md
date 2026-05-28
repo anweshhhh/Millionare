@@ -843,3 +843,15 @@
   - no auth/persistence/schema changes
 - added focused test coverage for recent-run overlap avoidance
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-28 — `mmrm-game-03-lifeline-system-foundation`
+- added a first-pass lifeline system to the hot-seat loop with one-time use per run:
+  - `50:50` (removes two wrong options)
+  - `+10s` (adds controlled timer extension once)
+  - `Second Chance` (armable shield that prevents one elimination on wrong lock or timeout)
+- kept gameplay pacing intact:
+  - select -> lock remains explicit
+  - suspense/reveal/auto-advance flow remains intact
+- wired lifeline state through reducer + hot-seat UI with deterministic behavior
+- added focused reducer tests for all three lifelines, including wrong/timeout recovery
+- re-verified `npm test` and `npm run build`

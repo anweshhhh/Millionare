@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import type { FailureReason, LadderStep, Question, RevealResult } from "../domain/game.ts";
+import type { FailureReason, LadderStep, LifelineState, Question, RevealResult } from "../domain/game.ts";
 import { QUESTION_TIME_LIMIT } from "../game/game-state.ts";
 import { ProgressLadder } from "./ProgressLadder.tsx";
 
@@ -17,8 +17,14 @@ type HotSeatScreenProps = {
   phase: "active" | "suspense" | "reveal";
   revealResult: RevealResult | null;
   failureReason: FailureReason | null;
+  pendingSecondChanceRecovery: boolean;
+  lifelines: LifelineState;
+  eliminatedAnswerIndexes: number[];
   onSelectAnswer: (answerIndex: number) => void;
   onLockAnswer: () => void;
+  onUseFiftyFifty: () => void;
+  onUseExtraTime: () => void;
+  onUseSecondChance: () => void;
   outcome: "eliminated" | "completed" | null;
 };
 
@@ -45,8 +51,14 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
     phase,
     revealResult,
     failureReason,
+    pendingSecondChanceRecovery,
+    lifelines,
+    eliminatedAnswerIndexes,
     onSelectAnswer,
     onLockAnswer,
+    onUseFiftyFifty,
+    onUseExtraTime,
+    onUseSecondChance,
     outcome
   } = props;
 
@@ -231,7 +243,7 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
                         .filter(Boolean)
                         .join(" ")}
                       onClick={() => onSelectAnswer(optionIndex)}
-                      disabled={phase !== "active"}
+                      disabled={phase !== "active" || eliminatedAnswerIndexes.includes(optionIndex)}
                       aria-pressed={isSelected}
                     >
                       <span className="answer-index">{String.fromCharCode(65 + optionIndex)}</span>
@@ -256,8 +268,47 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
                 <p>{questionNumber === totalQuestions ? "Read confirmed. Final rung secured." : "Read confirmed. Advancing automatically."}</p>
               ) : null}
               {phase === "reveal" && revealResult === "incorrect" ? (
-                <p>{failureReason === "timeout" ? "Time expired. Moving to the run result." : "False read. Moving to the run result."}</p>
+                <p>
+                  {pendingSecondChanceRecovery
+                    ? "Shield triggered. Resetting this question."
+                    : failureReason === "timeout"
+                      ? "Time expired. Moving to the run result."
+                      : "False read. Moving to the run result."}
+                </p>
               ) : null}
+            </div>
+
+            <div className="lifeline-strip">
+              <button
+                type="button"
+                className={["lifeline-chip", lifelines.fiftyFifty ? "" : "is-spent"].filter(Boolean).join(" ")}
+                onClick={onUseFiftyFifty}
+                disabled={phase !== "active" || !lifelines.fiftyFifty}
+              >
+                50:50
+              </button>
+              <button
+                type="button"
+                className={["lifeline-chip", lifelines.extraTime ? "" : "is-spent"].filter(Boolean).join(" ")}
+                onClick={onUseExtraTime}
+                disabled={phase !== "active" || !lifelines.extraTime}
+              >
+                +10s
+              </button>
+              <button
+                type="button"
+                className={[
+                  "lifeline-chip",
+                  lifelines.secondChance ? "" : "is-spent",
+                  lifelines.secondChanceArmed ? "is-armed" : ""
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                onClick={onUseSecondChance}
+                disabled={phase !== "active" || !lifelines.secondChance || lifelines.secondChanceArmed}
+              >
+                {lifelines.secondChanceArmed ? "Shield Armed" : "Second Chance"}
+              </button>
             </div>
 
             <div className="action-zone">

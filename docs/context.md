@@ -779,3 +779,20 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - same select/lock/suspense/reveal/result loop
 - Current recommendation:
   - add lifelines next as a narrow gameplay-system slice without touching auth/admin surfaces
+
+## Latest lifeline-system decisions (2026-05-28)
+- Completed gameplay support-system slice: `mmrm-game-03-lifeline-system-foundation`
+- Lifelines are now available in-run as one-time tactical tools:
+  - `50:50` narrows the answer field by removing two wrong options
+  - `+10s` adds a controlled one-time time extension
+  - `Second Chance` can be armed and will absorb one wrong lock or timeout elimination
+- Design posture remains narrow and mobile-first:
+  - no new screens
+  - no landing/result expansion
+  - no auth/persistence/admin scope change
+- Core pacing remains intact:
+  - explicit select then lock
+  - suspense and reveal beats preserved
+  - automatic progression behavior unchanged
+- Current recommendation:
+  - next slice should tune lifeline UX clarity and balance edge cases before broader gameplay expansion

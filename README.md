@@ -47,6 +47,7 @@ Phase 1 is complete. Phase 2 is complete enough to close with live auth/save, pe
 - adjacent replays now avoid immediate question repeats when the live pool can support it
 - 20 second timer
 - explicit select then `LOCK ANSWER` interaction
+- three one-time lifelines in-run: `50:50`, `+10s`, and armable `Second Chance`
 - suspense pause before reveal
 - reveal and progression now auto-advance after a short readable beat
 - timer urgency treatment and frozen timer presentation

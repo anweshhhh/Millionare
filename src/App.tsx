@@ -406,8 +406,14 @@ export default function App() {
           phase={state.phase}
           revealResult={state.revealResult}
           failureReason={state.failureReason}
+          pendingSecondChanceRecovery={state.pendingSecondChanceRecovery}
+          lifelines={state.lifelines}
+          eliminatedAnswerIndexes={state.eliminatedAnswerIndexes}
           onSelectAnswer={(answerIndex) => dispatch({ type: "SELECT_ANSWER", answerIndex })}
           onLockAnswer={() => dispatch({ type: "LOCK_ANSWER" })}
+          onUseFiftyFifty={() => dispatch({ type: "USE_LIFELINE_50_50", correctIndex: currentQuestion.correctIndex })}
+          onUseExtraTime={() => dispatch({ type: "USE_LIFELINE_EXTRA_TIME" })}
+          onUseSecondChance={() => dispatch({ type: "USE_LIFELINE_SECOND_CHANCE" })}
           outcome={state.outcome}
         />
       ) : null}

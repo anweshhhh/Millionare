@@ -22,6 +22,14 @@ export type GamePhase = "entry" | "active" | "suspense" | "reveal" | "result";
 export type RevealResult = "correct" | "incorrect";
 export type FailureReason = "wrong-answer" | "timeout";
 export type RunOutcome = "eliminated" | "completed";
+export type LifelineType = "fiftyFifty" | "extraTime" | "secondChance";
+
+export type LifelineState = {
+  fiftyFifty: boolean;
+  extraTime: boolean;
+  secondChance: boolean;
+  secondChanceArmed: boolean;
+};
 
 export type AnswerRecord = {
   questionId: string;
@@ -45,6 +53,9 @@ export type GameState = {
   lastRecord: AnswerRecord | null;
   outcome: RunOutcome | null;
   failureReason: FailureReason | null;
+  lifelines: LifelineState;
+  eliminatedAnswerIndexes: number[];
+  pendingSecondChanceRecovery: boolean;
 };
 
 export type GameAction =
@@ -52,6 +63,9 @@ export type GameAction =
   | { type: "REPLAY"; firstQuestionId: string; questionCount: number }
   | { type: "SELECT_ANSWER"; answerIndex: number }
   | { type: "LOCK_ANSWER" }
+  | { type: "USE_LIFELINE_50_50"; correctIndex: number }
+  | { type: "USE_LIFELINE_EXTRA_TIME" }
+  | { type: "USE_LIFELINE_SECOND_CHANCE" }
   | { type: "TICK" }
   | { type: "RESOLVE_SUSPENSE"; correctIndex: number }
   | { type: "CONTINUE"; nextQuestionId?: string };
