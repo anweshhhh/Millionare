@@ -1337,6 +1337,56 @@ button {
   }
 }
 
+@media (max-width: 719px) {
+  .question-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .ladder-rail {
+    order: -1;
+    position: relative;
+    top: 0;
+    max-height: none;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 10px;
+    border-radius: 16px;
+  }
+
+  .ladder-head {
+    border-bottom: 0;
+    padding-bottom: 0;
+    justify-items: start;
+    white-space: nowrap;
+    min-width: 140px;
+  }
+
+  .ladder-title,
+  .ladder-status,
+  .ladder-focus-label,
+  .ladder-meter {
+    display: none;
+  }
+
+  .ladder-step {
+    min-width: 58px;
+    padding: 6px 8px;
+  }
+
+  .result-shell {
+    padding: 16px;
+  }
+
+  .result-action {
+    margin-top: 12px;
+    margin-bottom: 14px;
+  }
+}
+
 @media (min-width: 960px) {
   .question-card {
     padding: 22px;

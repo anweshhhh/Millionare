@@ -1,16 +1,17 @@
 # Review Brief
 
 ## Slice
-`mmrm-ui-01-minimal-modern-pass`
+`mmrm-ui-02-mobile-fast-play-pass`
 
 ## Goal
-Apply a modern minimal UI/UX pass that removes non-essential surface noise while preserving current gameplay behavior.
+Improve mobile fast-play UX by reducing in-question scrolling and keeping primary actions continuously reachable.
 
 ## What changed
-- Landing: removed extra explanatory/metric blocks and tightened signed-in summary + recent-run presentation.
-- Hot-seat: shortened timer/state/question helper copy and reduced decision-panel visual weight.
-- Result: reduced redundant summary cards and tightened payoff/action copy.
-- Styling: lowered glow/noise/shadow intensity and tightened spacing/radius rhythm.
+- Added sticky mobile action zone so `LOCK ANSWER` stays visible while playing.
+- Reordered hot-seat blocks so action controls come earlier than secondary helper panels.
+- Added compact small-height behavior (less vertical overhead in active play).
+- Added compact mobile ladder layout (horizontal slim progression strip on narrow screens).
+- Moved result action block higher so replay remains above fold more reliably on mobile.
 
 ## Scope guard
 - No gameplay-rule changes

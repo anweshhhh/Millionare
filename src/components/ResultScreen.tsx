@@ -56,6 +56,22 @@ export function ResultScreen(props: ResultScreenProps) {
           <p>{subhead}</p>
         </div>
 
+        <div className="result-action">
+          <button className="primary-cta result-cta" type="button" onClick={onReplay}>
+            Play Again
+          </button>
+          {canSaveRun ? (
+            <button className="secondary-cta result-secondary-cta" type="button" onClick={onSaveRun} disabled={!isSaveConfigured}>
+              Create Account to Save This Run
+            </button>
+          ) : null}
+          <p className="result-note">A fresh run begins instantly.</p>
+          {authMessage ? <p className="result-auth-note">{authMessage}</p> : null}
+          {!signedInEmail && !isSaveConfigured && canSaveRun ? (
+            <p className="result-auth-note">Connect Supabase credentials to enable secure save.</p>
+          ) : null}
+        </div>
+
         <div className="result-ladder-card">
           <div className="result-ladder-topline">
             <span>Run trace</span>
@@ -100,22 +116,6 @@ export function ResultScreen(props: ResultScreenProps) {
         </div>
 
         <ResultInsightSummary insightSummary={insightSummary} />
-
-        <div className="result-action">
-          <button className="primary-cta result-cta" type="button" onClick={onReplay}>
-            Play Again
-          </button>
-          {canSaveRun ? (
-            <button className="secondary-cta result-secondary-cta" type="button" onClick={onSaveRun} disabled={!isSaveConfigured}>
-              Create Account to Save This Run
-            </button>
-          ) : null}
-          <p className="result-note">A fresh run begins instantly.</p>
-          {authMessage ? <p className="result-auth-note">{authMessage}</p> : null}
-          {!signedInEmail && !isSaveConfigured && canSaveRun ? (
-            <p className="result-auth-note">Connect Supabase credentials to enable secure save.</p>
-          ) : null}
-        </div>
       </div>
     </section>
   );

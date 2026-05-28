@@ -920,3 +920,15 @@
   - reduced glow/noise/shadow intensity
   - tightened spacing and border radii for a cleaner modern posture
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-28 — `mmrm-ui-02-mobile-fast-play-pass`
+- implemented a mobile-focused fast-play UX pass to remove scroll friction in-question
+- locked primary fix:
+  - `LOCK ANSWER` now stays visible via a sticky mobile action zone with safe-area spacing
+- improved small-height ergonomics:
+  - shortened active layout footprint via tighter paddings and reduced helper copy visibility
+- added compact mobile progression treatment:
+  - ladder converts to a slim horizontal strip on small-width screens
+- result-flow mobile improvement:
+  - replay action block moved higher so replay stays above fold more reliably
+- re-verified `npm test` and `npm run build`

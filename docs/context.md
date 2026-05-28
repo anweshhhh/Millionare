@@ -847,3 +847,15 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - reduced decorative intensity (glow/noise/shadow)
   - tighter spacing rhythm and cleaner card treatment
 - Gameplay/auth/persistence logic remains unchanged in this slice.
+
+## Latest mobile fast-play UX decisions (2026-05-28)
+- Completed mobile UX slice: `mmrm-ui-02-mobile-fast-play-pass`
+- Primary mobile friction addressed:
+  - `LOCK ANSWER` remains visible through a sticky action zone during question play
+- Mobile hierarchy now prioritizes speed:
+  - action controls appear before lower-priority helper regions
+  - compact spacing/height behavior reduces in-question scrolling
+- Progress visibility preserved with lower cost:
+  - ladder condenses to a slim horizontal presentation on narrow mobile screens
+- Result replay speed improved:
+  - replay action appears earlier in result layout to reduce post-run scroll
