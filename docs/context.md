@@ -836,3 +836,14 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - Fixed a gameplay leak where second-chance recovery reveal could expose the correct option before retry.
 - Recovery reveal now withholds correct-option highlighting during the shield-triggered reset beat.
 - This keeps second-chance fair while preserving existing suspense/reveal flow and UI structure.
+
+## Latest UI minimalization decisions (2026-05-28)
+- Completed UI pass slice: `mmrm-ui-01-minimal-modern-pass`
+- Product surfaces were simplified without expanding scope:
+  - landing now prioritizes immediate start and compact signed-in context
+  - hot-seat copy is shorter and less noisy
+  - result summaries are tighter with less duplication
+- Visual language shifted toward a cleaner modern baseline:
+  - reduced decorative intensity (glow/noise/shadow)
+  - tighter spacing rhythm and cleaner card treatment
+- Gameplay/auth/persistence logic remains unchanged in this slice.

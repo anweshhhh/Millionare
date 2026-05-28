@@ -42,10 +42,10 @@ export function ResultScreen(props: ResultScreenProps) {
   const headline = outcome === "completed" ? "Pattern Crowned" : "Signal Lost";
   const subhead =
     outcome === "completed"
-      ? "You cleared the full fictional ladder and held the read all the way through."
+      ? "You held the read all the way up."
       : failureReason === "timeout"
-        ? "The timer hit zero before the answer was locked."
-        : "A wrong read ended the run before the ladder was complete.";
+        ? "Timer hit zero before lock."
+        : "A wrong read ended the run.";
 
   return (
     <section className={["screen", "result-screen", outcome === "completed" ? "is-completed" : "is-eliminated"].join(" ")}>
@@ -85,16 +85,9 @@ export function ResultScreen(props: ResultScreenProps) {
           </p>
         </div>
 
-        <div className="summary-grid">
+        <div className="summary-grid summary-grid-minimal">
           <article className="summary-card">
-            <span>Highest rung</span>
-            <strong>
-              {highestStep ? `${highestStep.code} // ${highestStep.label}` : `${BASELINE_STEP.code} // ${BASELINE_STEP.label}`}
-            </strong>
-          </article>
-
-          <article className="summary-card">
-            <span>Correct answers</span>
+            <span>Correct</span>
             <strong>
               {correctCount} / {totalQuestions}
             </strong>
@@ -103,13 +96,6 @@ export function ResultScreen(props: ResultScreenProps) {
           <article className="summary-card">
             <span>Best reserve</span>
             <strong>{bestReserve}s</strong>
-          </article>
-
-          <article className="summary-card">
-            <span>Ladder cleared</span>
-            <strong>
-              {highestClearedRank} / {PROGRESSION_LADDER.length}
-            </strong>
           </article>
         </div>
 
@@ -124,7 +110,7 @@ export function ResultScreen(props: ResultScreenProps) {
               Create Account to Save This Run
             </button>
           ) : null}
-          <p className="result-note">A fresh run begins instantly from the chair.</p>
+          <p className="result-note">A fresh run begins instantly.</p>
           {authMessage ? <p className="result-auth-note">{authMessage}</p> : null}
           {!signedInEmail && !isSaveConfigured && canSaveRun ? (
             <p className="result-auth-note">Connect Supabase credentials to enable secure save.</p>

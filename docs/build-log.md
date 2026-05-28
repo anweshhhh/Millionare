@@ -903,3 +903,20 @@
   - no schema/auth changes
   - no new dependencies
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-28 — `mmrm-ui-01-minimal-modern-pass`
+- completed a focused UI/UX simplification pass to reduce visual clutter and strengthen primary action clarity
+- landing updates:
+  - removed non-essential metrics and pressure-signal exposition blocks
+  - kept compact signed-in summary and capped recent runs to a smaller list
+  - tightened hero copy and status messaging
+- hot-seat updates:
+  - compressed state/timer messaging and instructional copy
+  - reduced decision panel emphasis while preserving lock/suspense/reveal hierarchy
+- result updates:
+  - reduced redundant summary cards to a tighter minimal set
+  - tightened headline/subcopy and action-note wording
+- visual system updates:
+  - reduced glow/noise/shadow intensity
+  - tightened spacing and border radii for a cleaner modern posture
+- re-verified `npm test` and `npm run build`
