@@ -781,3 +781,24 @@
   - `npm test`
   - `npm run build`
   - `npm run admin:intelligence -- --json`
+
+## 2026-05-27 — `mmrm-content-06-bank-expansion-v3`
+- expanded the curated `launch-v1` question bank from 48 to 72 active questions
+- kept the slice content-only:
+  - no gameplay rule changes
+  - no UI changes
+  - no schema changes
+- grew the bank with another 24 hand-curated rows across the existing category set
+- deliberately used the new batch to strengthen replay depth and late-run tension:
+  - total difficulty mix now lands at `easy = 22`, `medium = 27`, `hard = 23`
+  - total pressure mix now lands at `calm = 24`, `neutral = 29`, `spiky = 19`
+- preserved validation and metadata hygiene:
+  - 4-option structure
+  - valid answer index
+  - valid difficulty/pressure tags
+  - non-empty prompt/category/external key
+- updated the checked-in content test expectation for the larger bank size
+- re-bootstrapped the live bank successfully:
+  - `npm run content:bootstrap`
+  - repository now loads 72 active `launch-v1` questions
+- re-verified `npm test` and `npm run build`

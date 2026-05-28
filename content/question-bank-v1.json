@@ -2,7 +2,12 @@
   {
     "external_key": "launch-q-001",
     "prompt": "Which planet in our solar system is known for its prominent rings?",
-    "options": ["Mars", "Saturn", "Venus", "Mercury"],
+    "options": [
+      "Mars",
+      "Saturn",
+      "Venus",
+      "Mercury"
+    ],
     "correct_answer_index": 1,
     "category": "Science",
     "difficulty_band": "easy",
@@ -14,7 +19,12 @@
   {
     "external_key": "launch-q-002",
     "prompt": "Which city serves as the capital of Canada?",
-    "options": ["Toronto", "Montreal", "Ottawa", "Vancouver"],
+    "options": [
+      "Toronto",
+      "Montreal",
+      "Ottawa",
+      "Vancouver"
+    ],
     "correct_answer_index": 2,
     "category": "World Facts",
     "difficulty_band": "easy",
@@ -26,7 +36,12 @@
   {
     "external_key": "launch-q-003",
     "prompt": "How many sides does a hexagon have?",
-    "options": ["Five", "Six", "Seven", "Eight"],
+    "options": [
+      "Five",
+      "Six",
+      "Seven",
+      "Eight"
+    ],
     "correct_answer_index": 1,
     "category": "Math",
     "difficulty_band": "easy",
@@ -38,7 +53,12 @@
   {
     "external_key": "launch-q-004",
     "prompt": "What gas do plants primarily absorb from the atmosphere?",
-    "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Helium"],
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon dioxide",
+      "Helium"
+    ],
     "correct_answer_index": 2,
     "category": "Biology",
     "difficulty_band": "easy",
@@ -50,7 +70,12 @@
   {
     "external_key": "launch-q-005",
     "prompt": "Which instrument typically has eighty-eight keys?",
-    "options": ["Violin", "Trumpet", "Piano", "Flute"],
+    "options": [
+      "Violin",
+      "Trumpet",
+      "Piano",
+      "Flute"
+    ],
     "correct_answer_index": 2,
     "category": "Music",
     "difficulty_band": "easy",
@@ -62,7 +87,12 @@
   {
     "external_key": "launch-q-006",
     "prompt": "In computing, what does CPU stand for?",
-    "options": ["Central Process Unit", "Central Processing Unit", "Computer Power Utility", "Control Program Upload"],
+    "options": [
+      "Central Process Unit",
+      "Central Processing Unit",
+      "Computer Power Utility",
+      "Control Program Upload"
+    ],
     "correct_answer_index": 1,
     "category": "Technology",
     "difficulty_band": "easy",
@@ -74,7 +104,12 @@
   {
     "external_key": "launch-q-007",
     "prompt": "Who wrote the novel '1984'?",
-    "options": ["George Orwell", "Aldous Huxley", "Ray Bradbury", "Mary Shelley"],
+    "options": [
+      "George Orwell",
+      "Aldous Huxley",
+      "Ray Bradbury",
+      "Mary Shelley"
+    ],
     "correct_answer_index": 0,
     "category": "Literature",
     "difficulty_band": "medium",
@@ -86,7 +121,12 @@
   {
     "external_key": "launch-q-008",
     "prompt": "Which museum is home to the Mona Lisa?",
-    "options": ["The Louvre", "The Met", "The Prado", "The Uffizi"],
+    "options": [
+      "The Louvre",
+      "The Met",
+      "The Prado",
+      "The Uffizi"
+    ],
     "correct_answer_index": 0,
     "category": "Art",
     "difficulty_band": "medium",
@@ -98,7 +138,12 @@
   {
     "external_key": "launch-q-009",
     "prompt": "Which language has the most native speakers worldwide?",
-    "options": ["English", "Spanish", "Hindi", "Mandarin Chinese"],
+    "options": [
+      "English",
+      "Spanish",
+      "Hindi",
+      "Mandarin Chinese"
+    ],
     "correct_answer_index": 3,
     "category": "Language",
     "difficulty_band": "medium",
@@ -110,7 +155,12 @@
   {
     "external_key": "launch-q-010",
     "prompt": "Which ocean lies between eastern Africa and western Australia?",
-    "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Southern Ocean"],
+    "options": [
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arctic Ocean",
+      "Southern Ocean"
+    ],
     "correct_answer_index": 1,
     "category": "Geography",
     "difficulty_band": "easy",
@@ -122,7 +172,12 @@
   {
     "external_key": "launch-q-011",
     "prompt": "What is the square root of 144?",
-    "options": ["10", "11", "12", "14"],
+    "options": [
+      "10",
+      "11",
+      "12",
+      "14"
+    ],
     "correct_answer_index": 2,
     "category": "Math",
     "difficulty_band": "medium",
@@ -134,7 +189,12 @@
   {
     "external_key": "launch-q-012",
     "prompt": "What is the chemical symbol for sodium?",
-    "options": ["So", "Na", "Sd", "Sm"],
+    "options": [
+      "So",
+      "Na",
+      "Sd",
+      "Sm"
+    ],
     "correct_answer_index": 1,
     "category": "Science",
     "difficulty_band": "medium",
@@ -146,7 +206,12 @@
   {
     "external_key": "launch-q-013",
     "prompt": "Genghis Khan founded which empire?",
-    "options": ["Ottoman Empire", "Roman Empire", "Mongol Empire", "Persian Empire"],
+    "options": [
+      "Ottoman Empire",
+      "Roman Empire",
+      "Mongol Empire",
+      "Persian Empire"
+    ],
     "correct_answer_index": 2,
     "category": "History",
     "difficulty_band": "medium",
@@ -158,7 +223,12 @@
   {
     "external_key": "launch-q-014",
     "prompt": "What does HTML stand for?",
-    "options": ["Hyper Trainer Marking Language", "Home Tool Markup Logic", "HyperText Markup Language", "High Text Markdown Language"],
+    "options": [
+      "Hyper Trainer Marking Language",
+      "Home Tool Markup Logic",
+      "HyperText Markup Language",
+      "High Text Markdown Language"
+    ],
     "correct_answer_index": 2,
     "category": "Technology",
     "difficulty_band": "medium",
@@ -170,7 +240,12 @@
   {
     "external_key": "launch-q-015",
     "prompt": "Which playwright wrote 'Hamlet'?",
-    "options": ["Christopher Marlowe", "William Shakespeare", "Ben Jonson", "Oscar Wilde"],
+    "options": [
+      "Christopher Marlowe",
+      "William Shakespeare",
+      "Ben Jonson",
+      "Oscar Wilde"
+    ],
     "correct_answer_index": 1,
     "category": "Literature",
     "difficulty_band": "medium",
@@ -182,7 +257,12 @@
   {
     "external_key": "launch-q-016",
     "prompt": "Which artist painted the ceiling of the Sistine Chapel?",
-    "options": ["Leonardo da Vinci", "Raphael", "Michelangelo", "Caravaggio"],
+    "options": [
+      "Leonardo da Vinci",
+      "Raphael",
+      "Michelangelo",
+      "Caravaggio"
+    ],
     "correct_answer_index": 2,
     "category": "Art",
     "difficulty_band": "hard",
@@ -194,7 +274,12 @@
   {
     "external_key": "launch-q-017",
     "prompt": "In which year did the Berlin Wall fall?",
-    "options": ["1985", "1987", "1989", "1991"],
+    "options": [
+      "1985",
+      "1987",
+      "1989",
+      "1991"
+    ],
     "correct_answer_index": 2,
     "category": "History",
     "difficulty_band": "hard",
@@ -206,7 +291,12 @@
   {
     "external_key": "launch-q-018",
     "prompt": "Which blood type is considered the universal donor for red blood cell transfusions?",
-    "options": ["AB positive", "O negative", "A negative", "B positive"],
+    "options": [
+      "AB positive",
+      "O negative",
+      "A negative",
+      "B positive"
+    ],
     "correct_answer_index": 1,
     "category": "Biology",
     "difficulty_band": "medium",
@@ -218,7 +308,12 @@
   {
     "external_key": "launch-q-019",
     "prompt": "What is the longest river in South America?",
-    "options": ["Orinoco", "Parana", "Magdalena", "Amazon"],
+    "options": [
+      "Orinoco",
+      "Parana",
+      "Magdalena",
+      "Amazon"
+    ],
     "correct_answer_index": 3,
     "category": "Geography",
     "difficulty_band": "hard",
@@ -230,7 +325,12 @@
   {
     "external_key": "launch-q-020",
     "prompt": "Which composer wrote the 'Moonlight Sonata'?",
-    "options": ["Mozart", "Bach", "Beethoven", "Chopin"],
+    "options": [
+      "Mozart",
+      "Bach",
+      "Beethoven",
+      "Chopin"
+    ],
     "correct_answer_index": 2,
     "category": "Music",
     "difficulty_band": "hard",
@@ -242,7 +342,12 @@
   {
     "external_key": "launch-q-021",
     "prompt": "Which element has the atomic number 79?",
-    "options": ["Silver", "Gold", "Mercury", "Platinum"],
+    "options": [
+      "Silver",
+      "Gold",
+      "Mercury",
+      "Platinum"
+    ],
     "correct_answer_index": 1,
     "category": "Science",
     "difficulty_band": "hard",
@@ -254,7 +359,12 @@
   {
     "external_key": "launch-q-022",
     "prompt": "Which country hosted the 2016 Summer Olympics in Rio de Janeiro?",
-    "options": ["China", "Brazil", "United Kingdom", "Japan"],
+    "options": [
+      "China",
+      "Brazil",
+      "United Kingdom",
+      "Japan"
+    ],
     "correct_answer_index": 1,
     "category": "World Facts",
     "difficulty_band": "easy",
@@ -266,7 +376,12 @@
   {
     "external_key": "launch-q-023",
     "prompt": "What is the term for a word that sounds the same as another word but has a different meaning?",
-    "options": ["Antonym", "Homophone", "Synonym", "Metaphor"],
+    "options": [
+      "Antonym",
+      "Homophone",
+      "Synonym",
+      "Metaphor"
+    ],
     "correct_answer_index": 1,
     "category": "Language",
     "difficulty_band": "medium",
@@ -278,7 +393,12 @@
   {
     "external_key": "launch-q-024",
     "prompt": "Which constellation contains the bright star Betelgeuse?",
-    "options": ["Orion", "Lyra", "Cassiopeia", "Cygnus"],
+    "options": [
+      "Orion",
+      "Lyra",
+      "Cassiopeia",
+      "Cygnus"
+    ],
     "correct_answer_index": 0,
     "category": "Astronomy",
     "difficulty_band": "hard",
@@ -290,7 +410,12 @@
   {
     "external_key": "launch-q-025",
     "prompt": "What force keeps planets in orbit around the Sun?",
-    "options": ["Magnetism", "Gravity", "Friction", "Radiation"],
+    "options": [
+      "Magnetism",
+      "Gravity",
+      "Friction",
+      "Radiation"
+    ],
     "correct_answer_index": 1,
     "category": "Science",
     "difficulty_band": "easy",
@@ -302,7 +427,12 @@
   {
     "external_key": "launch-q-026",
     "prompt": "What is the SI unit of electric current?",
-    "options": ["Volt", "Watt", "Ampere", "Ohm"],
+    "options": [
+      "Volt",
+      "Watt",
+      "Ampere",
+      "Ohm"
+    ],
     "correct_answer_index": 2,
     "category": "Science",
     "difficulty_band": "medium",
@@ -314,7 +444,12 @@
   {
     "external_key": "launch-q-027",
     "prompt": "Which country is home to the city of Kyoto?",
-    "options": ["China", "South Korea", "Thailand", "Japan"],
+    "options": [
+      "China",
+      "South Korea",
+      "Thailand",
+      "Japan"
+    ],
     "correct_answer_index": 3,
     "category": "World Facts",
     "difficulty_band": "easy",
@@ -326,7 +461,12 @@
   {
     "external_key": "launch-q-028",
     "prompt": "Which country has Manila as its capital city?",
-    "options": ["Malaysia", "Philippines", "Indonesia", "Vietnam"],
+    "options": [
+      "Malaysia",
+      "Philippines",
+      "Indonesia",
+      "Vietnam"
+    ],
     "correct_answer_index": 1,
     "category": "World Facts",
     "difficulty_band": "medium",
@@ -338,7 +478,12 @@
   {
     "external_key": "launch-q-029",
     "prompt": "What is 15 percent of 200?",
-    "options": ["20", "25", "30", "35"],
+    "options": [
+      "20",
+      "25",
+      "30",
+      "35"
+    ],
     "correct_answer_index": 2,
     "category": "Math",
     "difficulty_band": "easy",
@@ -350,7 +495,12 @@
   {
     "external_key": "launch-q-030",
     "prompt": "What is 12 cubed?",
-    "options": ["1,248", "1,440", "1,728", "1,872"],
+    "options": [
+      "1,248",
+      "1,440",
+      "1,728",
+      "1,872"
+    ],
     "correct_answer_index": 2,
     "category": "Math",
     "difficulty_band": "medium",
@@ -362,7 +512,12 @@
   {
     "external_key": "launch-q-031",
     "prompt": "Which organ pumps blood through the human body?",
-    "options": ["Liver", "Lung", "Heart", "Kidney"],
+    "options": [
+      "Liver",
+      "Lung",
+      "Heart",
+      "Kidney"
+    ],
     "correct_answer_index": 2,
     "category": "Biology",
     "difficulty_band": "easy",
@@ -374,7 +529,12 @@
   {
     "external_key": "launch-q-032",
     "prompt": "Which organ filters waste from the blood to produce urine?",
-    "options": ["Pancreas", "Kidney", "Spleen", "Gallbladder"],
+    "options": [
+      "Pancreas",
+      "Kidney",
+      "Spleen",
+      "Gallbladder"
+    ],
     "correct_answer_index": 1,
     "category": "Biology",
     "difficulty_band": "medium",
@@ -386,7 +546,12 @@
   {
     "external_key": "launch-q-033",
     "prompt": "How many lines are in a standard musical staff?",
-    "options": ["Four", "Five", "Six", "Seven"],
+    "options": [
+      "Four",
+      "Five",
+      "Six",
+      "Seven"
+    ],
     "correct_answer_index": 1,
     "category": "Music",
     "difficulty_band": "easy",
@@ -398,7 +563,12 @@
   {
     "external_key": "launch-q-034",
     "prompt": "Who composed 'The Four Seasons'?",
-    "options": ["Bach", "Mozart", "Vivaldi", "Handel"],
+    "options": [
+      "Bach",
+      "Mozart",
+      "Vivaldi",
+      "Handel"
+    ],
     "correct_answer_index": 2,
     "category": "Music",
     "difficulty_band": "medium",
@@ -410,7 +580,12 @@
   {
     "external_key": "launch-q-035",
     "prompt": "What does USB stand for?",
-    "options": ["Universal Serial Bus", "Unified System Board", "User Storage Block", "Universal Signal Base"],
+    "options": [
+      "Universal Serial Bus",
+      "Unified System Board",
+      "User Storage Block",
+      "Universal Signal Base"
+    ],
     "correct_answer_index": 0,
     "category": "Technology",
     "difficulty_band": "easy",
@@ -422,7 +597,12 @@
   {
     "external_key": "launch-q-036",
     "prompt": "In a web address, what does HTTP stand for?",
-    "options": ["HyperText Transfer Protocol", "High Transfer Text Process", "Hosted Transmission Type Path", "Hyperlink Transit Terminal Program"],
+    "options": [
+      "HyperText Transfer Protocol",
+      "High Transfer Text Process",
+      "Hosted Transmission Type Path",
+      "Hyperlink Transit Terminal Program"
+    ],
     "correct_answer_index": 0,
     "category": "Technology",
     "difficulty_band": "medium",
@@ -434,7 +614,12 @@
   {
     "external_key": "launch-q-037",
     "prompt": "Who wrote 'Pride and Prejudice'?",
-    "options": ["Jane Austen", "Charlotte Bronte", "Emily Dickinson", "Mary Wollstonecraft"],
+    "options": [
+      "Jane Austen",
+      "Charlotte Bronte",
+      "Emily Dickinson",
+      "Mary Wollstonecraft"
+    ],
     "correct_answer_index": 0,
     "category": "Literature",
     "difficulty_band": "medium",
@@ -446,7 +631,12 @@
   {
     "external_key": "launch-q-038",
     "prompt": "Which epic poem features Achilles and Hector as central figures?",
-    "options": ["The Odyssey", "The Iliad", "The Aeneid", "Beowulf"],
+    "options": [
+      "The Odyssey",
+      "The Iliad",
+      "The Aeneid",
+      "Beowulf"
+    ],
     "correct_answer_index": 1,
     "category": "Literature",
     "difficulty_band": "hard",
@@ -458,7 +648,12 @@
   {
     "external_key": "launch-q-039",
     "prompt": "In painting, red and blue combine with which third color to form the primary color trio?",
-    "options": ["Green", "Yellow", "Orange", "Black"],
+    "options": [
+      "Green",
+      "Yellow",
+      "Orange",
+      "Black"
+    ],
     "correct_answer_index": 1,
     "category": "Art",
     "difficulty_band": "easy",
@@ -470,7 +665,12 @@
   {
     "external_key": "launch-q-040",
     "prompt": "Which Dutch painter created 'The Night Watch'?",
-    "options": ["Vermeer", "Rembrandt", "Van Gogh", "Frans Hals"],
+    "options": [
+      "Vermeer",
+      "Rembrandt",
+      "Van Gogh",
+      "Frans Hals"
+    ],
     "correct_answer_index": 1,
     "category": "Art",
     "difficulty_band": "hard",
@@ -482,7 +682,12 @@
   {
     "external_key": "launch-q-041",
     "prompt": "What is the term for a word spelled the same forward and backward?",
-    "options": ["Anagram", "Palindrome", "Acronym", "Homonym"],
+    "options": [
+      "Anagram",
+      "Palindrome",
+      "Acronym",
+      "Homonym"
+    ],
     "correct_answer_index": 1,
     "category": "Language",
     "difficulty_band": "medium",
@@ -494,7 +699,12 @@
   {
     "external_key": "launch-q-042",
     "prompt": "What is the term for a word formed from the initial letters of a phrase, like NASA?",
-    "options": ["Metaphor", "Acronym", "Prefix", "Clause"],
+    "options": [
+      "Metaphor",
+      "Acronym",
+      "Prefix",
+      "Clause"
+    ],
     "correct_answer_index": 1,
     "category": "Language",
     "difficulty_band": "medium",
@@ -506,7 +716,12 @@
   {
     "external_key": "launch-q-043",
     "prompt": "Which continent is Egypt located in?",
-    "options": ["Europe", "Asia", "Africa", "South America"],
+    "options": [
+      "Europe",
+      "Asia",
+      "Africa",
+      "South America"
+    ],
     "correct_answer_index": 2,
     "category": "Geography",
     "difficulty_band": "easy",
@@ -518,7 +733,12 @@
   {
     "external_key": "launch-q-044",
     "prompt": "Which mountain range is commonly considered the boundary between Europe and Asia in Russia?",
-    "options": ["Alps", "Urals", "Carpathians", "Caucasus"],
+    "options": [
+      "Alps",
+      "Urals",
+      "Carpathians",
+      "Caucasus"
+    ],
     "correct_answer_index": 1,
     "category": "Geography",
     "difficulty_band": "hard",
@@ -530,7 +750,12 @@
   {
     "external_key": "launch-q-045",
     "prompt": "Who was the first president of the United States?",
-    "options": ["Thomas Jefferson", "George Washington", "John Adams", "James Madison"],
+    "options": [
+      "Thomas Jefferson",
+      "George Washington",
+      "John Adams",
+      "James Madison"
+    ],
     "correct_answer_index": 1,
     "category": "History",
     "difficulty_band": "easy",
@@ -542,7 +767,12 @@
   {
     "external_key": "launch-q-046",
     "prompt": "Which treaty formally ended World War I?",
-    "options": ["Treaty of Tordesillas", "Treaty of Versailles", "Treaty of Paris", "Treaty of Utrecht"],
+    "options": [
+      "Treaty of Tordesillas",
+      "Treaty of Versailles",
+      "Treaty of Paris",
+      "Treaty of Utrecht"
+    ],
     "correct_answer_index": 1,
     "category": "History",
     "difficulty_band": "hard",
@@ -554,7 +784,12 @@
   {
     "external_key": "launch-q-047",
     "prompt": "What is the name of the galaxy that contains our solar system?",
-    "options": ["Andromeda", "Whirlpool", "Milky Way", "Triangulum"],
+    "options": [
+      "Andromeda",
+      "Whirlpool",
+      "Milky Way",
+      "Triangulum"
+    ],
     "correct_answer_index": 2,
     "category": "Astronomy",
     "difficulty_band": "easy",
@@ -566,8 +801,421 @@
   {
     "external_key": "launch-q-048",
     "prompt": "What is the term for a star that suddenly becomes much brighter because of a catastrophic explosion?",
-    "options": ["Nebula", "Pulsar", "Supernova", "Quasar"],
+    "options": [
+      "Nebula",
+      "Pulsar",
+      "Supernova",
+      "Quasar"
+    ],
     "correct_answer_index": 2,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-049",
+    "prompt": "What force keeps planets in orbit around the Sun?",
+    "options": [
+      "Magnetism",
+      "Gravity",
+      "Friction",
+      "Radiation"
+    ],
+    "correct_answer_index": 1,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-050",
+    "prompt": "What is the pH of pure water at room temperature?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correct_answer_index": 2,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-051",
+    "prompt": "Which country is represented by the maple leaf on its national flag?",
+    "options": [
+      "Canada",
+      "Switzerland",
+      "Austria",
+      "Denmark"
+    ],
+    "correct_answer_index": 0,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-052",
+    "prompt": "Which country is the smallest in the world by land area?",
+    "options": [
+      "Monaco",
+      "San Marino",
+      "Liechtenstein",
+      "Vatican City"
+    ],
+    "correct_answer_index": 3,
+    "category": "World Facts",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-053",
+    "prompt": "What is 15 percent of 200?",
+    "options": [
+      "25",
+      "30",
+      "35",
+      "40"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-054",
+    "prompt": "What is 7 factorial?",
+    "options": [
+      "720",
+      "840",
+      "5040",
+      "6720"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-055",
+    "prompt": "Which organ pumps blood throughout the human body?",
+    "options": [
+      "Liver",
+      "Lung",
+      "Heart",
+      "Kidney"
+    ],
+    "correct_answer_index": 2,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-056",
+    "prompt": "What does DNA stand for?",
+    "options": [
+      "Deoxyribonucleic acid",
+      "Dynamic nitrogen acid",
+      "Dual ribose nucleic agent",
+      "Deoxygenated nucleic array"
+    ],
+    "correct_answer_index": 0,
+    "category": "Biology",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-057",
+    "prompt": "How many lines are on a standard musical staff?",
+    "options": [
+      "Four",
+      "Five",
+      "Six",
+      "Seven"
+    ],
+    "correct_answer_index": 1,
+    "category": "Music",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-058",
+    "prompt": "Which clef is also known as the G clef?",
+    "options": [
+      "Bass clef",
+      "Alto clef",
+      "Treble clef",
+      "Tenor clef"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-059",
+    "prompt": "What does URL stand for?",
+    "options": [
+      "Universal Reference Link",
+      "Uniform Resource Locator",
+      "Unified Routing Language",
+      "User Request Line"
+    ],
+    "correct_answer_index": 1,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-060",
+    "prompt": "What does RAM stand for in computing?",
+    "options": [
+      "Random Access Memory",
+      "Rapid Array Module",
+      "Remote Application Method",
+      "Readily Available Matrix"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-061",
+    "prompt": "Who wrote 'Pride and Prejudice'?",
+    "options": [
+      "Jane Austen",
+      "Emily Bronte",
+      "Virginia Woolf",
+      "Louisa May Alcott"
+    ],
+    "correct_answer_index": 0,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-062",
+    "prompt": "In Homer's epics, what is the name of Odysseus's wife?",
+    "options": [
+      "Helen",
+      "Penelope",
+      "Andromache",
+      "Clytemnestra"
+    ],
+    "correct_answer_index": 1,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-063",
+    "prompt": "What color do you get by mixing blue and yellow paint?",
+    "options": [
+      "Purple",
+      "Green",
+      "Orange",
+      "Brown"
+    ],
+    "correct_answer_index": 1,
+    "category": "Art",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-064",
+    "prompt": "Which Spanish artist painted 'Guernica'?",
+    "options": [
+      "Salvador Dali",
+      "Diego Velazquez",
+      "Pablo Picasso",
+      "Joan Miro"
+    ],
+    "correct_answer_index": 2,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-065",
+    "prompt": "Which language is primarily spoken in Brazil?",
+    "options": [
+      "Spanish",
+      "Portuguese",
+      "French",
+      "Italian"
+    ],
+    "correct_answer_index": 1,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-066",
+    "prompt": "Which Romance language has the most native speakers?",
+    "options": [
+      "French",
+      "Italian",
+      "Portuguese",
+      "Spanish"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-067",
+    "prompt": "Mount Everest lies on the border of Nepal and which region of China?",
+    "options": [
+      "Xinjiang",
+      "Inner Mongolia",
+      "Tibet",
+      "Sichuan"
+    ],
+    "correct_answer_index": 2,
+    "category": "Geography",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-068",
+    "prompt": "What is the capital of New Zealand?",
+    "options": [
+      "Auckland",
+      "Wellington",
+      "Christchurch",
+      "Hamilton"
+    ],
+    "correct_answer_index": 1,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-069",
+    "prompt": "Which ship sank on its maiden voyage in 1912?",
+    "options": [
+      "Lusitania",
+      "Britannic",
+      "Titanic",
+      "Bismarck"
+    ],
+    "correct_answer_index": 2,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-070",
+    "prompt": "Which war formally ended with the Treaty of Versailles?",
+    "options": [
+      "World War I",
+      "World War II",
+      "The Crimean War",
+      "The Franco-Prussian War"
+    ],
+    "correct_answer_index": 0,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-071",
+    "prompt": "What is the name of the galaxy that contains our solar system?",
+    "options": [
+      "Andromeda",
+      "Whirlpool",
+      "Triangulum",
+      "Milky Way"
+    ],
+    "correct_answer_index": 3,
+    "category": "Astronomy",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-072",
+    "prompt": "What is the name of the point in an orbit closest to the Sun?",
+    "options": [
+      "Aphelion",
+      "Perihelion",
+      "Equinox",
+      "Zenith"
+    ],
+    "correct_answer_index": 1,
     "category": "Astronomy",
     "difficulty_band": "hard",
     "pressure_tag": "spiky",

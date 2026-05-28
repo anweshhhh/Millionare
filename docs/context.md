@@ -699,3 +699,27 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - Current recommendation:
   - treat this build as the hardened showcase MVP baseline
   - future work should be either broader content depth or truly new product scope, not more micro-polish on the same surface
+
+## Latest bank expansion v3 decisions (2026-05-27)
+- Completed bank expansion slice: `mmrm-content-06-bank-expansion-v3`
+- The live `launch-v1` bank now contains 72 active questions.
+- Expansion posture remained intentionally narrow:
+  - same `questions` table
+  - same adaptive metadata contract
+  - same 12-question visible run format
+- This slice was used to improve full-scope replay depth, not just count:
+  - broader candidate variety for hidden adaptation
+  - more credible late-run hard/spiky coverage
+  - stronger category depth without reopening gameplay scope
+- Current bank shape after v3 expansion:
+  - `easy = 22`
+  - `medium = 27`
+  - `hard = 23`
+  - `calm = 24`
+  - `neutral = 29`
+  - `spiky = 19`
+- Live verification confirms the expanded bank is active in Supabase:
+  - bootstrap succeeded
+  - repository now loads 72 active `launch-v1` questions
+- Current recommendation:
+  - the next meaningful full-scope lift should come from content calibration on the deeper pool or broader product scope, not more raw count alone
