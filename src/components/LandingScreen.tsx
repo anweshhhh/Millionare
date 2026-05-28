@@ -81,6 +81,7 @@ export function LandingScreen({ onStart, signedInEmail, authStatusMessage, profi
   const summaryProfile = signedInEmail && profile ? profile : null;
   const hasSummary = Boolean(summaryProfile);
   const showRecentRuns = Boolean(signedInEmail);
+  const displayedRecentRuns = recentRuns?.slice(0, 3) ?? null;
 
   return (
     <section className="screen landing-screen">
@@ -94,8 +95,7 @@ export function LandingScreen({ onStart, signedInEmail, authStatusMessage, profi
           <span>Mind Reader Mode</span>
         </h1>
         <p className="hero-copy">
-          A premium hot-seat run that studies what you know, what you only think you know, and
-          what pressure distorts before the clock breaks.
+          A focused hot-seat run. One question, one clock, one decision at a time.
         </p>
 
         {summaryProfile ? (
@@ -121,21 +121,6 @@ export function LandingScreen({ onStart, signedInEmail, authStatusMessage, profi
           </div>
         ) : null}
 
-        <div className="hero-metrics">
-          <article className="hero-metric">
-            <span>Format</span>
-            <strong>12 question pressure run</strong>
-          </article>
-          <article className="hero-metric">
-            <span>Clock</span>
-            <strong>20 second read window</strong>
-          </article>
-          <article className="hero-metric">
-            <span>Flow</span>
-            <strong>Select. Lock. Hold. Reveal.</strong>
-          </article>
-        </div>
-
         <div className="hero-action">
           <button className="primary-cta landing-cta" type="button" onClick={onStart}>
             Start Run
@@ -145,53 +130,27 @@ export function LandingScreen({ onStart, signedInEmail, authStatusMessage, profi
               (signedInEmail
                 ? hasSummary
                   ? "Signed in. Saved progress is loaded. The chair opens immediately."
-                  : `Signed in as ${signedInEmail}. Runs can save after each result.`
+                  : `Signed in as ${signedInEmail}.`
                 : "No setup. The first question opens immediately.")}
           </p>
         </div>
-      </div>
-
-      <div className="pressure-panel">
-        <div className="panel-label">Pressure signals tracked</div>
-        <ul className="signal-list">
-          <li>
-            <span>Knowledge</span>
-            <strong>What holds instantly</strong>
-          </li>
-          <li>
-            <span>Hesitation</span>
-            <strong>What slows under threat</strong>
-          </li>
-          <li>
-            <span>Confidence</span>
-            <strong>What survives exposure</strong>
-          </li>
-          <li>
-            <span>Risk</span>
-            <strong>What you lock anyway</strong>
-          </li>
-        </ul>
-        <p className="panel-copy">
-          The game stays quiet on the surface. The tension comes from how certainty behaves when
-          the runway narrows.
-        </p>
 
         {showRecentRuns ? (
           <div className="landing-history">
             <div className="landing-history-topline">
               <span>Recent runs</span>
-              <span>{recentRuns === null ? "Syncing" : recentRuns.length === 0 ? "No saved runs" : `${recentRuns.length} shown`}</span>
+              <span>{recentRuns === null ? "Syncing" : recentRuns.length === 0 ? "No saved runs" : `${displayedRecentRuns?.length ?? 0} shown`}</span>
             </div>
 
             {recentRuns === null ? <p className="landing-history-empty">Loading recent trace.</p> : null}
 
             {recentRuns !== null && recentRuns.length === 0 ? (
-              <p className="landing-history-empty">No saved runs yet. The next secured result will appear here.</p>
+              <p className="landing-history-empty">No saved runs yet.</p>
             ) : null}
 
-            {recentRuns && recentRuns.length > 0 ? (
+            {displayedRecentRuns && displayedRecentRuns.length > 0 ? (
               <div className="landing-history-list">
-                {recentRuns.map((run) => {
+                {displayedRecentRuns.map((run) => {
                   const step = getStepByRank(run.highestRank);
                   const focus = step ? `${step.code} // ${step.label}` : `${BASELINE_STEP.code} // ${BASELINE_STEP.label}`;
 
@@ -203,10 +162,6 @@ export function LandingScreen({ onStart, signedInEmail, authStatusMessage, profi
                           <strong>{focus}</strong>
                         </div>
                         <span className="landing-history-time">{formatRecentRunTime(run.completedAt)}</span>
-                      </div>
-                      <div className="landing-history-meta">
-                        <span>{run.correctAnswers} / {run.totalQuestions} correct</span>
-                        <span>{run.failureReason === "timeout" ? "Timer hit zero" : run.outcome === "completed" ? "Full ladder cleared" : "Wrong read"}</span>
                       </div>
                     </article>
                   );
