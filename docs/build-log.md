@@ -884,3 +884,13 @@
   - no auth/persistence schema changes
 - added focused tests for recent-run memory behavior
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-28 — `mmrm-game-05-replay-memory-commit-timing`
+- finalized replay-memory behavior so run ids are persisted at run completion (result state), not at run start
+- prevents anti-repeat memory from being polluted by abandoned/refresh-interrupted runs
+- keeps adjacent replay variety while making memory reflect actually played runs
+- retained hidden-only posture:
+  - no UI changes
+  - no gameplay rule changes
+  - no auth/persistence schema changes
+- re-verified `npm test` and `npm run build`

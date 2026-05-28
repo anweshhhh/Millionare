@@ -64,6 +64,7 @@ export default function App() {
   const [runCatalog, setRunCatalog] = useState<QuestionCatalog | null>(null);
   const recentRunQuestionIdsRef = useRef<string[]>(getRecentRunAvoidIds());
   const runStartedAtRef = useRef<string | null>(null);
+  const storedRunMemoryKeyRef = useRef<string | null>(null);
   const completedRunRef = useRef<PendingRunBridge | null>(null);
   const questionCaptureRef = useRef<TransientQuestionCapture | null>(null);
   const capturedRecordKeyRef = useRef<string | null>(null);
@@ -185,8 +186,25 @@ export default function App() {
     completedRunRef.current = null;
     questionCaptureRef.current = null;
     capturedRecordKeyRef.current = null;
+    storedRunMemoryKeyRef.current = null;
     setQuestionBehaviorSignals([]);
   }, [state.answerLog.length, state.lockedAnswer, state.phase, state.questionIndex, state.runNumber, state.selectedAnswer]);
+
+  useEffect(() => {
+    if (state.phase !== "result" || !runCatalog) {
+      return;
+    }
+
+    const memoryKey = `${state.runNumber}:${runCatalog.questionSetVersion}:${runCatalog.questions[0]?.id ?? "none"}`;
+    if (storedRunMemoryKeyRef.current === memoryKey) {
+      return;
+    }
+
+    const runQuestionIds = runCatalog.questions.map((question) => question.id);
+    storeRecentRunQuestionIds(runQuestionIds);
+    recentRunQuestionIdsRef.current = runQuestionIds;
+    storedRunMemoryKeyRef.current = memoryKey;
+  }, [runCatalog, state.phase, state.runNumber]);
 
   useEffect(() => {
     if (state.phase !== "active") {
@@ -331,7 +349,6 @@ export default function App() {
     });
     setRunCatalog(nextCatalog);
     recentRunQuestionIdsRef.current = nextCatalog.questions.map((question) => question.id);
-    storeRecentRunQuestionIds(recentRunQuestionIdsRef.current);
     dispatch({
       type: "START_RUN",
       firstQuestionId: getInitialQuestionId(nextCatalog),
@@ -348,7 +365,6 @@ export default function App() {
     });
     setRunCatalog(nextCatalog);
     recentRunQuestionIdsRef.current = nextCatalog.questions.map((question) => question.id);
-    storeRecentRunQuestionIds(recentRunQuestionIdsRef.current);
     dispatch({
       type: "REPLAY",
       firstQuestionId: getInitialQuestionId(nextCatalog),

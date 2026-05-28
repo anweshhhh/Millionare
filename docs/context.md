@@ -820,3 +820,14 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - no auth or data-model expansion
 - Current recommendation:
   - run a local feel pass for repetition cadence, then finalize the gameplay MVP polish slice
+
+## Latest replay-memory timing decisions (2026-05-28)
+- Completed replay-memory finalization slice: `mmrm-game-05-replay-memory-commit-timing`
+- Recent-run memory now commits on run completion (result state) instead of run start.
+- This keeps anti-repeat memory aligned with actual played runs and avoids stale pollution from interrupted runs.
+- Scope remained narrow:
+  - no player-facing UI changes
+  - no gameplay pacing/rule changes
+  - no auth/persistence model changes
+- Current recommendation:
+  - run final local gameplay smoke checks, then proceed to planned UI design pass
