@@ -1,16 +1,17 @@
 # Review Brief
 
 ## Slice
-`mmrm-ui-04-mobile-dock-priority-reorder`
+`mmrm-ui-05-mobile-typography-and-tension-polish`
 
 ## Goal
-Fix the remaining mobile hot-seat hierarchy issue so `LOCK ANSWER` is visible in the first portion of the fixed dock without scrolling.
+Make the app feel more modern, hook-driven, and mobile-optimized by tightening typography and interaction hierarchy without changing gameplay behavior.
 
 ## What changed
-- Reordered the mobile action dock so the primary `LOCK ANSWER` action appears first.
-- Compressed decision status into a smaller secondary utility row.
-- Kept lifelines available while reducing their visual and vertical cost.
-- Tightened bottom gameplay padding and dock spacing for iPhone-class mobile viewports.
+- Recalibrated hot-seat typography tiers (headline, answer body, metadata) for faster scanning and less visual bloat.
+- Reduced spacing and chrome weight across question, answer, and dock elements while preserving clarity.
+- Strengthened action readability with lock-first hierarchy and cleaner secondary utility treatment.
+- Reduced decorative background noise and softened glow intensity to keep focus on gameplay actions.
+- Tuned CTA sizing and tap feedback to feel snappier on mobile.
 
 ## Scope guard
 - No gameplay-rule changes

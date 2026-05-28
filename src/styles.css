@@ -22,6 +22,11 @@
   --glow-accent: 0 0 0 1px rgba(173, 255, 246, 0.06), 0 10px 24px rgba(41, 99, 102, 0.1);
   --glow-success: 0 0 0 1px rgba(143, 255, 198, 0.06), 0 10px 24px rgba(40, 95, 71, 0.1);
   --glow-danger: 0 0 0 1px rgba(255, 143, 116, 0.06), 0 10px 24px rgba(94, 43, 33, 0.1);
+  --type-title: clamp(1.3rem, 4.4vw, 1.9rem);
+  --type-body: 0.94rem;
+  --type-answer: 0.95rem;
+  --type-meta: 0.63rem;
+  --radius-card: 20px;
 }
 
 * {
@@ -65,10 +70,10 @@ button {
 
 .app-backdrop {
   background:
-    radial-gradient(circle at 12% 12%, rgba(123, 214, 207, 0.1), transparent 24%),
-    radial-gradient(circle at 88% 8%, rgba(255, 143, 116, 0.08), transparent 20%),
+    radial-gradient(circle at 12% 12%, rgba(123, 214, 207, 0.09), transparent 24%),
+    radial-gradient(circle at 88% 8%, rgba(255, 143, 116, 0.07), transparent 20%),
     radial-gradient(circle at 50% 45%, rgba(121, 173, 255, 0.05), transparent 28%);
-  filter: blur(18px);
+  filter: blur(16px);
 }
 
 .app-noise {
@@ -76,7 +81,7 @@ button {
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 82%);
-  opacity: 0.1;
+  opacity: 0.06;
 }
 
 .app-shell.phase-suspense .app-backdrop {
@@ -128,7 +133,7 @@ button {
   border: 1px solid var(--line);
   background: var(--surface);
   backdrop-filter: blur(18px);
-  border-radius: 24px;
+  border-radius: 22px;
   box-shadow: var(--shadow);
 }
 
@@ -381,19 +386,19 @@ button {
 .primary-cta {
   width: 100%;
   border: 1px solid rgba(173, 255, 246, 0.26);
-  border-radius: 18px;
-  padding: 17px 20px;
+  border-radius: 16px;
+  padding: 15px 18px;
   background:
     linear-gradient(180deg, rgba(123, 214, 207, 0.26), rgba(123, 214, 207, 0.1)),
     rgba(6, 16, 27, 0.84);
   color: var(--ink);
-  font-size: 0.98rem;
+  font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   box-shadow: var(--glow-accent);
   transition:
-    transform 180ms ease,
+    transform 120ms ease,
     border-color 180ms ease,
     background-color 180ms ease,
     box-shadow 180ms ease;
@@ -402,11 +407,11 @@ button {
 .secondary-cta {
   width: 100%;
   border: 1px solid var(--line-strong);
-  border-radius: 18px;
-  padding: 15px 18px;
+  border-radius: 16px;
+  padding: 13px 16px;
   background: rgba(6, 16, 27, 0.66);
   color: var(--ink);
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -419,13 +424,19 @@ button {
 
 .landing-cta,
 .result-cta {
-  min-height: 58px;
+  min-height: 54px;
 }
 
 .primary-cta:hover:enabled,
 .secondary-cta:hover:enabled,
 .answer-card:hover:enabled {
   transform: translateY(-1px);
+}
+
+.primary-cta:active:enabled,
+.secondary-cta:active:enabled,
+.answer-card:active:enabled {
+  transform: translateY(0) scale(0.995);
 }
 
 .primary-cta:focus-visible,
@@ -537,16 +548,17 @@ button {
 }
 
 .status-title {
-  font-size: 1.08rem;
+  font-size: 1.02rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .status-pill {
-  font-size: 0.62rem;
+  font-size: 0.59rem;
 }
 
 .status-progress {
-  height: 4px;
+  height: 3px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   overflow: hidden;
@@ -575,9 +587,9 @@ button {
 }
 
 .timer-card {
-  min-width: 118px;
-  padding: 12px 13px;
-  border-radius: 18px;
+  min-width: 112px;
+  padding: 11px 12px;
+  border-radius: 16px;
   border: 1px solid var(--line);
   background: linear-gradient(180deg, rgba(123, 214, 207, 0.08), rgba(255, 255, 255, 0.02));
   text-align: right;
@@ -588,7 +600,7 @@ button {
   margin-top: 7px;
   margin-bottom: 9px;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1.22rem;
+  font-size: 1.12rem;
 }
 
 .timer-track {
@@ -656,11 +668,11 @@ button {
 .result-banner {
   border: 1px solid var(--line);
   background: var(--surface-strong);
-  border-radius: 22px;
+  border-radius: var(--radius-card);
 }
 
 .question-card {
-  padding: 18px;
+  padding: 16px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
 }
 
@@ -668,31 +680,35 @@ button {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  font-size: 0.67rem;
+  font-size: var(--type-meta);
   color: var(--muted);
 }
 
+.question-topline span:last-child {
+  opacity: 0.7;
+}
+
 .question-rank {
-  margin-top: 16px;
+  margin-top: 12px;
   color: var(--accent);
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .question-card h2 {
-  margin: 10px 0 0;
-  font-size: clamp(1.48rem, 5.4vw, 2.4rem);
-  line-height: 1.12;
+  margin: 8px 0 0;
+  font-size: var(--type-title);
+  line-height: 1.14;
   letter-spacing: -0.035em;
 }
 
 .question-subcopy {
-  margin: 16px 0 0;
+  margin: 12px 0 0;
   color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.55;
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 .answer-stack-shell {
@@ -711,14 +727,14 @@ button {
   grid-template-columns: 36px minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
-  padding: 16px;
+  padding: 14px;
   color: inherit;
   text-align: left;
   transition:
     border-color 160ms ease,
     background-color 160ms ease,
     opacity 160ms ease,
-    transform 160ms ease,
+    transform 140ms ease,
     box-shadow 160ms ease;
 }
 
@@ -727,8 +743,8 @@ button {
 }
 
 .answer-card.is-selected {
-  border-color: rgba(173, 255, 246, 0.4);
-  background: linear-gradient(180deg, rgba(123, 214, 207, 0.12), rgba(10, 20, 33, 0.96));
+  border-color: rgba(173, 255, 246, 0.5);
+  background: linear-gradient(180deg, rgba(123, 214, 207, 0.15), rgba(10, 20, 33, 0.98));
   box-shadow: var(--glow-accent);
 }
 
@@ -751,8 +767,8 @@ button {
 }
 
 .answer-card.is-dimmed {
-  opacity: 0.34;
-  transform: scale(0.985);
+  opacity: 0.4;
+  transform: scale(0.99);
 }
 
 .answer-card.is-eliminated {
@@ -761,8 +777,8 @@ button {
 }
 
 .answer-index {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   display: grid;
   place-items: center;
   border-radius: 999px;
@@ -773,14 +789,14 @@ button {
 }
 
 .answer-copy {
-  font-size: 0.98rem;
-  line-height: 1.45;
+  font-size: var(--type-answer);
+  line-height: 1.35;
 }
 
 .answer-tag {
-  min-width: 78px;
+  min-width: 70px;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-align: right;
@@ -831,11 +847,12 @@ button {
   z-index: 25;
   width: min(calc(100% - 24px), 560px);
   display: grid;
-  gap: 7px;
-  padding: 8px;
+  gap: 6px;
+  padding: 8px 8px 9px;
   border: 1px solid var(--line);
   border-radius: 16px;
-  background: rgba(8, 15, 24, 0.94);
+  background: rgba(8, 15, 24, 0.95);
+  box-shadow: 0 -8px 22px rgba(0, 0, 0, 0.24);
   backdrop-filter: blur(12px);
 }
 
@@ -852,17 +869,17 @@ button {
 .lifeline-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
+  gap: 6px;
 }
 
 .lifeline-chip {
-  min-height: 36px;
-  border-radius: 14px;
+  min-height: 34px;
+  border-radius: 12px;
   border: 1px solid rgba(173, 255, 246, 0.22);
   background: rgba(123, 214, 207, 0.08);
   color: var(--accent-strong);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -883,7 +900,7 @@ button {
 .lifeline-meta {
   margin: 0;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.58rem;
+  font-size: 0.56rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--muted);
@@ -898,7 +915,7 @@ button {
 .decision-readout {
   flex: 1 1 auto;
   min-width: 0;
-  padding: 9px 12px;
+  padding: 8px 10px;
   border-radius: 12px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.02);
@@ -907,7 +924,7 @@ button {
 }
 
 .decision-readout strong {
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
@@ -927,7 +944,8 @@ button {
 }
 
 .hot-seat-cta {
-  min-height: 48px;
+  min-height: 46px;
+  letter-spacing: 0.07em;
 }
 
 .summary-grid-minimal {
@@ -1066,8 +1084,8 @@ button {
 
 .result-banner h1 {
   margin: 10px 0 8px;
-  font-size: clamp(2.1rem, 8vw, 3.9rem);
-  line-height: 0.94;
+  font-size: clamp(1.94rem, 7.6vw, 3.5rem);
+  line-height: 0.96;
   letter-spacing: -0.06em;
 }
 
@@ -1169,7 +1187,7 @@ button {
 
 .result-insight-line p {
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--ink);
 }
 
@@ -1180,13 +1198,13 @@ button {
 }
 
 .summary-card strong {
-  font-size: 1.16rem;
+  font-size: 1.08rem;
   line-height: 1.28;
 }
 
 .result-action {
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .result-secondary-cta,
@@ -1463,8 +1481,12 @@ button {
   }
 
   .result-action {
-    margin-top: 12px;
-    margin-bottom: 14px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+
+  .answer-tag {
+    display: none;
   }
 }
 
@@ -1488,21 +1510,21 @@ button {
   }
 
   .question-card {
-    padding: 14px;
-  }
-
-  .question-card h2 {
-    font-size: clamp(1.22rem, 4.9vw, 1.58rem);
-    line-height: 1.16;
-  }
-
-  .answer-card {
     padding: 13px;
   }
 
+  .question-card h2 {
+    font-size: clamp(1.14rem, 4.6vw, 1.44rem);
+    line-height: 1.17;
+  }
+
+  .answer-card {
+    padding: 12px;
+  }
+
   .answer-copy {
-    font-size: 0.92rem;
-    line-height: 1.38;
+    font-size: 0.88rem;
+    line-height: 1.34;
   }
 
   .state-panel {
@@ -1524,7 +1546,7 @@ button {
   }
 
   .hot-seat-cta {
-    min-height: 44px;
+    min-height: 42px;
   }
 
   .decision-readout {
@@ -1532,11 +1554,11 @@ button {
   }
 
   .decision-readout strong {
-    font-size: 0.79rem;
+    font-size: 0.76rem;
   }
 
   .lifeline-chip {
-    min-height: 34px;
+    min-height: 32px;
   }
 }
 

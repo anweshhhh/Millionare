@@ -877,3 +877,15 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - decision state is compressed into a smaller secondary strip
   - lifelines remain available but no longer push the primary action below the initial viewport
 - Additional small-height tightening was applied to the dock and bottom gameplay padding to better fit iPhone-class responsive viewports.
+
+## Latest visual redesign polish decisions (2026-05-28)
+- Completed visual polish slice: `mmrm-ui-05-mobile-typography-and-tension-polish`
+- Design posture remains premium and fast-play focused, with tighter mobile readability:
+  - reduced headline/body/meta typography scale in hot-seat
+  - reduced answer-card and control chrome weight to lower cognitive load
+- Interaction clarity is stronger without adding UI surface area:
+  - selected/locked states remain high contrast
+  - lock-first action hierarchy preserved
+  - lifeline utility remains visible but less dominant
+- This slice is presentation-only:
+  - no reducer/gameplay/auth/persistence/schema changes

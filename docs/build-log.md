@@ -954,3 +954,20 @@
   - lifelines retained as a lower utility row
 - reduced dock height and gameplay bottom padding so the button surfaces earlier on iPhone-class viewports
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-28 — `mmrm-ui-05-mobile-typography-and-tension-polish`
+- completed a single-pass visual redesign polish with no gameplay logic changes
+- tightened mobile-first typography scale to reduce visual bulk in active play:
+  - smaller question headline, answer text, and metadata tiers
+  - cleaner line-heights and reduced spacing for faster scanning
+- improved interaction hierarchy and clarity:
+  - stronger selected answer emphasis
+  - compacted action dock utility copy and lifeline controls
+  - preserved lock-first control priority
+- reduced decorative noise while keeping premium tone:
+  - softer backdrop intensity and grid noise
+  - cleaner card radii and calmer chrome
+- polished CTA feel:
+  - lighter button weight/sizing
+  - faster press feedback for mobile tap responsiveness
+- re-verified `npm test` and `npm run build`
