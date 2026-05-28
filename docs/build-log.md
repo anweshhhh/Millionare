@@ -725,3 +725,23 @@
   - harsh rebound / repeated-category adaptive fairness review
   - compact report assembly
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-27 — `mmrm-phase6-03-internal-report-wiring`
+- completed the first internal admin report wiring slice without building any dashboard surface
+- kept the slice private/internal only:
+  - no player-facing UI changes
+  - no schema changes
+  - no new dependencies
+- added a compact report formatter for the hidden Phase 6 payload
+- added a developer-facing command:
+  - `npm run admin:intelligence`
+  - supports `--json` for raw structured output
+- added the minimum repository helpers needed to assemble report evidence with a Supabase client:
+  - active questions
+  - runs
+  - per-question behavioral signals
+  - player-model snapshots
+- verified the command end to end against the live project:
+  - sparse current data correctly stays `low-confidence`
+  - no fake precision or overconfident admin labeling
+- re-verified `npm test` and `npm run build`

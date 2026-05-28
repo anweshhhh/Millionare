@@ -283,6 +283,10 @@ export async function fetchPlayerModel(userId: string) {
 
 export async function fetchQuestionSignalsForUser(userId: string) {
   const client = requireClient();
+  return fetchQuestionSignalsForUserWithClient(client, userId);
+}
+
+export async function fetchQuestionSignalsForUserWithClient(client: SupabaseClient<Database>, userId: string) {
   const { data, error } = await client
     .from("run_question_signals")
     .select("*")
@@ -294,6 +298,45 @@ export async function fetchQuestionSignalsForUser(userId: string) {
   }
 
   return (data ?? []).map(mapPersistedQuestionSignal);
+}
+
+export async function fetchAllRunsWithClient(
+  client: SupabaseClient<Database>,
+  options: { questionSetVersion?: string } = {}
+) {
+  let query = client.from("runs").select("*").order("completed_at", { ascending: false });
+
+  if (options.questionSetVersion) {
+    query = query.eq("question_set_version", options.questionSetVersion);
+  }
+
+  const { data, error } = await query;
+
+  if (error) {
+    throw error;
+  }
+
+  return (data ?? []).map(mapPersistedRun);
+}
+
+export async function fetchAllQuestionSignalsWithClient(client: SupabaseClient<Database>) {
+  const { data, error } = await client.from("run_question_signals").select("*").order("created_at", { ascending: false });
+
+  if (error) {
+    throw error;
+  }
+
+  return (data ?? []).map(mapPersistedQuestionSignal);
+}
+
+export async function fetchAllPlayerModelsWithClient(client: SupabaseClient<Database>) {
+  const { data, error } = await client.from("player_models").select("*").order("updated_at", { ascending: false });
+
+  if (error) {
+    throw error;
+  }
+
+  return (data ?? []).map(mapPersistedPlayerModel);
 }
 
 export async function fetchRecentRuns(userId: string, limit = RECENT_RUN_LIMIT) {

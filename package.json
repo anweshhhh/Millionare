@@ -7,8 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "node --test src/game/game-state.test.ts src/game/question-catalog.test.ts src/game/adaptive-selection.test.ts src/lib/supabase/pending-run.test.ts src/domain/player-model.test.ts src/domain/adaptive-engine.test.ts src/domain/insights.test.ts src/domain/content.test.ts src/domain/admin-intelligence.test.ts src/components/result-screen-view.test.ts",
-    "content:bootstrap": "node scripts/bootstrap-questions.ts"
+    "test": "node --test src/game/game-state.test.ts src/game/question-catalog.test.ts src/game/adaptive-selection.test.ts src/lib/supabase/pending-run.test.ts src/domain/player-model.test.ts src/domain/adaptive-engine.test.ts src/domain/insights.test.ts src/domain/content.test.ts src/domain/admin-intelligence.test.ts src/domain/admin-report.test.ts src/components/result-screen-view.test.ts",
+    "content:bootstrap": "node scripts/bootstrap-questions.ts",
+    "admin:intelligence": "node scripts/admin-intelligence-report.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.101.1",

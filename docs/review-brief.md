@@ -1,42 +1,32 @@
 # Review Brief
 
 ## Slice
-`mmrm-phase6-02-admin-signal-derivation-foundation`
+`mmrm-phase6-03-internal-report-wiring`
 
 ## Goal
-Implement the first private admin intelligence foundation as a pure deterministic backstage layer, without changing any player-facing surface.
+Wire the first compact private admin intelligence output without building an admin dashboard or changing any player-facing surface.
 
 ## What changed
-- Added a new pure domain module for private admin intelligence:
-  - question calibration reviews
+- Added a compact internal report formatter for the hidden Phase 6 intelligence payload.
+- Added a new developer-facing command:
+  - `npm run admin:intelligence`
+  - optional `--json` output for raw structured payloads
+- Added the minimum client-injected repository helpers needed to assemble backstage evidence cleanly from Supabase.
+- Reused only approved first-pass signal families:
+  - question calibration
   - ambiguity / instability flags
-  - drop-off concentration by ending rank
-  - adaptation fairness review signals
-- Kept the output intentionally internal and confidence-banded:
-  - `review`
-  - `watch`
-  - `stable`
-  - `low-confidence`
-- Reused only existing evidence sources:
-  - persisted runs
-  - run question signals
-  - current question metadata
-  - optional player-model count context in the report summary
-- Added focused deterministic tests for:
-  - unstable-question detection
-  - sparse-sample low-confidence behavior
-  - missing legacy metadata tolerance
-  - drop-off hotspot detection
-  - harsh adaptive rebound detection
-  - compact report assembly
+  - drop-off concentration
+  - adaptation fairness review
+- Verified the command against the live project, where the current sparse dataset correctly resolves to low-confidence review output.
 
 ## Scope guard
-- No UI changes
+- No admin dashboard pages
+- No player-facing UI changes
 - No schema changes
-- No persistence-path changes
 - No new dependencies
-- No admin dashboard or report surface yet
+- No gameplay changes
 
 ## Verification
 - `npm test` passed
 - `npm run build` passed
+- `npm run admin:intelligence -- --json` passed

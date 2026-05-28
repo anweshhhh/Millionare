@@ -654,3 +654,20 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - Current recommended next step:
   - wire a narrow internal report/output path for these hidden signals
   - keep the player-facing product frozen while Phase 6 depth grows backstage
+
+## Latest Phase 6 report-wiring decisions (2026-05-27)
+- Completed Phase 6 report slice: `mmrm-phase6-03-internal-report-wiring`
+- Phase 6 now has a usable internal output path without introducing an admin dashboard.
+- A new developer-facing command assembles the private intelligence payload from live Supabase evidence:
+  - `npm run admin:intelligence`
+  - `npm run admin:intelligence -- --json` for raw structured output
+- Repository/data-layer posture remains narrow:
+  - enough client-injected fetch helpers to assemble backstage evidence
+  - no player-facing repo changes
+  - no schema expansion
+- Current verification shows the internal report behaves honestly on sparse live data:
+  - current project evidence is still thin
+  - outputs remain `low-confidence` instead of implying strong conclusions
+- Current recommended next step:
+  - calibrate the Phase 6 thresholds and internal wording now that the report path is real
+  - keep the player-facing MVP frozen while backstage intelligence gets more trustworthy

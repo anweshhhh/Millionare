@@ -79,6 +79,7 @@ Notes:
 - The current app still runs without Supabase credentials for Phase 1 gameplay work.
 - The guest-to-account save flow requires valid Supabase project values.
 - The content bootstrap script requires `SUPABASE_SERVICE_ROLE_KEY`.
+- The internal admin report command also requires `SUPABASE_SERVICE_ROLE_KEY`.
 - The client env layer also accepts legacy `VITE_SUPABASE_ANON_KEY` as a fallback, but the preferred variable is `VITE_SUPABASE_PUBLISHABLE_KEY`.
 
 ## Useful commands
@@ -86,4 +87,5 @@ Notes:
 npm test
 npm run build
 npm run content:bootstrap
+npm run admin:intelligence
 ```
