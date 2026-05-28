@@ -1,29 +1,30 @@
 # Review Brief
 
 ## Slice
-`mmrm-phase6-03-internal-report-wiring`
+`mmrm-phase6-04-calibration-and-threshold-review`
 
 ## Goal
-Wire the first compact private admin intelligence output without building an admin dashboard or changing any player-facing surface.
+Calibrate the hidden private admin intelligence layer so it stays more trustworthy, deterministic, and conservative before any broader final-product polish.
 
 ## What changed
-- Added a compact internal report formatter for the hidden Phase 6 intelligence payload.
-- Added a new developer-facing command:
-  - `npm run admin:intelligence`
-  - optional `--json` output for raw structured payloads
-- Added the minimum client-injected repository helpers needed to assemble backstage evidence cleanly from Supabase.
-- Reused only approved first-pass signal families:
-  - question calibration
-  - ambiguity / instability flags
-  - drop-off concentration
-  - adaptation fairness review
-- Verified the command against the live project, where the current sparse dataset correctly resolves to low-confidence review output.
+- Tuned Phase 6 thresholds to require stronger evidence before escalating signals.
+- Kept the hidden posture intentionally conservative:
+  - sparse samples remain `low-confidence`
+  - miss-only question patterns tend to surface as `watch`
+  - drop-off review calls now need stronger concentration
+  - adaptation fairness needs more transitions before a confident judgment
+- Expanded deterministic tests for:
+  - sparse-vs-strong question review cases
+  - watch-level drop-off concentration
+  - low-confidence adaptation fairness with thin transitions
+  - stronger adaptation fairness review scenarios
+- Re-verified the internal report command against live project data after calibration.
 
 ## Scope guard
-- No admin dashboard pages
 - No player-facing UI changes
 - No schema changes
 - No new dependencies
+- No admin dashboard work
 - No gameplay changes
 
 ## Verification

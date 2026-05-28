@@ -7,21 +7,23 @@ import type {
 } from "./persistence.ts";
 
 export const ADMIN_INTELLIGENCE_THRESHOLDS = {
-  minimumQuestionObservations: 3,
-  stableQuestionObservations: 5,
+  minimumQuestionObservations: 4,
+  stableQuestionObservations: 6,
   elevatedMissRate: 0.6,
   elevatedTimeoutRate: 0.34,
-  highSelectionChangeAverage: 1,
-  lateLockRate: 0.5,
+  highSelectionChangeAverage: 1.25,
+  lateLockRate: 0.67,
   slowResponseTimeMs: 14_000,
-  minimumDropoffRuns: 3,
-  dropoffReviewRate: 0.5,
-  dropoffWatchRate: 0.3,
-  timeoutConcentrationReviewRate: 0.45,
-  minimumAdaptationTransitions: 4,
-  harshReboundReviewRate: 0.2,
-  harshReboundWatchRate: 0.1,
-  repeatedCategoryReviewRate: 0.34,
+  minimumDropoffRuns: 4,
+  dropoffReviewRate: 0.6,
+  dropoffWatchRate: 0.4,
+  timeoutConcentrationReviewRate: 0.55,
+  timeoutConcentrationWatchRate: 0.4,
+  minimumAdaptationTransitions: 6,
+  harshReboundReviewRate: 0.25,
+  harshReboundWatchRate: 0.15,
+  repeatedCategoryReviewRate: 0.45,
+  repeatedCategoryWatchRate: 0.3,
   difficultyLeapDistance: 2
 } as const;
 
@@ -148,11 +150,20 @@ function getQuestionReviewStatus(input: {
     return "low-confidence" as const;
   }
 
+  if (input.flags.includes("elevated-timeout-rate")) {
+    return "review" as const;
+  }
+
   if (
-    input.flags.includes("elevated-timeout-rate") ||
-    input.flags.includes("elevated-miss-rate") ||
-    (input.flags.includes("high-selection-churn") && input.flags.includes("late-lock-instability"))
+    input.flags.includes("elevated-miss-rate") &&
+    (input.flags.includes("high-selection-churn") ||
+      input.flags.includes("late-lock-instability") ||
+      input.flags.includes("slow-response-anomaly"))
   ) {
+    return "review" as const;
+  }
+
+  if (input.flags.includes("high-selection-churn") && input.flags.includes("late-lock-instability")) {
     return "review" as const;
   }
 
@@ -180,7 +191,10 @@ function getDropoffStatus(input: {
     return "review" as const;
   }
 
-  if (input.endingRate >= ADMIN_INTELLIGENCE_THRESHOLDS.dropoffWatchRate) {
+  if (
+    input.endingRate >= ADMIN_INTELLIGENCE_THRESHOLDS.dropoffWatchRate ||
+    input.timeoutRate >= ADMIN_INTELLIGENCE_THRESHOLDS.timeoutConcentrationWatchRate
+  ) {
     return "watch" as const;
   }
 
@@ -205,7 +219,10 @@ function getAdaptationStatus(input: {
     return "review" as const;
   }
 
-  if (input.harshRate >= ADMIN_INTELLIGENCE_THRESHOLDS.harshReboundWatchRate) {
+  if (
+    input.harshRate >= ADMIN_INTELLIGENCE_THRESHOLDS.harshReboundWatchRate ||
+    input.repeatedCategoryRate >= ADMIN_INTELLIGENCE_THRESHOLDS.repeatedCategoryWatchRate
+  ) {
     return "watch" as const;
   }
 

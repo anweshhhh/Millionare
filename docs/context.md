@@ -671,3 +671,17 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - Current recommended next step:
   - calibrate the Phase 6 thresholds and internal wording now that the report path is real
   - keep the player-facing MVP frozen while backstage intelligence gets more trustworthy
+
+## Latest Phase 6 calibration decisions (2026-05-27)
+- Completed Phase 6 calibration slice: `mmrm-phase6-04-calibration-and-threshold-review`
+- The private admin layer is now more conservative and less noisy.
+- Current calibration posture:
+  - sparse samples should stay `low-confidence`
+  - miss-heavy but otherwise thin question evidence should usually land in `watch`, not `review`
+  - drop-off hotspots need stronger concentration before escalation
+  - adaptation fairness now requires a larger transition sample before confident judgments
+- The internal report command has now been exercised against live project data after calibration:
+  - current project evidence remains sparse
+  - the report still resolves to `low-confidence` instead of overclaiming
+- Current recommended next step:
+  - stop expanding Phase 6 scope for now and move to final showcase hardening or focused content quality review

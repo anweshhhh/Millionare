@@ -189,16 +189,22 @@ test("deriveAdaptationFairnessReview flags harsh rebounds and repeated categorie
     createQuestion({ id: "q2", category: "Science", difficultyBand: "hard", pressureTag: "spiky" }),
     createQuestion({ id: "q3", category: "History", difficultyBand: "medium", pressureTag: "neutral" }),
     createQuestion({ id: "q4", category: "Math", difficultyBand: "hard", pressureTag: "spiky" }),
-    createQuestion({ id: "q5", category: "Math", difficultyBand: "easy", pressureTag: "calm" })
+    createQuestion({ id: "q5", category: "Math", difficultyBand: "easy", pressureTag: "calm" }),
+    createQuestion({ id: "q6", category: "Geography", difficultyBand: "medium", pressureTag: "neutral" }),
+    createQuestion({ id: "q7", category: "Art", difficultyBand: "hard", pressureTag: "spiky" }),
+    createQuestion({ id: "q8", category: "Art", difficultyBand: "easy", pressureTag: "calm" })
   ];
 
   const signals = [
     createSignal({ id: "run-1-q1", runId: "run-1", userId: "u1", questionId: "q1", questionRank: 1, category: "Science", result: "incorrect" }),
     createSignal({ id: "run-1-q2", runId: "run-1", userId: "u1", questionId: "q2", questionRank: 2, category: "Science", result: "correct" }),
     createSignal({ id: "run-1-q3", runId: "run-1", userId: "u1", questionId: "q3", questionRank: 3, category: "History", result: "correct" }),
+    createSignal({ id: "run-1-q4", runId: "run-1", userId: "u1", questionId: "q6", questionRank: 4, category: "Geography", result: "correct" }),
     createSignal({ id: "run-2-q1", runId: "run-2", userId: "u2", questionId: "q5", questionRank: 1, category: "Math", result: "timeout", selectedAnswerIndex: null, lockedAnswerIndex: null, timedOutWithoutLock: true }),
     createSignal({ id: "run-2-q2", runId: "run-2", userId: "u2", questionId: "q4", questionRank: 2, category: "Math", result: "correct" }),
-    createSignal({ id: "run-2-q3", runId: "run-2", userId: "u2", questionId: "q3", questionRank: 3, category: "History", result: "correct" })
+    createSignal({ id: "run-2-q3", runId: "run-2", userId: "u2", questionId: "q3", questionRank: 3, category: "History", result: "correct" }),
+    createSignal({ id: "run-2-q4", runId: "run-2", userId: "u2", questionId: "q7", questionRank: 4, category: "Art", result: "incorrect" }),
+    createSignal({ id: "run-2-q5", runId: "run-2", userId: "u2", questionId: "q8", questionRank: 5, category: "Art", result: "correct" })
   ];
 
   const review = deriveAdaptationFairnessReview({
@@ -206,11 +212,11 @@ test("deriveAdaptationFairnessReview flags harsh rebounds and repeated categorie
     questions
   });
 
-  assert.equal(review.transitionsObserved, 4);
+  assert.equal(review.transitionsObserved, 7);
   assert.equal(review.harshPressureRebounds, 2);
   assert.equal(review.timeoutPressureRebounds, 1);
-  assert.equal(review.repeatedCategoryRebounds, 2);
-  assert.equal(review.difficultyLeaps, 2);
+  assert.equal(review.repeatedCategoryRebounds, 3);
+  assert.equal(review.difficultyLeaps, 3);
   assert.equal(review.status, "review");
   assert.deepEqual(review.notes, [
     "spiky-after-miss",
@@ -272,4 +278,72 @@ test("buildAdminIntelligenceReport assembles a compact backstage review payload"
   assert.equal(report.summary.playerModelsObserved, 1);
   assert.equal(report.questionReviews.length, 3);
   assert.ok(report.dropoffRanks.length >= 1);
+});
+
+
+test("question review thresholds stay conservative for miss-only or sparse evidence", () => {
+  const questions = [
+    createQuestion({ id: "q-watch", category: "Geography", difficultyBand: "medium", pressureTag: "neutral" }),
+    createQuestion({ id: "q-sparse", category: "Art", difficultyBand: "hard", pressureTag: "spiky" })
+  ];
+
+  const signals = [
+    createSignal({ id: "w1", runId: "run-w1", userId: "user-1", questionId: "q-watch", questionRank: 6, category: "Geography", result: "incorrect" }),
+    createSignal({ id: "w2", runId: "run-w2", userId: "user-2", questionId: "q-watch", questionRank: 6, category: "Geography", result: "incorrect" }),
+    createSignal({ id: "w3", runId: "run-w3", userId: "user-3", questionId: "q-watch", questionRank: 6, category: "Geography", result: "correct" }),
+    createSignal({ id: "w4", runId: "run-w4", userId: "user-4", questionId: "q-watch", questionRank: 6, category: "Geography", result: "incorrect" }),
+    createSignal({ id: "s1", runId: "run-s1", userId: "user-5", questionId: "q-sparse", questionRank: 9, category: "Art", result: "timeout", selectedAnswerIndex: null, lockedAnswerIndex: null, firstSelectionTimeMs: null, timedOutWithoutLock: true }),
+    createSignal({ id: "s2", runId: "run-s2", userId: "user-6", questionId: "q-sparse", questionRank: 9, category: "Art", result: "incorrect" }),
+    createSignal({ id: "s3", runId: "run-s3", userId: "user-7", questionId: "q-sparse", questionRank: 9, category: "Art", result: "timeout", selectedAnswerIndex: null, lockedAnswerIndex: null, firstSelectionTimeMs: null, timedOutWithoutLock: true })
+  ];
+
+  const reviews = deriveQuestionCalibrationReviews({ questionSignals: signals, questions });
+  const watchReview = reviews.find((review) => review.questionId === "q-watch");
+  const sparseReview = reviews.find((review) => review.questionId === "q-sparse");
+
+  assert.equal(watchReview?.status, "watch");
+  assert.deepEqual(watchReview?.flags, ["elevated-miss-rate"]);
+  assert.equal(sparseReview?.status, "low-confidence");
+});
+
+test("dropoff and adaptation thresholds prefer low-confidence or watch before review", () => {
+  const runs = [
+    createRun({ id: "run-1", userId: "u1", completedAt: "2026-05-27T00:00:00.000Z", outcome: "eliminated" }),
+    createRun({ id: "run-2", userId: "u2", completedAt: "2026-05-27T00:01:00.000Z", outcome: "eliminated" }),
+    createRun({ id: "run-3", userId: "u3", completedAt: "2026-05-27T00:02:00.000Z", outcome: "eliminated" }),
+    createRun({ id: "run-4", userId: "u4", completedAt: "2026-05-27T00:03:00.000Z", outcome: "eliminated" })
+  ];
+  const dropoffSignals = [
+    createSignal({ id: "d1", runId: "run-1", userId: "u1", questionId: "q1", questionRank: 4, category: "Science", result: "incorrect" }),
+    createSignal({ id: "d2", runId: "run-2", userId: "u2", questionId: "q1", questionRank: 4, category: "Science", result: "incorrect" }),
+    createSignal({ id: "d3", runId: "run-3", userId: "u3", questionId: "q2", questionRank: 2, category: "History", result: "incorrect" }),
+    createSignal({ id: "d4", runId: "run-4", userId: "u4", questionId: "q3", questionRank: 1, category: "Math", result: "incorrect" })
+  ];
+  const dropoffReview = deriveDropoffRankReviews({ runs, questionSignals: dropoffSignals }).find((review) => review.rank == 4);
+
+  assert.equal(dropoffReview?.status, "watch");
+
+  const questions = [
+    createQuestion({ id: "a1", category: "Science", difficultyBand: "easy", pressureTag: "calm" }),
+    createQuestion({ id: "a2", category: "History", difficultyBand: "medium", pressureTag: "spiky" }),
+    createQuestion({ id: "a3", category: "Math", difficultyBand: "medium", pressureTag: "neutral" }),
+    createQuestion({ id: "a4", category: "Music", difficultyBand: "medium", pressureTag: "neutral" }),
+    createQuestion({ id: "a5", category: "Science", difficultyBand: "medium", pressureTag: "neutral" }),
+    createQuestion({ id: "a6", category: "Art", difficultyBand: "medium", pressureTag: "neutral" }),
+    createQuestion({ id: "a7", category: "Geography", difficultyBand: "medium", pressureTag: "neutral" })
+  ];
+  const adaptationSignals = [
+    createSignal({ id: "a1-1", runId: "run-a1", userId: "ua1", questionId: "a1", questionRank: 1, category: "Science", result: "incorrect" }),
+    createSignal({ id: "a1-2", runId: "run-a1", userId: "ua1", questionId: "a2", questionRank: 2, category: "History", result: "correct" }),
+    createSignal({ id: "a1-3", runId: "run-a1", userId: "ua1", questionId: "a3", questionRank: 3, category: "Math", result: "correct" }),
+    createSignal({ id: "a2-1", runId: "run-a2", userId: "ua2", questionId: "a4", questionRank: 1, category: "Music", result: "incorrect" }),
+    createSignal({ id: "a2-2", runId: "run-a2", userId: "ua2", questionId: "a5", questionRank: 2, category: "Science", result: "correct" }),
+    createSignal({ id: "a2-3", runId: "run-a2", userId: "ua2", questionId: "a6", questionRank: 3, category: "Art", result: "correct" }),
+    createSignal({ id: "a3-1", runId: "run-a3", userId: "ua3", questionId: "a1", questionRank: 1, category: "Science", result: "correct" }),
+    createSignal({ id: "a3-2", runId: "run-a3", userId: "ua3", questionId: "a7", questionRank: 2, category: "Geography", result: "correct" })
+  ];
+  const adaptationReview = deriveAdaptationFairnessReview({ questionSignals: adaptationSignals, questions });
+
+  assert.equal(adaptationReview.transitionsObserved, 5);
+  assert.equal(adaptationReview.status, "low-confidence");
 });

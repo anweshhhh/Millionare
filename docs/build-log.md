@@ -745,3 +745,21 @@
   - sparse current data correctly stays `low-confidence`
   - no fake precision or overconfident admin labeling
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-27 — `mmrm-phase6-04-calibration-and-threshold-review`
+- completed the first Phase 6 calibration pass on the hidden admin intelligence layer
+- kept the slice narrow and internal:
+  - no player-facing UI changes
+  - no schema changes
+  - no new dependencies
+- tuned the admin threshold posture to be more conservative and reviewable:
+  - more observations required before question reviews become confident
+  - miss-only patterns now tend to land in `watch` instead of `review`
+  - drop-off concentration needs stronger evidence before escalating
+  - adaptation fairness now requires more transitions before making a confident call
+- expanded deterministic tests for:
+  - sparse vs strong question-review evidence
+  - watch-level drop-off concentration
+  - low-confidence adaptation fairness with thin transition counts
+  - stronger high-confidence adaptation fairness scenarios
+- re-verified `npm test`, `npm run build`, and `npm run admin:intelligence -- --json`
