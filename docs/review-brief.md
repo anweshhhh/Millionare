@@ -1,16 +1,16 @@
 # Review Brief
 
 ## Slice
-`mmrm-ui-03-mobile-action-dock-and-focus-mode`
+`mmrm-ui-04-mobile-dock-priority-reorder`
 
 ## Goal
-Eliminate remaining mobile scroll friction by keeping primary answer controls continuously visible.
+Fix the remaining mobile hot-seat hierarchy issue so `LOCK ANSWER` is visible in the first portion of the fixed dock without scrolling.
 
 ## What changed
-- Implemented a viewport-fixed mobile action dock for hot-seat controls.
-- Dock now contains decision status, lifeline controls, and `LOCK ANSWER`.
-- Added active-phase focus behavior by hiding lower-priority state panel while answering.
-- Added concise lifeline usage guidance (`1 lifeline per question`).
+- Reordered the mobile action dock so the primary `LOCK ANSWER` action appears first.
+- Compressed decision status into a smaller secondary utility row.
+- Kept lifelines available while reducing their visual and vertical cost.
+- Tightened bottom gameplay padding and dock spacing for iPhone-class mobile viewports.
 
 ## Scope guard
 - No gameplay-rule changes

@@ -945,3 +945,12 @@
 - improved lifeline clarity with compact helper cue:
   - `1 lifeline per question`
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-28 — `mmrm-ui-04-mobile-dock-priority-reorder`
+- corrected the remaining mobile hierarchy issue where the dock existed but `LOCK ANSWER` still sat below the first visible portion of the viewport
+- reordered the mobile action dock around thumb-first priority:
+  - primary `LOCK ANSWER` action first
+  - compact decision state second
+  - lifelines retained as a lower utility row
+- reduced dock height and gameplay bottom padding so the button surfaces earlier on iPhone-class viewports
+- re-verified `npm test` and `npm run build`

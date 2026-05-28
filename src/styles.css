@@ -648,7 +648,7 @@ button {
 .play-stage {
   display: grid;
   gap: 12px;
-  padding-bottom: calc(186px + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(152px + env(safe-area-inset-bottom, 0px));
 }
 
 .question-card,
@@ -831,12 +831,22 @@ button {
   z-index: 25;
   width: min(calc(100% - 24px), 560px);
   display: grid;
-  gap: 8px;
-  padding: 10px;
+  gap: 7px;
+  padding: 8px;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: rgba(8, 15, 24, 0.94);
   backdrop-filter: blur(12px);
+}
+
+.action-utility-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-utility-row {
+  justify-content: space-between;
 }
 
 .lifeline-strip {
@@ -846,13 +856,13 @@ button {
 }
 
 .lifeline-chip {
-  min-height: 42px;
+  min-height: 36px;
   border-radius: 14px;
   border: 1px solid rgba(173, 255, 246, 0.22);
   background: rgba(123, 214, 207, 0.08);
   color: var(--accent-strong);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -873,20 +883,23 @@ button {
 .lifeline-meta {
   margin: 0;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .action-zone {
   display: grid;
-  gap: 8px;
+  width: 100%;
 }
 
 .decision-readout {
-  padding: 12px 14px;
-  border-radius: 14px;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 9px 12px;
+  border-radius: 12px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.02);
   display: flex;
@@ -894,8 +907,11 @@ button {
 }
 
 .decision-readout strong {
-  font-size: 0.95rem;
+  font-size: 0.84rem;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .decision-readout.is-suspense {
@@ -911,7 +927,7 @@ button {
 }
 
 .hot-seat-cta {
-  min-height: 52px;
+  min-height: 48px;
 }
 
 .summary-grid-minimal {
@@ -1369,6 +1385,14 @@ button {
     backdrop-filter: none;
   }
 
+  .action-utility-row {
+    justify-content: flex-start;
+  }
+
+  .decision-readout {
+    flex: 0 1 280px;
+  }
+
   .question-layout {
     grid-template-columns: minmax(0, 1fr) 118px;
     gap: 16px;
@@ -1491,16 +1515,28 @@ button {
   }
 
   .play-stage {
-    padding-bottom: calc(170px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(144px + env(safe-area-inset-bottom, 0px));
   }
 
   .action-dock {
-    gap: 6px;
-    padding: 8px;
+    gap: 5px;
+    padding: 7px;
   }
 
   .hot-seat-cta {
-    min-height: 48px;
+    min-height: 44px;
+  }
+
+  .decision-readout {
+    padding: 8px 10px;
+  }
+
+  .decision-readout strong {
+    font-size: 0.79rem;
+  }
+
+  .lifeline-chip {
+    min-height: 34px;
   }
 }
 

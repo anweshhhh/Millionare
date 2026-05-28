@@ -869,3 +869,11 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - This slice remains UX-only:
   - no gameplay-rule changes
   - no auth/persistence/schema changes
+
+## Latest mobile dock hierarchy decisions (2026-05-28)
+- Completed follow-up mobile refinement slice: `mmrm-ui-04-mobile-dock-priority-reorder`
+- The first visible portion of the fixed dock now prioritizes the primary action instead of utility controls:
+  - `LOCK ANSWER` appears before decision/lifeline helpers
+  - decision state is compressed into a smaller secondary strip
+  - lifelines remain available but no longer push the primary action below the initial viewport
+- Additional small-height tightening was applied to the dock and bottom gameplay padding to better fit iPhone-class responsive viewports.

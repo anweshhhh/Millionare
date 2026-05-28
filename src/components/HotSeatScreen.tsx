@@ -291,11 +291,32 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
             </div>
 
             <div className="action-dock" aria-label="Primary answer controls">
-              <div className={["decision-readout", stageToneClass].join(" ")}>
-                <strong>{decisionLabel}</strong>
+              <div className="action-zone">
+                <button
+                  className={[
+                    "primary-cta",
+                    "hot-seat-cta",
+                    phase === "active" && selectedAnswer === null ? "is-disabled" : "",
+                    phase === "suspense" ? "is-quiet" : "",
+                    phase === "reveal" && revealResult === "incorrect" ? "is-danger" : ""
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                  type="button"
+                  onClick={phase === "active" ? onLockAnswer : undefined}
+                  disabled={phase !== "active" || selectedAnswer === null}
+                >
+                  {ctaLabel}
+                </button>
               </div>
 
-              <p className="lifeline-meta">1 lifeline per question</p>
+              <div className="action-utility-row">
+                <div className={["decision-readout", stageToneClass].join(" ")}>
+                  <strong>{decisionLabel}</strong>
+                </div>
+
+                <p className="lifeline-meta">1 lifeline per question</p>
+              </div>
 
               <div className="lifeline-strip">
                 <button
@@ -332,25 +353,6 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
                   }
                 >
                   {lifelines.secondChanceArmed ? "Shield Armed" : "Second Chance"}
-                </button>
-              </div>
-
-              <div className="action-zone">
-                <button
-                  className={[
-                    "primary-cta",
-                    "hot-seat-cta",
-                    phase === "active" && selectedAnswer === null ? "is-disabled" : "",
-                    phase === "suspense" ? "is-quiet" : "",
-                    phase === "reveal" && revealResult === "incorrect" ? "is-danger" : ""
-                  ]
-                    .filter(Boolean)
-                    .join(" ")}
-                  type="button"
-                  onClick={phase === "active" ? onLockAnswer : undefined}
-                  disabled={phase !== "active" || selectedAnswer === null}
-                >
-                  {ctaLabel}
                 </button>
               </div>
             </div>
