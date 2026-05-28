@@ -739,6 +739,11 @@ button {
   transform: scale(0.985);
 }
 
+.answer-card.is-eliminated {
+  border-style: dashed;
+  opacity: 0.36;
+}
+
 .answer-index {
   width: 36px;
   height: 36px;

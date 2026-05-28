@@ -73,9 +73,18 @@ function pickQuestionsByDifficultyBand(input: {
   targetCount: number;
   selectedIds: Set<string>;
   selectedByCategory: Map<string, number>;
+  avoidedIds: Set<string>;
 }) {
   const selected: Question[] = [];
-  const shuffled = shuffleWithSeed(input.pool, input.random);
+  const preferred = shuffleWithSeed(
+    input.pool.filter((question) => !input.avoidedIds.has(question.id)),
+    input.random
+  );
+  const avoided = shuffleWithSeed(
+    input.pool.filter((question) => input.avoidedIds.has(question.id)),
+    input.random
+  );
+  const shuffled = [...preferred, ...avoided];
 
   for (const question of shuffled) {
     if (selected.length >= input.targetCount) {
@@ -157,11 +166,11 @@ export function sampleRunQuestions(
   runSeed: string,
   options?: { recentlyUsedQuestionIds?: string[] }
 ) {
+  const random = createSeededRandom(`${catalog.questionSetVersion}:${runSeed}`);
   if (catalog.questions.length <= catalog.runQuestionCount) {
-    return catalog.questions;
+    return shuffleWithSeed([...catalog.questions], random);
   }
 
-  const random = createSeededRandom(`${catalog.questionSetVersion}:${runSeed}`);
   const selectedIds = new Set<string>();
   const selectedByCategory = new Map<string, number>();
   const avoidedIds = new Set(options?.recentlyUsedQuestionIds ?? []);
@@ -177,21 +186,24 @@ export function sampleRunQuestions(
       random,
       targetCount: TARGET_PER_DIFFICULTY_BAND,
       selectedIds,
-      selectedByCategory
+      selectedByCategory,
+      avoidedIds
     }),
     ...pickQuestionsByDifficultyBand({
       pool: byBand.medium,
       random,
       targetCount: TARGET_PER_DIFFICULTY_BAND,
       selectedIds,
-      selectedByCategory
+      selectedByCategory,
+      avoidedIds
     }),
     ...pickQuestionsByDifficultyBand({
       pool: byBand.hard,
       random,
       targetCount: TARGET_PER_DIFFICULTY_BAND,
       selectedIds,
-      selectedByCategory
+      selectedByCategory,
+      avoidedIds
     })
   ];
   const remainingCount = catalog.runQuestionCount - selected.length;

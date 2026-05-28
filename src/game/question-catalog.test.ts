@@ -37,6 +37,19 @@ test("seed catalog stays the fallback baseline", () => {
   assert.equal(getInitialQuestionId(catalog), SEEDED_QUESTIONS[0]?.id);
 });
 
+test("seed catalog run order rotates deterministically across run seeds", () => {
+  const catalog = createSeedQuestionCatalog();
+  const runOne = createRunQuestionCatalog({ catalog, runNumber: 1 });
+  const runTwo = createRunQuestionCatalog({ catalog, runNumber: 2 });
+
+  assert.equal(runOne.questions.length, RUN_QUESTION_COUNT);
+  assert.equal(runTwo.questions.length, RUN_QUESTION_COUNT);
+  assert.notDeepEqual(
+    runOne.questions.map((question) => question.id),
+    runTwo.questions.map((question) => question.id)
+  );
+});
+
 test("supabase catalog is accepted only when it can sustain a full 12-question run", () => {
   const tooSmall = createSupabaseQuestionCatalog(Array.from({ length: 8 }, (_, index) => createContentQuestion(index)));
   const viable = createSupabaseQuestionCatalog(

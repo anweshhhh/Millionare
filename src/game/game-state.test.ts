@@ -193,3 +193,20 @@ test("armed second chance recovers after timeout instead of ending run", () => {
   assert.equal(state.phase, "active");
   assert.equal(state.questionIndex, 0);
 });
+
+test("only one lifeline can be used per question", () => {
+  let state = gameReducer(createInitialGameState(), {
+    type: "START_RUN",
+    firstQuestionId: SEEDED_QUESTIONS[0].id,
+    questionCount: SEEDED_QUESTIONS.length
+  });
+
+  state = gameReducer(state, { type: "USE_LIFELINE_50_50", correctIndex: SEEDED_QUESTIONS[0].correctIndex });
+  assert.equal(state.lifelineUsedOnCurrentQuestion, true);
+  assert.equal(state.lifelines.fiftyFifty, false);
+
+  const timeBefore = state.timeRemaining;
+  state = gameReducer(state, { type: "USE_LIFELINE_EXTRA_TIME" });
+  assert.equal(state.timeRemaining, timeBefore);
+  assert.equal(state.lifelines.extraTime, true);
+});

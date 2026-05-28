@@ -1,31 +1,25 @@
 # Review Brief
 
 ## Slice
-`mmrm-game-03-lifeline-system-foundation`
+`mmrm-game-03a-lifeline-and-rotation-fixes`
 
 ## Goal
-Add a compact first-pass lifeline system that reduces harsh run termination while preserving existing hot-seat pacing.
+Fix reported lifeline behavior and replay-rotation regressions from the previous gameplay slice.
+
+## Findings
+- `50:50` was technically disabling options but not clearly presenting them as removed.
+- Lifelines could be stacked on the same question because there was no per-question usage lock.
+- Recent-run avoid ids were not applied in the difficulty-band pick path, allowing repeat leakage.
 
 ## What changed
-- Added reducer-level lifeline state with one-time usage per run.
-- Implemented three lifelines:
-  - `50:50`: removes two wrong options for the active question.
-  - `+10s`: adds a one-time time extension during active play.
-  - `Second Chance`: armable shield that absorbs one wrong-answer or timeout elimination and reopens the same question.
-- Wired lifeline controls into the existing hot-seat screen without adding new pages.
-- Preserved core gameplay loop behavior (`select -> lock`, suspense, reveal, auto-advance).
-- Added deterministic reducer tests for all lifeline behaviors.
-
-## Scope guard
-- No new screens
-- No landing/result expansion
-- No auth/persistence/schema changes
-- No new dependencies
+- Added explicit eliminated-option rendering in hot-seat answer cards.
+- Added reducer-level `lifelineUsedOnCurrentQuestion` guard:
+  - blocks multiple lifelines on the same question
+  - resets on next question and on second-chance reset of the same question
+- Strengthened run sampling to apply avoid ids during band picks and fill picks.
+- Seed fallback run order now rotates deterministically by run seed.
 
 ## Verification
 - `npm test` passed
 - `npm run build` passed
-- New tests cover:
-  - 50:50 elimination behavior and blocked selection
-  - +10s consumption and timer update
-  - second-chance recovery for wrong-answer and timeout paths
+- Added regression tests for one-lifeline-per-question and seed run-order variation.

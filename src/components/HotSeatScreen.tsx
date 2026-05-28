@@ -19,6 +19,7 @@ type HotSeatScreenProps = {
   failureReason: FailureReason | null;
   pendingSecondChanceRecovery: boolean;
   lifelines: LifelineState;
+  lifelineUsedOnCurrentQuestion: boolean;
   eliminatedAnswerIndexes: number[];
   onSelectAnswer: (answerIndex: number) => void;
   onLockAnswer: () => void;
@@ -53,6 +54,7 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
     failureReason,
     pendingSecondChanceRecovery,
     lifelines,
+    lifelineUsedOnCurrentQuestion,
     eliminatedAnswerIndexes,
     onSelectAnswer,
     onLockAnswer,
@@ -206,6 +208,7 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
               <div className={["answer-stack", phase].join(" ")}>
                 {question.options.map((option, optionIndex) => {
                   const isSelected = phase === "active" && selectedAnswer === optionIndex;
+                  const isEliminated = eliminatedAnswerIndexes.includes(optionIndex);
                   const isLocked = lockedAnswer === optionIndex;
                   const isCorrect = revealResult !== null && optionIndex === correctIndex;
                   const isWrongPick =
@@ -224,8 +227,10 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
                           ? failureReason === "timeout"
                             ? "Correct Answer"
                             : "Correct"
-                          : phase === "reveal" && isWrongPick
+                      : phase === "reveal" && isWrongPick
                             ? "Your Pick"
+                            : phase === "active" && isEliminated
+                              ? "Removed"
                             : "";
 
                   return (
@@ -238,16 +243,17 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
                         isLocked ? "is-locked" : "",
                         isCorrect ? "is-correct" : "",
                         isWrongPick ? "is-wrong" : "",
+                        isEliminated ? "is-eliminated" : "",
                         isDimmed ? "is-dimmed" : ""
                       ]
                         .filter(Boolean)
                         .join(" ")}
                       onClick={() => onSelectAnswer(optionIndex)}
-                      disabled={phase !== "active" || eliminatedAnswerIndexes.includes(optionIndex)}
+                      disabled={phase !== "active" || isEliminated}
                       aria-pressed={isSelected}
                     >
                       <span className="answer-index">{String.fromCharCode(65 + optionIndex)}</span>
-                      <span className="answer-copy">{option}</span>
+                      <span className="answer-copy">{isEliminated ? "Option removed" : option}</span>
                       <span className="answer-tag">{answerTag}</span>
                     </button>
                   );
@@ -283,7 +289,7 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
                 type="button"
                 className={["lifeline-chip", lifelines.fiftyFifty ? "" : "is-spent"].filter(Boolean).join(" ")}
                 onClick={onUseFiftyFifty}
-                disabled={phase !== "active" || !lifelines.fiftyFifty}
+                disabled={phase !== "active" || !lifelines.fiftyFifty || lifelineUsedOnCurrentQuestion}
               >
                 50:50
               </button>
@@ -291,7 +297,7 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
                 type="button"
                 className={["lifeline-chip", lifelines.extraTime ? "" : "is-spent"].filter(Boolean).join(" ")}
                 onClick={onUseExtraTime}
-                disabled={phase !== "active" || !lifelines.extraTime}
+                disabled={phase !== "active" || !lifelines.extraTime || lifelineUsedOnCurrentQuestion}
               >
                 +10s
               </button>
@@ -305,7 +311,12 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
                   .filter(Boolean)
                   .join(" ")}
                 onClick={onUseSecondChance}
-                disabled={phase !== "active" || !lifelines.secondChance || lifelines.secondChanceArmed}
+                disabled={
+                  phase !== "active" ||
+                  !lifelines.secondChance ||
+                  lifelines.secondChanceArmed ||
+                  lifelineUsedOnCurrentQuestion
+                }
               >
                 {lifelines.secondChanceArmed ? "Shield Armed" : "Second Chance"}
               </button>

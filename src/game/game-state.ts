@@ -31,6 +31,7 @@ function createRunState(runNumber: number, firstQuestionId: string, questionCoun
     outcome: null,
     failureReason: null,
     lifelines: createInitialLifelines(),
+    lifelineUsedOnCurrentQuestion: false,
     eliminatedAnswerIndexes: [],
     pendingSecondChanceRecovery: false
   };
@@ -73,6 +74,7 @@ export function createInitialGameState(): GameState {
     outcome: null,
     failureReason: null,
     lifelines: createInitialLifelines(),
+    lifelineUsedOnCurrentQuestion: false,
     eliminatedAnswerIndexes: [],
     pendingSecondChanceRecovery: false
   };
@@ -136,7 +138,12 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         lockedAnswer: state.selectedAnswer
       };
     case "USE_LIFELINE_50_50":
-      if (state.phase !== "active" || !state.lifelines.fiftyFifty || state.eliminatedAnswerIndexes.length > 0) {
+      if (
+        state.phase !== "active" ||
+        !state.lifelines.fiftyFifty ||
+        state.eliminatedAnswerIndexes.length > 0 ||
+        state.lifelineUsedOnCurrentQuestion
+      ) {
         return state;
       }
 
@@ -146,12 +153,13 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
           ...state.lifelines,
           fiftyFifty: false
         },
+        lifelineUsedOnCurrentQuestion: true,
         eliminatedAnswerIndexes: [0, 1, 2, 3].filter(
           (index) => index !== action.correctIndex && index !== state.selectedAnswer
         ).slice(0, 2)
       };
     case "USE_LIFELINE_EXTRA_TIME":
-      if (state.phase !== "active" || !state.lifelines.extraTime) {
+      if (state.phase !== "active" || !state.lifelines.extraTime || state.lifelineUsedOnCurrentQuestion) {
         return state;
       }
 
@@ -161,10 +169,16 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
           ...state.lifelines,
           extraTime: false
         },
+        lifelineUsedOnCurrentQuestion: true,
         timeRemaining: Math.min(QUESTION_TIME_LIMIT + EXTRA_TIME_LIFELINE_SECONDS, state.timeRemaining + EXTRA_TIME_LIFELINE_SECONDS)
       };
     case "USE_LIFELINE_SECOND_CHANCE":
-      if (state.phase !== "active" || !state.lifelines.secondChance || state.lifelines.secondChanceArmed) {
+      if (
+        state.phase !== "active" ||
+        !state.lifelines.secondChance ||
+        state.lifelines.secondChanceArmed ||
+        state.lifelineUsedOnCurrentQuestion
+      ) {
         return state;
       }
 
@@ -173,7 +187,8 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         lifelines: {
           ...state.lifelines,
           secondChanceArmed: true
-        }
+        },
+        lifelineUsedOnCurrentQuestion: true
       };
     case "TICK":
       if (state.phase !== "active") {
@@ -261,6 +276,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
           timeRemaining: QUESTION_TIME_LIMIT,
           lastRecord: null,
           failureReason: null,
+          lifelineUsedOnCurrentQuestion: false,
           pendingSecondChanceRecovery: false
         };
       }
@@ -299,6 +315,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         timeRemaining: QUESTION_TIME_LIMIT,
         lastRecord: null,
         failureReason: null,
+        lifelineUsedOnCurrentQuestion: false,
         eliminatedAnswerIndexes: [],
         pendingSecondChanceRecovery: false,
         lifelines: {

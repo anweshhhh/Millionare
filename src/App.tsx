@@ -408,6 +408,7 @@ export default function App() {
           failureReason={state.failureReason}
           pendingSecondChanceRecovery={state.pendingSecondChanceRecovery}
           lifelines={state.lifelines}
+          lifelineUsedOnCurrentQuestion={state.lifelineUsedOnCurrentQuestion}
           eliminatedAnswerIndexes={state.eliminatedAnswerIndexes}
           onSelectAnswer={(answerIndex) => dispatch({ type: "SELECT_ANSWER", answerIndex })}
           onLockAnswer={() => dispatch({ type: "LOCK_ANSWER" })}

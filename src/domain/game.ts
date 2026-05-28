@@ -54,6 +54,7 @@ export type GameState = {
   outcome: RunOutcome | null;
   failureReason: FailureReason | null;
   lifelines: LifelineState;
+  lifelineUsedOnCurrentQuestion: boolean;
   eliminatedAnswerIndexes: number[];
   pendingSecondChanceRecovery: boolean;
 };

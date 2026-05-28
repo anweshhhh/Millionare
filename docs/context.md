@@ -796,3 +796,15 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - automatic progression behavior unchanged
 - Current recommendation:
   - next slice should tune lifeline UX clarity and balance edge cases before broader gameplay expansion
+
+## Latest lifeline/rotation fix decisions (2026-05-28)
+- Completed stabilization follow-up slice: `mmrm-game-03a-lifeline-and-rotation-fixes`
+- Lifeline behavior is now stricter and clearer:
+  - `50:50` visually marks removed options explicitly
+  - only one lifeline can be used per question
+  - per-question lifeline lock resets when advancing or when second-chance reopens the same question
+- Recent-run anti-repeat behavior is now stronger:
+  - avoidance applies during band selection and fill phases
+  - seed fallback runs now rotate deterministically by run seed to reduce same-order replay feel
+- Current recommendation:
+  - proceed to the next planned gameplay slice after local validation confirms expected lifeline feel

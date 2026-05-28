@@ -855,3 +855,18 @@
 - wired lifeline state through reducer + hot-seat UI with deterministic behavior
 - added focused reducer tests for all three lifelines, including wrong/timeout recovery
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-28 — `mmrm-game-03a-lifeline-and-rotation-fixes`
+- audited and fixed regressions reported during local validation of the lifeline slice
+- fixed `50:50` clarity:
+  - removed options now render as explicit removed states, not just subtle disables
+- fixed lifeline stacking:
+  - only one lifeline can now be used per question
+  - lock resets on next question and on second-chance replay of the same question
+- fixed repeat leakage in run sampling:
+  - recent-run avoidance is now applied during difficulty-band picks, not only fill phase
+  - seed fallback runs now rotate deterministically by run seed so back-to-back runs do not feel identical
+- added focused regression tests for:
+  - one-lifeline-per-question guardrail
+  - seed run rotation by run seed
+- re-verified `npm test` and `npm run build`
