@@ -261,23 +261,26 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
               {phase === "suspense" ? <div className="suspense-scan" aria-hidden="true" /> : null}
             </div>
 
-            <div className={["state-panel", phase === "suspense" ? "is-visible" : "", phase === "reveal" ? "is-reveal" : ""].join(" ")}>
-              <span className="state-label">{stateTitle}</span>
-              <p>
-                {phase === "active"
-                  ? "Select then lock."
-                  : phase === "suspense"
-                    ? "Answer locked."
-                    : revealResult === "correct"
-                      ? questionNumber === totalQuestions
-                        ? "Final rung secured."
-                        : "Advancing."
-                      : pendingSecondChanceRecovery
-                        ? "Shield triggered. Retry."
-                        : failureReason === "timeout"
-                          ? "Time expired."
-                          : "Wrong read."}
-              </p>
+            <div className="action-zone">
+              <div className={["decision-readout", stageToneClass].join(" ")}>
+                <strong>{decisionLabel}</strong>
+              </div>
+              <button
+                className={[
+                  "primary-cta",
+                  "hot-seat-cta",
+                  phase === "active" && selectedAnswer === null ? "is-disabled" : "",
+                  phase === "suspense" ? "is-quiet" : "",
+                  phase === "reveal" && revealResult === "incorrect" ? "is-danger" : ""
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                type="button"
+                onClick={phase === "active" ? onLockAnswer : undefined}
+                disabled={phase !== "active" || selectedAnswer === null}
+              >
+                {ctaLabel}
+              </button>
             </div>
 
             <div className="lifeline-strip">
@@ -318,26 +321,23 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
               </button>
             </div>
 
-            <div className="action-zone">
-              <div className={["decision-readout", stageToneClass].join(" ")}>
-                <strong>{decisionLabel}</strong>
-              </div>
-              <button
-                className={[
-                  "primary-cta",
-                  "hot-seat-cta",
-                  phase === "active" && selectedAnswer === null ? "is-disabled" : "",
-                  phase === "suspense" ? "is-quiet" : "",
-                  phase === "reveal" && revealResult === "incorrect" ? "is-danger" : ""
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-                type="button"
-                onClick={phase === "active" ? onLockAnswer : undefined}
-                disabled={phase !== "active" || selectedAnswer === null}
-              >
-                {ctaLabel}
-              </button>
+            <div className={["state-panel", phase === "suspense" ? "is-visible" : "", phase === "reveal" ? "is-reveal" : ""].join(" ")}>
+              <span className="state-label">{stateTitle}</span>
+              <p>
+                {phase === "active"
+                  ? "Select then lock."
+                  : phase === "suspense"
+                    ? "Answer locked."
+                    : revealResult === "correct"
+                      ? questionNumber === totalQuestions
+                        ? "Final rung secured."
+                        : "Advancing."
+                      : pendingSecondChanceRecovery
+                        ? "Shield triggered. Retry."
+                        : failureReason === "timeout"
+                          ? "Time expired."
+                          : "Wrong read."}
+              </p>
             </div>
           </div>
 
