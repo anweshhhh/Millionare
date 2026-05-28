@@ -218,6 +218,20 @@
 - verified both tables return `200` with empty arrays from the connected publishable client
 - unblocked the backend-side blocker that previously caused `PGRST205` during save-path verification
 
+## 2026-05-28 — `mmrm-game-01-randomized-run-selection`
+- added deterministic per-run question sampling for Supabase-backed catalogs
+- each run/replay now receives a seeded sampled 12-question pool instead of replaying a fixed ordering
+- introduced lightweight sampling guardrails:
+  - bounded category repetition preference
+  - baseline difficulty-band targeting
+  - deterministic tie-breaking from run seed
+- kept gameplay surface unchanged:
+  - no new UI
+  - no reducer rule changes
+  - no auth/persistence changes
+- added focused catalog tests for uniqueness, balance posture, and run-seed variation
+- verified `npm test` and `npm run build`
+
 ## 2026-04-05 — Live save path verification after migration
 - reused the current authenticated app session to verify live authenticated reads against the connected Supabase project
 - confirmed a real `profiles` row now exists for the signed-in app user

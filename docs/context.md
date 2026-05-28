@@ -747,3 +747,21 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - repository now loads 156 active `launch-v1` questions
 - Recommended next step:
   - run a deeper calibration pass on the larger pool before additional raw expansion
+
+## Latest randomized run-selection decisions (2026-05-28)
+- Completed gameplay content-rotation slice: `mmrm-game-01-randomized-run-selection`
+- Visible UX remains intentionally unchanged:
+  - same landing/start posture
+  - same hot-seat interaction model
+  - same suspense/reveal/result pacing
+- Supabase-backed play now rotates question pools per run:
+  - each run derives a deterministic 12-question sample from the larger active bank
+  - replay increments seed context to produce a new pool while remaining deterministic
+- Sampling guardrails are intentionally lightweight for this pass:
+  - baseline difficulty targeting (`easy`/`medium`/`hard`)
+  - category repeat restraint where possible
+  - safe fill behavior when strict guardrails would under-fill
+- Seed fallback behavior is unchanged:
+  - if live content is unavailable/thin, the app still uses the local seeded catalog
+- Current recommendation:
+  - next slice should add stronger anti-repeat memory across adjacent runs, then lifeline systems

@@ -7,6 +7,8 @@ import type { GameState } from "../domain/game.ts";
 
 export const RUN_QUESTION_COUNT = PROGRESSION_LADDER.length;
 export const LIVE_QUESTION_SET_VERSION = "launch-v1";
+const MAX_CATEGORY_OCCURRENCES = 2;
+const TARGET_PER_DIFFICULTY_BAND = 4;
 
 export type QuestionCatalogSource = "seed" | "supabase";
 
@@ -16,6 +18,8 @@ export type QuestionCatalog = {
   questions: Question[];
   runQuestionCount: number;
 };
+
+type SeededRandom = () => number;
 
 export function createSeedQuestionCatalog(): QuestionCatalog {
   return {
@@ -28,6 +32,184 @@ export function createSeedQuestionCatalog(): QuestionCatalog {
 
 function hasEnoughQuestions(questions: Question[]) {
   return questions.length >= RUN_QUESTION_COUNT;
+}
+
+function hashString(value: string) {
+  let hash = 2166136261;
+
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  return hash >>> 0;
+}
+
+function createSeededRandom(seedValue: string): SeededRandom {
+  let state = hashString(seedValue) || 1;
+
+  return () => {
+    state = (state * 1664525 + 1013904223) >>> 0;
+    return state / 4294967296;
+  };
+}
+
+function shuffleWithSeed<T>(items: T[], random: SeededRandom) {
+  const next = [...items];
+
+  for (let index = next.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(random() * (index + 1));
+    const current = next[index];
+    next[index] = next[swapIndex] as T;
+    next[swapIndex] = current as T;
+  }
+
+  return next;
+}
+
+function pickQuestionsByDifficultyBand(input: {
+  pool: Question[];
+  random: SeededRandom;
+  targetCount: number;
+  selectedIds: Set<string>;
+  selectedByCategory: Map<string, number>;
+}) {
+  const selected: Question[] = [];
+  const shuffled = shuffleWithSeed(input.pool, input.random);
+
+  for (const question of shuffled) {
+    if (selected.length >= input.targetCount) {
+      break;
+    }
+
+    if (input.selectedIds.has(question.id)) {
+      continue;
+    }
+
+    const categoryCount = input.selectedByCategory.get(question.category) ?? 0;
+
+    if (categoryCount >= MAX_CATEGORY_OCCURRENCES) {
+      continue;
+    }
+
+    selected.push(question);
+    input.selectedIds.add(question.id);
+    input.selectedByCategory.set(question.category, categoryCount + 1);
+  }
+
+  return selected;
+}
+
+function fillRemainingQuestions(input: {
+  allQuestions: Question[];
+  random: SeededRandom;
+  selectedIds: Set<string>;
+  selectedByCategory: Map<string, number>;
+  targetCount: number;
+}) {
+  const remaining = shuffleWithSeed(
+    input.allQuestions.filter((question) => !input.selectedIds.has(question.id)),
+    input.random
+  );
+  const fill: Question[] = [];
+
+  for (const question of remaining) {
+    if (fill.length >= input.targetCount) {
+      break;
+    }
+
+    const categoryCount = input.selectedByCategory.get(question.category) ?? 0;
+
+    if (categoryCount < MAX_CATEGORY_OCCURRENCES) {
+      fill.push(question);
+      input.selectedIds.add(question.id);
+      input.selectedByCategory.set(question.category, categoryCount + 1);
+    }
+  }
+
+  if (fill.length < input.targetCount) {
+    for (const question of remaining) {
+      if (fill.length >= input.targetCount) {
+        break;
+      }
+
+      if (input.selectedIds.has(question.id)) {
+        continue;
+      }
+
+      fill.push(question);
+      input.selectedIds.add(question.id);
+    }
+  }
+
+  return fill;
+}
+
+export function sampleRunQuestions(catalog: QuestionCatalog, runSeed: string) {
+  if (catalog.questions.length <= catalog.runQuestionCount) {
+    return catalog.questions;
+  }
+
+  const random = createSeededRandom(`${catalog.questionSetVersion}:${runSeed}`);
+  const selectedIds = new Set<string>();
+  const selectedByCategory = new Map<string, number>();
+  const byBand = {
+    easy: catalog.questions.filter((question) => question.difficultyBand === "easy"),
+    medium: catalog.questions.filter((question) => question.difficultyBand === "medium"),
+    hard: catalog.questions.filter((question) => question.difficultyBand === "hard")
+  };
+
+  const selected = [
+    ...pickQuestionsByDifficultyBand({
+      pool: byBand.easy,
+      random,
+      targetCount: TARGET_PER_DIFFICULTY_BAND,
+      selectedIds,
+      selectedByCategory
+    }),
+    ...pickQuestionsByDifficultyBand({
+      pool: byBand.medium,
+      random,
+      targetCount: TARGET_PER_DIFFICULTY_BAND,
+      selectedIds,
+      selectedByCategory
+    }),
+    ...pickQuestionsByDifficultyBand({
+      pool: byBand.hard,
+      random,
+      targetCount: TARGET_PER_DIFFICULTY_BAND,
+      selectedIds,
+      selectedByCategory
+    })
+  ];
+  const remainingCount = catalog.runQuestionCount - selected.length;
+
+  if (remainingCount > 0) {
+    selected.push(
+      ...fillRemainingQuestions({
+        allQuestions: catalog.questions,
+        random,
+        selectedIds,
+        selectedByCategory,
+        targetCount: remainingCount
+      })
+    );
+  }
+
+  return shuffleWithSeed(selected.slice(0, catalog.runQuestionCount), random);
+}
+
+export function createRunQuestionCatalog(input: {
+  catalog: QuestionCatalog;
+  runNumber: number;
+}) {
+  const sampledQuestions = sampleRunQuestions(input.catalog, `${input.runNumber}`);
+
+  return {
+    ...input.catalog,
+    questions: sampledQuestions,
+    runQuestionCount: Math.min(input.catalog.runQuestionCount, sampledQuestions.length)
+  } satisfies QuestionCatalog;
 }
 
 export function createSupabaseQuestionCatalog(contentQuestions: ContentQuestion[]): QuestionCatalog | null {

@@ -31,6 +31,7 @@ import { listActiveQuestions } from "./lib/supabase/repositories.ts";
 import { selectNextAdaptiveQuestionId } from "./game/adaptive-selection.ts";
 import { QUESTION_SET_VERSION, SEEDED_QUESTIONS } from "./seed/questions.ts";
 import {
+  createRunQuestionCatalog,
   createSeedQuestionCatalog,
   getFallbackNextQuestionId,
   getInitialQuestionId,
@@ -321,7 +322,10 @@ export default function App() {
 
   const handleStartRun = () => {
     resetSaveState();
-    const nextCatalog = availableCatalog;
+    const nextCatalog = createRunQuestionCatalog({
+      catalog: availableCatalog,
+      runNumber: state.runNumber
+    });
     setRunCatalog(nextCatalog);
     dispatch({
       type: "START_RUN",
@@ -332,7 +336,10 @@ export default function App() {
 
   const handleReplay = () => {
     resetSaveState();
-    const nextCatalog = availableCatalog;
+    const nextCatalog = createRunQuestionCatalog({
+      catalog: availableCatalog,
+      runNumber: state.runNumber + 1
+    });
     setRunCatalog(nextCatalog);
     dispatch({
       type: "REPLAY",

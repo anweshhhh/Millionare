@@ -43,6 +43,7 @@ Phase 1 is complete. Phase 2 is complete enough to close with live auth/save, pe
 - entry screen with immediate start CTA
 - hot-seat gameplay screen with right-side progression ladder
 - 12-question run with Supabase-backed question sourcing when available, otherwise seeded fallback
+- Supabase-backed runs now sample a deterministic per-run 12-question pool for replay variety
 - 20 second timer
 - explicit select then `LOCK ANSWER` interaction
 - suspense pause before reveal
