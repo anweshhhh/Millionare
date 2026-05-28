@@ -544,6 +544,20 @@ button {
   font-size: 0.62rem;
 }
 
+.status-progress {
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  width: min(180px, 50vw);
+}
+
+.status-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(123, 214, 207, 0.5), var(--accent-strong));
+}
+
 .status-pill.is-suspense {
   border-color: rgba(173, 255, 246, 0.22);
   background: rgba(173, 255, 246, 0.08);
@@ -943,6 +957,20 @@ button {
   background: linear-gradient(180deg, rgba(123, 214, 207, 0.5), var(--accent-strong));
 }
 
+.ladder-run-progress {
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.ladder-run-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(123, 214, 207, 0.5), var(--accent-strong));
+}
+
 .ladder-step {
   display: grid;
   gap: 2px;
@@ -1268,7 +1296,7 @@ button {
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 960px) {
   .app-shell {
     padding: 36px 24px 80px;
   }
@@ -1337,7 +1365,7 @@ button {
   }
 }
 
-@media (max-width: 719px) {
+@media (max-width: 959px) {
   .question-layout {
     grid-template-columns: minmax(0, 1fr);
     gap: 10px;
@@ -1372,9 +1400,12 @@ button {
     display: none;
   }
 
-  .ladder-step {
-    min-width: 58px;
-    padding: 6px 8px;
+  .ladder-run-progress {
+    display: block;
+  }
+
+  .ladder-steps {
+    display: none;
   }
 
   .result-shell {
@@ -1401,12 +1432,6 @@ button {
   }
 }
 
-@media (max-width: 420px) {
-  .question-layout {
-    grid-template-columns: minmax(0, 1fr) 86px;
-  }
-}
-
 @media (max-height: 760px) {
   .question-subcopy {
     display: none;
@@ -1416,8 +1441,18 @@ button {
     padding: 14px;
   }
 
+  .question-card h2 {
+    font-size: clamp(1.22rem, 4.9vw, 1.58rem);
+    line-height: 1.16;
+  }
+
   .answer-card {
     padding: 13px;
+  }
+
+  .answer-copy {
+    font-size: 0.92rem;
+    line-height: 1.38;
   }
 
   .state-panel {

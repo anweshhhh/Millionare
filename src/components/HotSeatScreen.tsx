@@ -145,6 +145,7 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
             : "Advancing"
           : "Ending Run";
   const shouldMaskCorrectReveal = phase === "reveal" && pendingSecondChanceRecovery;
+  const questionProgressPercent = Math.round((questionNumber / Math.max(totalQuestions, 1)) * 100);
 
   return (
     <section className={["screen", "hot-seat-screen", stageToneClass].join(" ")}>
@@ -164,8 +165,10 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
               </div>
             </div>
             <div className="status-meta">
-              RUN {String(runNumber).padStart(2, "0")} | Q {String(questionNumber).padStart(2, "0")} /{" "}
-              {String(totalQuestions).padStart(2, "0")}
+              RUN {String(runNumber).padStart(2, "0")}
+            </div>
+            <div className="status-progress" aria-label={`Question progress ${questionProgressPercent}%`}>
+              <div className="status-progress-fill" style={{ width: `${questionProgressPercent}%` }} />
             </div>
           </div>
 

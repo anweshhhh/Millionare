@@ -21,6 +21,7 @@ export function ProgressLadder(props: ProgressLadderProps) {
           : "Signal break"
         : "Tracking live";
   const completionPercent = `${(highestClearedRank / PROGRESSION_LADDER.length) * 100}%`;
+  const runProgressPercent = `${(Math.min(currentRank, PROGRESSION_LADDER.length) / PROGRESSION_LADDER.length) * 100}%`;
 
   return (
     <aside className={["ladder-rail", `phase-${phase}`].join(" ")} aria-label="Progression ladder">
@@ -32,8 +33,12 @@ export function ProgressLadder(props: ProgressLadderProps) {
         <div className="ladder-meter">
           <div className="ladder-meter-fill" style={{ height: completionPercent }} />
         </div>
+        <div className="ladder-run-progress" aria-label="Run progression">
+          <div className="ladder-run-progress-fill" style={{ width: runProgressPercent }} />
+        </div>
       </div>
-      {[...PROGRESSION_LADDER].reverse().map((step) => {
+      <div className="ladder-steps">
+        {[...PROGRESSION_LADDER].reverse().map((step) => {
         const isCleared = step.rank <= highestClearedRank;
         const isActive = phase !== "result" && step.rank === currentRank;
         const isResolvedCorrect = phase === "reveal" && revealResult === "correct" && step.rank === currentRank;
@@ -56,7 +61,8 @@ export function ProgressLadder(props: ProgressLadderProps) {
             <span className="ladder-step-label">{step.label}</span>
           </div>
         );
-      })}
+        })}
+      </div>
     </aside>
   );
 }
