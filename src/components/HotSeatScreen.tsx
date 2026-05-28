@@ -82,27 +82,25 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
   const timerLabel =
     phase === "active"
       ? timeRemaining <= 5
-        ? "Critical window"
+        ? "Critical"
         : timeRemaining <= 10
-          ? "Pressure rising"
-          : "Timer live"
+          ? "Warning"
+          : "Live"
       : phase === "suspense"
-        ? "Timer frozen"
+        ? "Frozen"
         : failureReason === "timeout"
-          ? "Timer expired"
-          : "Verdict locked";
+          ? "Expired"
+          : "Locked";
   const timerDetail =
     phase === "active"
       ? `${timeRemaining}s remaining`
       : phase === "suspense"
-        ? "Decision held"
+        ? "Hold"
         : failureReason === "timeout"
-          ? "No lock recorded"
+          ? "No lock"
           : revealResult === "correct"
-            ? questionNumber === totalQuestions
-              ? "Run closure incoming"
-              : "Next question loading"
-            : "Result transition incoming";
+            ? "Advance"
+            : "Result";
   const timerStyle = {
     "--timer-progress": `${(timeRemaining / QUESTION_TIME_LIMIT) * 100}%`
   } as CSSProperties;
@@ -194,14 +192,14 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
               <h2>{question.prompt}</h2>
               <p className="question-subcopy">
                 {phase === "active"
-                  ? "Pick your read carefully. The timer only stops when you commit."
+                  ? "Choose. Lock. Hold your nerve."
                   : phase === "suspense"
-                    ? "The room goes quiet while the locked read is tested."
+                    ? "The locked read is being tested."
                     : revealResult === "correct"
-                      ? "The answer held under pressure. The ladder opens upward."
+                      ? "Confirmed. Moving up."
                       : failureReason === "timeout"
-                        ? "The window closed before the answer became real."
-                        : "The locked read failed and the run snapped shut."}
+                        ? "Time ran out."
+                        : "The lock failed."}
               </p>
             </div>
 
@@ -265,24 +263,21 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
 
             <div className={["state-panel", phase === "suspense" ? "is-visible" : "", phase === "reveal" ? "is-reveal" : ""].join(" ")}>
               <span className="state-label">{stateTitle}</span>
-              {phase === "active" ? (
-                <p>Select an answer, then lock it in. The clock only stops when you commit.</p>
-              ) : null}
-              {phase === "suspense" ? (
-                <p>Answer locked. Timer frozen. Hold the line.</p>
-              ) : null}
-              {phase === "reveal" && revealResult === "correct" ? (
-                <p>{questionNumber === totalQuestions ? "Read confirmed. Final rung secured." : "Read confirmed. Advancing automatically."}</p>
-              ) : null}
-              {phase === "reveal" && revealResult === "incorrect" ? (
-                <p>
-                  {pendingSecondChanceRecovery
-                    ? "Shield triggered. Resetting this question."
-                    : failureReason === "timeout"
-                      ? "Time expired. Moving to the run result."
-                      : "False read. Moving to the run result."}
-                </p>
-              ) : null}
+              <p>
+                {phase === "active"
+                  ? "Select then lock."
+                  : phase === "suspense"
+                    ? "Answer locked."
+                    : revealResult === "correct"
+                      ? questionNumber === totalQuestions
+                        ? "Final rung secured."
+                        : "Advancing."
+                      : pendingSecondChanceRecovery
+                        ? "Shield triggered. Retry."
+                        : failureReason === "timeout"
+                          ? "Time expired."
+                          : "Wrong read."}
+              </p>
             </div>
 
             <div className="lifeline-strip">
@@ -325,7 +320,6 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
 
             <div className="action-zone">
               <div className={["decision-readout", stageToneClass].join(" ")}>
-                <span>Decision</span>
                 <strong>{decisionLabel}</strong>
               </div>
               <button
