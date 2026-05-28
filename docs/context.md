@@ -723,3 +723,27 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - repository now loads 72 active `launch-v1` questions
 - Current recommendation:
   - the next meaningful full-scope lift should come from content calibration on the deeper pool or broader product scope, not more raw count alone
+
+## Latest bank expansion v4 decisions (2026-05-28)
+- Completed bank expansion slice: `mmrm-content-08-bank-expansion-v4`
+- The live `launch-v1` bank now contains 156 active questions.
+- Expansion posture remained intentionally narrow:
+  - same `questions` table
+  - same adaptive metadata contract
+  - same 12-question visible run format
+- This slice focused on replay depth and adaptive breathing room:
+  - deeper category coverage within the existing taxonomy
+  - stronger medium/hard pool for later-run tension
+  - enough total volume to reduce early repetition in repeated sessions
+- Current bank shape after v4 expansion:
+  - `easy = 46`
+  - `medium = 51`
+  - `hard = 59`
+  - `calm = 48`
+  - `neutral = 65`
+  - `spiky = 43`
+- Live verification confirms the expanded bank is active in Supabase:
+  - bootstrap succeeded
+  - repository now loads 156 active `launch-v1` questions
+- Recommended next step:
+  - run a deeper calibration pass on the larger pool before additional raw expansion

@@ -1,17 +1,17 @@
 # Review Brief
 
 ## Slice
-`mmrm-content-06-bank-expansion-v3`
+`mmrm-content-08-bank-expansion-v4`
 
 ## Goal
-Expand the live Supabase-backed question bank so the product gets materially deeper replay value without changing visible gameplay.
+Expand the live Supabase-backed launch bank to materially improve replay depth without changing visible gameplay.
 
 ## What changed
-- Expanded the checked-in `launch-v1` bank from 48 to 72 active curated questions.
-- Added 24 new hand-curated rows across the existing category set.
+- Expanded the checked-in `launch-v1` bank from 72 to 156 active curated questions.
+- Added 84 new rows across the existing category set.
 - Preserved the current content contract and adaptive metadata shape.
-- Used the new batch to strengthen hard/spiky coverage instead of only adding easy filler.
-- Re-bootstrapped the expanded bank into Supabase successfully.
+- Updated the content test expectation to match the expanded checked-in bank.
+- Re-bootstrapped Supabase successfully and verified repository loading on the live set.
 
 ## Scope guard
 - No gameplay rule changes
@@ -24,4 +24,4 @@ Expand the live Supabase-backed question bank so the product gets materially dee
 - `npm test` passed
 - `npm run build` passed
 - `npm run content:bootstrap` passed
-- repository now loads 72 active `launch-v1` questions
+- repository now loads 156 active `launch-v1` questions

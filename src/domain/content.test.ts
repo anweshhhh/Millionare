@@ -192,7 +192,7 @@ test("checked-in question bank JSON normalizes cleanly", () => {
   const parsed = JSON.parse(readFileSync(filePath, "utf8")) as QuestionImportRecord[];
   const prepared = prepareQuestionImportRows(parsed);
 
-  assert.equal(prepared.length, 72);
+  assert.equal(prepared.length, 156);
   assert.equal(prepared[0]?.question_set_version, "launch-v1");
   assert.ok(prepared.every((row) => row.is_active !== false));
 });
