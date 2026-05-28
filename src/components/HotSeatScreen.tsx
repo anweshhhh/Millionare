@@ -146,6 +146,7 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
             ? "Run Secured"
             : "Advancing"
           : "Ending Run";
+  const shouldMaskCorrectReveal = phase === "reveal" && pendingSecondChanceRecovery;
 
   return (
     <section className={["screen", "hot-seat-screen", stageToneClass].join(" ")}>
@@ -210,7 +211,7 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
                   const isSelected = phase === "active" && selectedAnswer === optionIndex;
                   const isEliminated = eliminatedAnswerIndexes.includes(optionIndex);
                   const isLocked = lockedAnswer === optionIndex;
-                  const isCorrect = revealResult !== null && optionIndex === correctIndex;
+                  const isCorrect = !shouldMaskCorrectReveal && revealResult !== null && optionIndex === correctIndex;
                   const isWrongPick =
                     revealResult === "incorrect" && lockedAnswer === optionIndex && optionIndex !== correctIndex;
                   const isDimmed =

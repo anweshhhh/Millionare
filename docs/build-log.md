@@ -894,3 +894,12 @@
   - no gameplay rule changes
   - no auth/persistence schema changes
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-28 — `mmrm-game-05a-second-chance-reveal-mask`
+- fixed a second-chance reveal leak where the correct option could be exposed during shield recovery
+- recovery reveal now masks correct-option highlight until the retry attempt resolves
+- kept fix narrow:
+  - no gameplay-rule changes
+  - no schema/auth changes
+  - no new dependencies
+- re-verified `npm test` and `npm run build`

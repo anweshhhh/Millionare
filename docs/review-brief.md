@@ -1,21 +1,15 @@
 # Review Brief
 
 ## Slice
-`mmrm-game-05-replay-memory-commit-timing`
+`mmrm-game-05a-second-chance-reveal-mask`
 
 ## Goal
-Finalize replay-memory behavior so anti-repeat state reflects completed runs, not just started runs.
+Patch a fairness bug in second-chance flow where recovery reveal exposed the correct option.
 
 ## What changed
-- Moved `storeRecentRunQuestionIds(...)` calls from start/replay handlers to a result-state effect.
-- Added a run-level guard key to avoid duplicate writes for the same completed run.
-- Kept run-start sampling behavior unchanged while improving memory fidelity.
-
-## Scope guard
-- No visible UI changes
-- No gameplay rule/timer changes
-- No auth or schema changes
-- No new dependencies
+- Masked correct-option highlight during shield-triggered recovery reveal.
+- Retry now proceeds without revealing the correct answer beforehand.
+- Kept all other gameplay timing/flow unchanged.
 
 ## Verification
 - `npm test` passed

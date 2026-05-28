@@ -831,3 +831,8 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - no auth/persistence model changes
 - Current recommendation:
   - run final local gameplay smoke checks, then proceed to planned UI design pass
+
+## Latest second-chance reveal fix (2026-05-28)
+- Fixed a gameplay leak where second-chance recovery reveal could expose the correct option before retry.
+- Recovery reveal now withholds correct-option highlighting during the shield-triggered reset beat.
+- This keeps second-chance fair while preserving existing suspense/reveal flow and UI structure.
