@@ -51,7 +51,8 @@ button {
   position: relative;
   min-height: 100vh;
   padding: 24px 16px 72px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .app-backdrop,
