@@ -647,7 +647,7 @@ button {
 .play-stage {
   display: grid;
   gap: 12px;
-  padding-bottom: calc(86px + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(186px + env(safe-area-inset-bottom, 0px));
 }
 
 .question-card,
@@ -818,6 +818,26 @@ button {
   color: var(--ink);
 }
 
+.state-panel.is-hidden-active {
+  display: none;
+}
+
+.action-dock {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+  z-index: 25;
+  width: min(calc(100% - 24px), 560px);
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(8, 15, 24, 0.94);
+  backdrop-filter: blur(12px);
+}
+
 .lifeline-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -849,17 +869,18 @@ button {
   color: var(--muted);
 }
 
+.lifeline-meta {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .action-zone {
   display: grid;
-  gap: 10px;
-  position: sticky;
-  bottom: calc(8px + env(safe-area-inset-bottom, 0px));
-  z-index: 3;
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(8, 15, 24, 0.9);
-  backdrop-filter: blur(10px);
+  gap: 8px;
 }
 
 .decision-readout {
@@ -963,6 +984,7 @@ button {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   overflow: hidden;
+  display: none;
 }
 
 .ladder-run-progress-fill {
@@ -1332,10 +1354,13 @@ button {
     padding-bottom: 0;
   }
 
-  .action-zone {
+  .action-dock {
     position: static;
+    left: auto;
+    transform: none;
     bottom: auto;
     z-index: auto;
+    width: 100%;
     padding: 0;
     border: 0;
     border-radius: 0;
@@ -1462,6 +1487,19 @@ button {
 
   .lifeline-chip {
     min-height: 38px;
+  }
+
+  .play-stage {
+    padding-bottom: calc(170px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .action-dock {
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .hot-seat-cta {
+    min-height: 48px;
   }
 }
 

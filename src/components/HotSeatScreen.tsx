@@ -264,67 +264,14 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
               {phase === "suspense" ? <div className="suspense-scan" aria-hidden="true" /> : null}
             </div>
 
-            <div className="action-zone">
-              <div className={["decision-readout", stageToneClass].join(" ")}>
-                <strong>{decisionLabel}</strong>
-              </div>
-              <button
-                className={[
-                  "primary-cta",
-                  "hot-seat-cta",
-                  phase === "active" && selectedAnswer === null ? "is-disabled" : "",
-                  phase === "suspense" ? "is-quiet" : "",
-                  phase === "reveal" && revealResult === "incorrect" ? "is-danger" : ""
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-                type="button"
-                onClick={phase === "active" ? onLockAnswer : undefined}
-                disabled={phase !== "active" || selectedAnswer === null}
-              >
-                {ctaLabel}
-              </button>
-            </div>
-
-            <div className="lifeline-strip">
-              <button
-                type="button"
-                className={["lifeline-chip", lifelines.fiftyFifty ? "" : "is-spent"].filter(Boolean).join(" ")}
-                onClick={onUseFiftyFifty}
-                disabled={phase !== "active" || !lifelines.fiftyFifty || lifelineUsedOnCurrentQuestion}
-              >
-                50:50
-              </button>
-              <button
-                type="button"
-                className={["lifeline-chip", lifelines.extraTime ? "" : "is-spent"].filter(Boolean).join(" ")}
-                onClick={onUseExtraTime}
-                disabled={phase !== "active" || !lifelines.extraTime || lifelineUsedOnCurrentQuestion}
-              >
-                +10s
-              </button>
-              <button
-                type="button"
-                className={[
-                  "lifeline-chip",
-                  lifelines.secondChance ? "" : "is-spent",
-                  lifelines.secondChanceArmed ? "is-armed" : ""
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-                onClick={onUseSecondChance}
-                disabled={
-                  phase !== "active" ||
-                  !lifelines.secondChance ||
-                  lifelines.secondChanceArmed ||
-                  lifelineUsedOnCurrentQuestion
-                }
-              >
-                {lifelines.secondChanceArmed ? "Shield Armed" : "Second Chance"}
-              </button>
-            </div>
-
-            <div className={["state-panel", phase === "suspense" ? "is-visible" : "", phase === "reveal" ? "is-reveal" : ""].join(" ")}>
+            <div
+              className={[
+                "state-panel",
+                phase === "active" ? "is-hidden-active" : "",
+                phase === "suspense" ? "is-visible" : "",
+                phase === "reveal" ? "is-reveal" : ""
+              ].join(" ")}
+            >
               <span className="state-label">{stateTitle}</span>
               <p>
                 {phase === "active"
@@ -339,8 +286,73 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
                         ? "Shield triggered. Retry."
                         : failureReason === "timeout"
                           ? "Time expired."
-                          : "Wrong read."}
+                  : "Wrong read."}
               </p>
+            </div>
+
+            <div className="action-dock" aria-label="Primary answer controls">
+              <div className={["decision-readout", stageToneClass].join(" ")}>
+                <strong>{decisionLabel}</strong>
+              </div>
+
+              <p className="lifeline-meta">1 lifeline per question</p>
+
+              <div className="lifeline-strip">
+                <button
+                  type="button"
+                  className={["lifeline-chip", lifelines.fiftyFifty ? "" : "is-spent"].filter(Boolean).join(" ")}
+                  onClick={onUseFiftyFifty}
+                  disabled={phase !== "active" || !lifelines.fiftyFifty || lifelineUsedOnCurrentQuestion}
+                >
+                  50:50
+                </button>
+                <button
+                  type="button"
+                  className={["lifeline-chip", lifelines.extraTime ? "" : "is-spent"].filter(Boolean).join(" ")}
+                  onClick={onUseExtraTime}
+                  disabled={phase !== "active" || !lifelines.extraTime || lifelineUsedOnCurrentQuestion}
+                >
+                  +10s
+                </button>
+                <button
+                  type="button"
+                  className={[
+                    "lifeline-chip",
+                    lifelines.secondChance ? "" : "is-spent",
+                    lifelines.secondChanceArmed ? "is-armed" : ""
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                  onClick={onUseSecondChance}
+                  disabled={
+                    phase !== "active" ||
+                    !lifelines.secondChance ||
+                    lifelines.secondChanceArmed ||
+                    lifelineUsedOnCurrentQuestion
+                  }
+                >
+                  {lifelines.secondChanceArmed ? "Shield Armed" : "Second Chance"}
+                </button>
+              </div>
+
+              <div className="action-zone">
+                <button
+                  className={[
+                    "primary-cta",
+                    "hot-seat-cta",
+                    phase === "active" && selectedAnswer === null ? "is-disabled" : "",
+                    phase === "suspense" ? "is-quiet" : "",
+                    phase === "reveal" && revealResult === "incorrect" ? "is-danger" : ""
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                  type="button"
+                  onClick={phase === "active" ? onLockAnswer : undefined}
+                  disabled={phase !== "active" || selectedAnswer === null}
+                >
+                  {ctaLabel}
+                </button>
+              </div>
             </div>
           </div>
 

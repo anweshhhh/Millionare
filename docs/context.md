@@ -859,3 +859,13 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - ladder condenses to a slim horizontal presentation on narrow mobile screens
 - Result replay speed improved:
   - replay action appears earlier in result layout to reduce post-run scroll
+
+## Latest mobile action-dock decisions (2026-05-28)
+- Completed mobile control-visibility fix slice: `mmrm-ui-03-mobile-action-dock-and-focus-mode`
+- The hot-seat primary controls are now pinned in a true viewport-fixed mobile dock.
+- Active answering posture is cleaner:
+  - non-critical state panel is hidden during active decision-making
+  - lifeline usage constraints are surfaced with concise helper text
+- This slice remains UX-only:
+  - no gameplay-rule changes
+  - no auth/persistence/schema changes

@@ -1,17 +1,16 @@
 # Review Brief
 
 ## Slice
-`mmrm-ui-02-mobile-fast-play-pass`
+`mmrm-ui-03-mobile-action-dock-and-focus-mode`
 
 ## Goal
-Improve mobile fast-play UX by reducing in-question scrolling and keeping primary actions continuously reachable.
+Eliminate remaining mobile scroll friction by keeping primary answer controls continuously visible.
 
 ## What changed
-- Added sticky mobile action zone so `LOCK ANSWER` stays visible while playing.
-- Reordered hot-seat blocks so action controls come earlier than secondary helper panels.
-- Added compact small-height behavior (less vertical overhead in active play).
-- Added compact mobile ladder layout (horizontal slim progression strip on narrow screens).
-- Moved result action block higher so replay remains above fold more reliably on mobile.
+- Implemented a viewport-fixed mobile action dock for hot-seat controls.
+- Dock now contains decision status, lifeline controls, and `LOCK ANSWER`.
+- Added active-phase focus behavior by hiding lower-priority state panel while answering.
+- Added concise lifeline usage guidance (`1 lifeline per question`).
 
 ## Scope guard
 - No gameplay-rule changes

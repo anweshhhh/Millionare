@@ -932,3 +932,16 @@
 - result-flow mobile improvement:
   - replay action block moved higher so replay stays above fold more reliably
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-28 — `mmrm-ui-03-mobile-action-dock-and-focus-mode`
+- fixed remaining mobile play friction where `LOCK ANSWER` could still fall below the fold
+- replaced in-flow sticky behavior with a viewport-fixed mobile action dock that keeps primary controls visible:
+  - decision state
+  - lifelines
+  - `LOCK ANSWER`
+- strengthened active-phase focus mode:
+  - hides lower-priority status panel while actively answering
+  - keeps first-glance attention on timer, question, answers, and primary controls
+- improved lifeline clarity with compact helper cue:
+  - `1 lifeline per question`
+- re-verified `npm test` and `npm run build`
