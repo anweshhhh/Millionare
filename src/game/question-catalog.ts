@@ -106,14 +106,21 @@ function fillRemainingQuestions(input: {
   selectedIds: Set<string>;
   selectedByCategory: Map<string, number>;
   targetCount: number;
+  avoidedIds: Set<string>;
 }) {
-  const remaining = shuffleWithSeed(
-    input.allQuestions.filter((question) => !input.selectedIds.has(question.id)),
+  const remaining = input.allQuestions.filter((question) => !input.selectedIds.has(question.id));
+  const preferred = shuffleWithSeed(
+    remaining.filter((question) => !input.avoidedIds.has(question.id)),
     input.random
   );
+  const avoided = shuffleWithSeed(
+    remaining.filter((question) => input.avoidedIds.has(question.id)),
+    input.random
+  );
+  const orderedRemaining = [...preferred, ...avoided];
   const fill: Question[] = [];
 
-  for (const question of remaining) {
+  for (const question of orderedRemaining) {
     if (fill.length >= input.targetCount) {
       break;
     }
@@ -128,7 +135,7 @@ function fillRemainingQuestions(input: {
   }
 
   if (fill.length < input.targetCount) {
-    for (const question of remaining) {
+    for (const question of orderedRemaining) {
       if (fill.length >= input.targetCount) {
         break;
       }
@@ -145,7 +152,11 @@ function fillRemainingQuestions(input: {
   return fill;
 }
 
-export function sampleRunQuestions(catalog: QuestionCatalog, runSeed: string) {
+export function sampleRunQuestions(
+  catalog: QuestionCatalog,
+  runSeed: string,
+  options?: { recentlyUsedQuestionIds?: string[] }
+) {
   if (catalog.questions.length <= catalog.runQuestionCount) {
     return catalog.questions;
   }
@@ -153,6 +164,7 @@ export function sampleRunQuestions(catalog: QuestionCatalog, runSeed: string) {
   const random = createSeededRandom(`${catalog.questionSetVersion}:${runSeed}`);
   const selectedIds = new Set<string>();
   const selectedByCategory = new Map<string, number>();
+  const avoidedIds = new Set(options?.recentlyUsedQuestionIds ?? []);
   const byBand = {
     easy: catalog.questions.filter((question) => question.difficultyBand === "easy"),
     medium: catalog.questions.filter((question) => question.difficultyBand === "medium"),
@@ -191,7 +203,8 @@ export function sampleRunQuestions(catalog: QuestionCatalog, runSeed: string) {
         random,
         selectedIds,
         selectedByCategory,
-        targetCount: remainingCount
+        targetCount: remainingCount,
+        avoidedIds
       })
     );
   }
@@ -202,8 +215,21 @@ export function sampleRunQuestions(catalog: QuestionCatalog, runSeed: string) {
 export function createRunQuestionCatalog(input: {
   catalog: QuestionCatalog;
   runNumber: number;
+  recentlyUsedQuestionIds?: string[];
 }) {
-  const sampledQuestions = sampleRunQuestions(input.catalog, `${input.runNumber}`);
+  const avoidIds = new Set(input.recentlyUsedQuestionIds ?? []);
+  const filteredCatalog =
+    avoidIds.size === 0
+      ? input.catalog
+      : {
+          ...input.catalog,
+          questions: input.catalog.questions.filter((question) => !avoidIds.has(question.id))
+        };
+  const sourceCatalog =
+    filteredCatalog.questions.length >= input.catalog.runQuestionCount ? filteredCatalog : input.catalog;
+  const sampledQuestions = sampleRunQuestions(sourceCatalog, `${input.runNumber}`, {
+    recentlyUsedQuestionIds: input.recentlyUsedQuestionIds
+  });
 
   return {
     ...input.catalog,

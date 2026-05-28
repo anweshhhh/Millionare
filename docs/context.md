@@ -765,3 +765,17 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - if live content is unavailable/thin, the app still uses the local seeded catalog
 - Current recommendation:
   - next slice should add stronger anti-repeat memory across adjacent runs, then lifeline systems
+
+## Latest recent-repeat guardrail decisions (2026-05-28)
+- Completed replay-depth stabilization slice: `mmrm-game-02-recent-run-repeat-guardrail`
+- The run sampler now uses a small adjacent-run memory:
+  - after start/replay, the current sampled run ids are retained in-memory
+  - the next sampled run attempts to avoid those ids when the live catalog has enough depth
+- Safety posture remains explicit:
+  - avoidance is preferred, not mandatory
+  - when avoidance would underfill the 12-question run, the sampler falls back to full-catalog sampling
+- Visible UX remains unchanged:
+  - no new player-facing controls or messaging
+  - same select/lock/suspense/reveal/result loop
+- Current recommendation:
+  - add lifelines next as a narrow gameplay-system slice without touching auth/admin surfaces

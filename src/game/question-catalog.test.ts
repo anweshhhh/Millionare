@@ -133,3 +133,32 @@ test("createRunQuestionCatalog produces varied pools for different run seeds", (
     runTwo.questions.map((question) => question.id)
   );
 });
+
+test("createRunQuestionCatalog avoids recently used questions when the pool can support it", () => {
+  const catalog = createSupabaseQuestionCatalog(
+    Array.from({ length: RUN_QUESTION_COUNT * 4 }, (_, index) => ({
+      ...createContentQuestion(index),
+      category: `Category ${index}`,
+      difficultyBand: ["easy", "medium", "hard"][index % 3] as "easy" | "medium" | "hard"
+    }))
+  );
+
+  assert.ok(catalog);
+
+  const firstRun = createRunQuestionCatalog({
+    catalog,
+    runNumber: 1
+  });
+  const secondRun = createRunQuestionCatalog({
+    catalog,
+    runNumber: 2,
+    recentlyUsedQuestionIds: firstRun.questions.map((question) => question.id)
+  });
+  const overlap = secondRun.questions.filter((question) =>
+    firstRun.questions.some((firstQuestion) => firstQuestion.id === question.id)
+  );
+
+  assert.equal(firstRun.questions.length, RUN_QUESTION_COUNT);
+  assert.equal(secondRun.questions.length, RUN_QUESTION_COUNT);
+  assert.equal(overlap.length, 0);
+});

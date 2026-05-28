@@ -830,3 +830,16 @@
   - `npm run content:bootstrap`
   - repository now loads 156 active `launch-v1` questions
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-28 — `mmrm-game-02-recent-run-repeat-guardrail`
+- added a narrow anti-repeat guardrail for adjacent replays in the live Supabase-backed flow
+- the app now remembers the most recent run's sampled question ids in-memory
+- next run/replay sampling softly avoids those ids when the catalog can support it
+- fallback remains safe:
+  - if strict avoidance would make the pool too small, the sampler falls back to the full catalog
+- kept scope narrow:
+  - no UI changes
+  - no gameplay rule/timer changes
+  - no auth/persistence/schema changes
+- added focused test coverage for recent-run overlap avoidance
+- re-verified `npm test` and `npm run build`

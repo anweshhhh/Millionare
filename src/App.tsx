@@ -61,6 +61,7 @@ export default function App() {
     useAuth();
   const [availableCatalog, setAvailableCatalog] = useState<QuestionCatalog>(() => createSeedQuestionCatalog());
   const [runCatalog, setRunCatalog] = useState<QuestionCatalog | null>(null);
+  const recentRunQuestionIdsRef = useRef<string[]>([]);
   const runStartedAtRef = useRef<string | null>(null);
   const completedRunRef = useRef<PendingRunBridge | null>(null);
   const questionCaptureRef = useRef<TransientQuestionCapture | null>(null);
@@ -324,9 +325,11 @@ export default function App() {
     resetSaveState();
     const nextCatalog = createRunQuestionCatalog({
       catalog: availableCatalog,
-      runNumber: state.runNumber
+      runNumber: state.runNumber,
+      recentlyUsedQuestionIds: recentRunQuestionIdsRef.current
     });
     setRunCatalog(nextCatalog);
+    recentRunQuestionIdsRef.current = nextCatalog.questions.map((question) => question.id);
     dispatch({
       type: "START_RUN",
       firstQuestionId: getInitialQuestionId(nextCatalog),
@@ -338,9 +341,11 @@ export default function App() {
     resetSaveState();
     const nextCatalog = createRunQuestionCatalog({
       catalog: availableCatalog,
-      runNumber: state.runNumber + 1
+      runNumber: state.runNumber + 1,
+      recentlyUsedQuestionIds: recentRunQuestionIdsRef.current
     });
     setRunCatalog(nextCatalog);
+    recentRunQuestionIdsRef.current = nextCatalog.questions.map((question) => question.id);
     dispatch({
       type: "REPLAY",
       firstQuestionId: getInitialQuestionId(nextCatalog),
