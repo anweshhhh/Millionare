@@ -910,3 +910,13 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - lifeline utility remains visible but less dominant
 - This slice is presentation-only:
   - no reducer/gameplay/auth/persistence/schema changes
+
+## Latest docs reconciliation decisions (2026-05-29)
+- Reconciled product docs after feedback-driven UX iterations to remove timeline ambiguity and conflicting mobile dock language.
+- Authoritative current hot-seat mobile behavior for demos/fundraising is:
+  - lock-first action hierarchy in the mobile control dock
+  - `LOCK ANSWER` remains primary and easy to reach in active play
+  - lifelines remain visible but secondary to the primary lock action
+- No product-scope expansion in this reconciliation slice:
+  - docs-only update
+  - no code or behavior changes

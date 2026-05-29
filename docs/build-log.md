@@ -248,6 +248,14 @@
 - preserved the existing lock/reveal rules and only changed the dock positioning behavior on mobile viewports
 - re-verified the app with `npm test` and `npm run build`
 
+## 2026-05-29 — docs reconciliation for fundraiser narrative
+- reconciled `README.md`, `docs/context.md`, and `docs/review-brief.md` so current product posture is consistent for external review
+- clarified authoritative mobile UX posture:
+  - lock-first mobile action dock
+  - `LOCK ANSWER` remains dominant
+  - lifelines remain secondary support controls
+- this slice is docs-only and does not change gameplay logic, auth, persistence, or schema
+
 ## 2026-04-05 — Live save path verification after migration
 - reused the current authenticated app session to verify live authenticated reads against the connected Supabase project
 - confirmed a real `profiles` row now exists for the signed-in app user
