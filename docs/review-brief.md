@@ -1,25 +1,27 @@
 # Review Brief
 
 ## Slice
-`mmrm-phase8-01-question-bank-quality-foundation`
+`mmrm-phase8-02-question-bank-quality-remediation`
 
 ## Goal
-Start Phase 8 with a narrow content quality and replay-variety tooling foundation so larger bank expansion can be measured and gated deterministically.
+Resolve current launch-bank quality warnings so the bank is cleaner, less repetitive, and less biased before larger expansion.
 
 ## What changed
-- Added `scripts/audit-question-bank.ts`.
-- Added `scripts/simulate-question-replay.ts`.
-- Added npm script wiring:
-  - `npm run content:audit`
-  - `npm run content:simulate`
-- Updated docs context/build-log for Phase 8 kickoff.
+- Updated `content/question-bank-v1.json` to remove normalized duplicate prompts.
+- Replaced repeated rows with unique curated prompts in the same categories.
+- Rebalanced correct-answer index distribution to reduce answer-position bias.
+- Re-ran quality tooling:
+  - `npm run content:audit` now reports `Warnings: none`
+  - `npm run content:simulate` remains stable with zero overlap in the default replay window.
 
 ## Scope guard
-- No gameplay behavior changes
+- No gameplay/reducer changes
 - No UI changes
 - No schema/persistence changes
 - No new dependencies
 
 ## Verification
+- `npm run content:audit` passed with no warnings
+- `npm run content:simulate` passed
 - `npm test` passed
 - `npm run build` passed

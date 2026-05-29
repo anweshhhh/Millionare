@@ -273,6 +273,18 @@
   - no UI changes
   - no schema/persistence changes
 - verified `npm test` and `npm run build`
+
+## 2026-05-29 — `mmrm-phase8-02-question-bank-quality-remediation`
+- remediated the checked-in `launch-v1` bank quality issues surfaced by `content:audit`
+- removed normalized duplicate prompts by replacing repeated rows with unique curated questions in the same domain categories
+- reduced answer-position bias by rebalancing correct-answer index distribution across A/B/C/D
+- re-ran quality gates:
+  - `npm run content:audit` now reports `Warnings: none`
+  - `npm run content:simulate` still reports zero overlap inside the default 5-run memory window
+- preserved scope constraints:
+  - no gameplay/reducer/UI changes
+  - no schema/persistence changes
+- verified `npm test` and `npm run build`
 - confirmed a real `profiles` row now exists for the signed-in app user
 - confirmed a real `runs` row now exists for the signed-in app user
 - confirmed the saved profile aggregates match the persisted run state for the latest live save:

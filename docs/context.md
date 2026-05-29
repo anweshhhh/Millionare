@@ -155,6 +155,12 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - This slice intentionally adds no gameplay/UI behavior changes.
 - Next Phase 8 slices should use these checks as merge gates while expanding curated question volume and balancing metadata coverage.
 
+## Latest content quality decisions (2026-05-29)
+- The checked-in `launch-v1` question bank has been remediated to clear local audit warnings.
+- Duplicate normalized prompts were removed from active rows.
+- Correct-answer index spread has been rebalanced to reduce option-position bias.
+- Replay/selection architecture is unchanged; this is a content-quality correction slice only.
+
 ## Latest auth decisions (2026-04-05)
 - Completed first user-facing Phase 2 slice: `mmrm-phase2-03-auth-shell-and-save-run`
 - Guest-first entry remains unchanged:

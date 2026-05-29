@@ -4,11 +4,11 @@
     "prompt": "Which planet in our solar system is known for its prominent rings?",
     "options": [
       "Mars",
-      "Saturn",
+      "Mercury",
       "Venus",
-      "Mercury"
+      "Saturn"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Science",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -20,12 +20,12 @@
     "external_key": "launch-q-002",
     "prompt": "Which city serves as the capital of Canada?",
     "options": [
-      "Toronto",
-      "Montreal",
       "Ottawa",
+      "Montreal",
+      "Toronto",
       "Vancouver"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "World Facts",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -38,11 +38,11 @@
     "prompt": "How many sides does a hexagon have?",
     "options": [
       "Five",
-      "Six",
+      "Eight",
       "Seven",
-      "Eight"
+      "Six"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Math",
     "difficulty_band": "easy",
     "pressure_tag": "neutral",
@@ -54,12 +54,12 @@
     "external_key": "launch-q-004",
     "prompt": "What gas do plants primarily absorb from the atmosphere?",
     "options": [
-      "Oxygen",
-      "Nitrogen",
       "Carbon dioxide",
+      "Nitrogen",
+      "Oxygen",
       "Helium"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "Biology",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -71,12 +71,12 @@
     "external_key": "launch-q-005",
     "prompt": "Which instrument typically has eighty-eight keys?",
     "options": [
-      "Violin",
-      "Trumpet",
       "Piano",
+      "Trumpet",
+      "Violin",
       "Flute"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "Music",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -89,11 +89,11 @@
     "prompt": "In computing, what does CPU stand for?",
     "options": [
       "Central Process Unit",
-      "Central Processing Unit",
+      "Control Program Upload",
       "Computer Power Utility",
-      "Control Program Upload"
+      "Central Processing Unit"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Technology",
     "difficulty_band": "easy",
     "pressure_tag": "neutral",
@@ -157,11 +157,11 @@
     "prompt": "Which ocean lies between eastern Africa and western Australia?",
     "options": [
       "Atlantic Ocean",
-      "Indian Ocean",
+      "Southern Ocean",
       "Arctic Ocean",
-      "Southern Ocean"
+      "Indian Ocean"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Geography",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -173,12 +173,12 @@
     "external_key": "launch-q-011",
     "prompt": "What is the square root of 144?",
     "options": [
-      "10",
-      "11",
       "12",
+      "11",
+      "10",
       "14"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "Math",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -191,11 +191,11 @@
     "prompt": "What is the chemical symbol for sodium?",
     "options": [
       "So",
-      "Na",
+      "Sm",
       "Sd",
-      "Sm"
+      "Na"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Science",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -207,12 +207,12 @@
     "external_key": "launch-q-013",
     "prompt": "Genghis Khan founded which empire?",
     "options": [
-      "Ottoman Empire",
-      "Roman Empire",
       "Mongol Empire",
+      "Roman Empire",
+      "Ottoman Empire",
       "Persian Empire"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "History",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -224,12 +224,12 @@
     "external_key": "launch-q-014",
     "prompt": "What does HTML stand for?",
     "options": [
-      "Hyper Trainer Marking Language",
-      "Home Tool Markup Logic",
       "HyperText Markup Language",
+      "Home Tool Markup Logic",
+      "Hyper Trainer Marking Language",
       "High Text Markdown Language"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "Technology",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -242,11 +242,11 @@
     "prompt": "Which playwright wrote 'Hamlet'?",
     "options": [
       "Christopher Marlowe",
-      "William Shakespeare",
+      "Oscar Wilde",
       "Ben Jonson",
-      "Oscar Wilde"
+      "William Shakespeare"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Literature",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -258,12 +258,12 @@
     "external_key": "launch-q-016",
     "prompt": "Which artist painted the ceiling of the Sistine Chapel?",
     "options": [
-      "Leonardo da Vinci",
-      "Raphael",
       "Michelangelo",
+      "Raphael",
+      "Leonardo da Vinci",
       "Caravaggio"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "Art",
     "difficulty_band": "hard",
     "pressure_tag": "spiky",
@@ -275,12 +275,12 @@
     "external_key": "launch-q-017",
     "prompt": "In which year did the Berlin Wall fall?",
     "options": [
-      "1985",
-      "1987",
       "1989",
+      "1987",
+      "1985",
       "1991"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "History",
     "difficulty_band": "hard",
     "pressure_tag": "spiky",
@@ -293,11 +293,11 @@
     "prompt": "Which blood type is considered the universal donor for red blood cell transfusions?",
     "options": [
       "AB positive",
-      "O negative",
+      "B positive",
       "A negative",
-      "B positive"
+      "O negative"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Biology",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -326,12 +326,12 @@
     "external_key": "launch-q-020",
     "prompt": "Which composer wrote the 'Moonlight Sonata'?",
     "options": [
-      "Mozart",
-      "Bach",
       "Beethoven",
+      "Bach",
+      "Mozart",
       "Chopin"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "Music",
     "difficulty_band": "hard",
     "pressure_tag": "spiky",
@@ -344,11 +344,11 @@
     "prompt": "Which element has the atomic number 79?",
     "options": [
       "Silver",
-      "Gold",
+      "Platinum",
       "Mercury",
-      "Platinum"
+      "Gold"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Science",
     "difficulty_band": "hard",
     "pressure_tag": "spiky",
@@ -361,11 +361,11 @@
     "prompt": "Which country hosted the 2016 Summer Olympics in Rio de Janeiro?",
     "options": [
       "China",
-      "Brazil",
+      "Japan",
       "United Kingdom",
-      "Japan"
+      "Brazil"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "World Facts",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -378,11 +378,11 @@
     "prompt": "What is the term for a word that sounds the same as another word but has a different meaning?",
     "options": [
       "Antonym",
-      "Homophone",
+      "Metaphor",
       "Synonym",
-      "Metaphor"
+      "Homophone"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Language",
     "difficulty_band": "medium",
     "pressure_tag": "calm",
@@ -412,11 +412,11 @@
     "prompt": "What force keeps planets in orbit around the Sun?",
     "options": [
       "Magnetism",
-      "Gravity",
+      "Radiation",
       "Friction",
-      "Radiation"
+      "Gravity"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Science",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -428,12 +428,12 @@
     "external_key": "launch-q-026",
     "prompt": "What is the SI unit of electric current?",
     "options": [
-      "Volt",
-      "Watt",
       "Ampere",
+      "Watt",
+      "Volt",
       "Ohm"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "Science",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -463,11 +463,11 @@
     "prompt": "Which country has Manila as its capital city?",
     "options": [
       "Malaysia",
-      "Philippines",
+      "Vietnam",
       "Indonesia",
-      "Vietnam"
+      "Philippines"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "World Facts",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -479,12 +479,12 @@
     "external_key": "launch-q-029",
     "prompt": "What is 15 percent of 200?",
     "options": [
-      "20",
-      "25",
       "30",
+      "25",
+      "20",
       "35"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "Math",
     "difficulty_band": "easy",
     "pressure_tag": "neutral",
@@ -496,12 +496,12 @@
     "external_key": "launch-q-030",
     "prompt": "What is 12 cubed?",
     "options": [
-      "1,248",
-      "1,440",
       "1,728",
+      "1,440",
+      "1,248",
       "1,872"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "Math",
     "difficulty_band": "medium",
     "pressure_tag": "spiky",
@@ -513,12 +513,12 @@
     "external_key": "launch-q-031",
     "prompt": "Which organ pumps blood through the human body?",
     "options": [
-      "Liver",
-      "Lung",
       "Heart",
+      "Lung",
+      "Liver",
       "Kidney"
     ],
-    "correct_answer_index": 2,
+    "correct_answer_index": 0,
     "category": "Biology",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -531,11 +531,11 @@
     "prompt": "Which organ filters waste from the blood to produce urine?",
     "options": [
       "Pancreas",
-      "Kidney",
+      "Gallbladder",
       "Spleen",
-      "Gallbladder"
+      "Kidney"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Biology",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -548,11 +548,11 @@
     "prompt": "How many lines are in a standard musical staff?",
     "options": [
       "Four",
-      "Five",
+      "Seven",
       "Six",
-      "Seven"
+      "Five"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Music",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -633,11 +633,11 @@
     "prompt": "Which epic poem features Achilles and Hector as central figures?",
     "options": [
       "The Odyssey",
-      "The Iliad",
+      "Beowulf",
       "The Aeneid",
-      "Beowulf"
+      "The Iliad"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Literature",
     "difficulty_band": "hard",
     "pressure_tag": "spiky",
@@ -650,11 +650,11 @@
     "prompt": "In painting, red and blue combine with which third color to form the primary color trio?",
     "options": [
       "Green",
-      "Yellow",
+      "Black",
       "Orange",
-      "Black"
+      "Yellow"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Art",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -667,11 +667,11 @@
     "prompt": "Which Dutch painter created 'The Night Watch'?",
     "options": [
       "Vermeer",
-      "Rembrandt",
+      "Frans Hals",
       "Van Gogh",
-      "Frans Hals"
+      "Rembrandt"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Art",
     "difficulty_band": "hard",
     "pressure_tag": "spiky",
@@ -684,11 +684,11 @@
     "prompt": "What is the term for a word spelled the same forward and backward?",
     "options": [
       "Anagram",
-      "Palindrome",
+      "Homonym",
       "Acronym",
-      "Homonym"
+      "Palindrome"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Language",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -701,11 +701,11 @@
     "prompt": "What is the term for a word formed from the initial letters of a phrase, like NASA?",
     "options": [
       "Metaphor",
-      "Acronym",
+      "Clause",
       "Prefix",
-      "Clause"
+      "Acronym"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Language",
     "difficulty_band": "medium",
     "pressure_tag": "calm",
@@ -735,11 +735,11 @@
     "prompt": "Which mountain range is commonly considered the boundary between Europe and Asia in Russia?",
     "options": [
       "Alps",
-      "Urals",
+      "Caucasus",
       "Carpathians",
-      "Caucasus"
+      "Urals"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Geography",
     "difficulty_band": "hard",
     "pressure_tag": "spiky",
@@ -752,11 +752,11 @@
     "prompt": "Who was the first president of the United States?",
     "options": [
       "Thomas Jefferson",
-      "George Washington",
+      "James Madison",
       "John Adams",
-      "James Madison"
+      "George Washington"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "History",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -769,11 +769,11 @@
     "prompt": "Which treaty formally ended World War I?",
     "options": [
       "Treaty of Tordesillas",
-      "Treaty of Versailles",
+      "Treaty of Utrecht",
       "Treaty of Paris",
-      "Treaty of Utrecht"
+      "Treaty of Versailles"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "History",
     "difficulty_band": "hard",
     "pressure_tag": "neutral",
@@ -817,12 +817,12 @@
   },
   {
     "external_key": "launch-q-049",
-    "prompt": "What force keeps planets in orbit around the Sun?",
+    "prompt": "What is the chemical symbol for gold?",
     "options": [
-      "Magnetism",
-      "Gravity",
-      "Friction",
-      "Radiation"
+      "Ag",
+      "Au",
+      "Gd",
+      "Go"
     ],
     "correct_answer_index": 1,
     "category": "Science",
@@ -885,12 +885,12 @@
   },
   {
     "external_key": "launch-q-053",
-    "prompt": "What is 15 percent of 200?",
+    "prompt": "What is the cube root of 27?",
     "options": [
-      "25",
-      "30",
-      "35",
-      "40"
+      "2",
+      "3",
+      "6",
+      "9"
     ],
     "correct_answer_index": 1,
     "category": "Math",
@@ -956,11 +956,11 @@
     "prompt": "How many lines are on a standard musical staff?",
     "options": [
       "Four",
-      "Five",
+      "Seven",
       "Six",
-      "Seven"
+      "Five"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Music",
     "difficulty_band": "medium",
     "pressure_tag": "calm",
@@ -990,11 +990,11 @@
     "prompt": "What does URL stand for?",
     "options": [
       "Universal Reference Link",
-      "Uniform Resource Locator",
+      "User Request Line",
       "Unified Routing Language",
-      "User Request Line"
+      "Uniform Resource Locator"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Technology",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -1021,12 +1021,12 @@
   },
   {
     "external_key": "launch-q-061",
-    "prompt": "Who wrote 'Pride and Prejudice'?",
+    "prompt": "Who wrote \"1984\"?",
     "options": [
-      "Jane Austen",
-      "Emily Bronte",
-      "Virginia Woolf",
-      "Louisa May Alcott"
+      "George Orwell",
+      "Aldous Huxley",
+      "Ray Bradbury",
+      "H. G. Wells"
     ],
     "correct_answer_index": 0,
     "category": "Literature",
@@ -1041,11 +1041,11 @@
     "prompt": "In Homer's epics, what is the name of Odysseus's wife?",
     "options": [
       "Helen",
-      "Penelope",
+      "Clytemnestra",
       "Andromache",
-      "Clytemnestra"
+      "Penelope"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Literature",
     "difficulty_band": "hard",
     "pressure_tag": "neutral",
@@ -1058,11 +1058,11 @@
     "prompt": "What color do you get by mixing blue and yellow paint?",
     "options": [
       "Purple",
-      "Green",
+      "Brown",
       "Orange",
-      "Brown"
+      "Green"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Art",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -1092,11 +1092,11 @@
     "prompt": "Which language is primarily spoken in Brazil?",
     "options": [
       "Spanish",
-      "Portuguese",
+      "Italian",
       "French",
-      "Italian"
+      "Portuguese"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Language",
     "difficulty_band": "medium",
     "pressure_tag": "neutral",
@@ -1143,11 +1143,11 @@
     "prompt": "What is the capital of New Zealand?",
     "options": [
       "Auckland",
-      "Wellington",
+      "Hamilton",
       "Christchurch",
-      "Hamilton"
+      "Wellington"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Geography",
     "difficulty_band": "hard",
     "pressure_tag": "spiky",
@@ -1191,12 +1191,12 @@
   },
   {
     "external_key": "launch-q-071",
-    "prompt": "What is the name of the galaxy that contains our solar system?",
+    "prompt": "Which planet is the largest in our solar system?",
     "options": [
-      "Andromeda",
-      "Whirlpool",
-      "Triangulum",
-      "Milky Way"
+      "Earth",
+      "Saturn",
+      "Mars",
+      "Jupiter"
     ],
     "correct_answer_index": 3,
     "category": "Astronomy",
@@ -1211,11 +1211,11 @@
     "prompt": "What is the name of the point in an orbit closest to the Sun?",
     "options": [
       "Aphelion",
-      "Perihelion",
+      "Zenith",
       "Equinox",
-      "Zenith"
+      "Perihelion"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Astronomy",
     "difficulty_band": "hard",
     "pressure_tag": "spiky",
@@ -1228,11 +1228,11 @@
     "prompt": "What is the primary gas found in the Earth's atmosphere?",
     "options": [
       "Oxygen",
-      "Nitrogen",
+      "Hydrogen",
       "Carbon dioxide",
-      "Hydrogen"
+      "Nitrogen"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Science",
     "difficulty_band": "easy",
     "pressure_tag": "calm",
@@ -1245,11 +1245,11 @@
     "prompt": "Which part of the cell contains genetic material?",
     "options": [
       "Mitochondria",
-      "Nucleus",
+      "Cell membrane",
       "Ribosome",
-      "Cell membrane"
+      "Nucleus"
     ],
-    "correct_answer_index": 1,
+    "correct_answer_index": 3,
     "category": "Science",
     "difficulty_band": "easy",
     "pressure_tag": "neutral",
@@ -1820,12 +1820,12 @@
   },
   {
     "external_key": "launch-q-108",
-    "prompt": "What does USB stand for?",
+    "prompt": "What does CPU stand for?",
     "options": [
-      "Universal Serial Bus",
-      "Unified System Base",
-      "User Service Bridge",
-      "Universal Storage Block"
+      "Central Processing Unit",
+      "Computer Primary Utility",
+      "Core Program Unit",
+      "Central Program Utility"
     ],
     "correct_answer_index": 0,
     "category": "Technology",
@@ -2415,12 +2415,12 @@
   },
   {
     "external_key": "launch-q-143",
-    "prompt": "Who was the first President of the United States?",
+    "prompt": "In which year did World War II end?",
     "options": [
-      "Thomas Jefferson",
-      "George Washington",
-      "John Adams",
-      "James Madison"
+      "1942",
+      "1945",
+      "1948",
+      "1950"
     ],
     "correct_answer_index": 1,
     "category": "History",
