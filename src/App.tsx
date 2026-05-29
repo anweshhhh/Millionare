@@ -203,7 +203,7 @@ export default function App() {
 
     const runQuestionIds = runCatalog.questions.map((question) => question.id);
     storeRecentRunQuestionIds(runQuestionIds);
-    recentRunQuestionIdsRef.current = runQuestionIds;
+    recentRunQuestionIdsRef.current = getRecentRunAvoidIds();
     storedRunMemoryKeyRef.current = memoryKey;
   }, [runCatalog, state.phase, state.runNumber]);
 
@@ -369,13 +369,14 @@ export default function App() {
 
   const handleStartRun = () => {
     resetSaveState();
+    const avoidIds = getRecentRunAvoidIds();
+    recentRunQuestionIdsRef.current = avoidIds;
     const nextCatalog = createRunQuestionCatalog({
       catalog: availableCatalog,
       runNumber: state.runNumber,
-      recentlyUsedQuestionIds: recentRunQuestionIdsRef.current
+      recentlyUsedQuestionIds: avoidIds
     });
     setRunCatalog(nextCatalog);
-    recentRunQuestionIdsRef.current = nextCatalog.questions.map((question) => question.id);
     dispatch({
       type: "START_RUN",
       firstQuestionId: getInitialQuestionId(nextCatalog),
@@ -385,13 +386,14 @@ export default function App() {
 
   const handleReplay = () => {
     resetSaveState();
+    const avoidIds = getRecentRunAvoidIds();
+    recentRunQuestionIdsRef.current = avoidIds;
     const nextCatalog = createRunQuestionCatalog({
       catalog: availableCatalog,
       runNumber: state.runNumber + 1,
-      recentlyUsedQuestionIds: recentRunQuestionIdsRef.current
+      recentlyUsedQuestionIds: avoidIds
     });
     setRunCatalog(nextCatalog);
-    recentRunQuestionIdsRef.current = nextCatalog.questions.map((question) => question.id);
     dispatch({
       type: "REPLAY",
       firstQuestionId: getInitialQuestionId(nextCatalog),

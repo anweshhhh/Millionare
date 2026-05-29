@@ -1,5 +1,5 @@
 const RECENT_RUN_MEMORY_KEY = "mmrm.recent-run-ids.v1";
-const MAX_TRACKED_RUNS = 2;
+const MAX_TRACKED_RUNS = 5;
 
 type RecentRunMemory = {
   runs: string[][];

@@ -22,7 +22,7 @@ function createStorage() {
   };
 }
 
-test("recent run memory stores up to two runs and returns deduped avoid ids", () => {
+test("recent run memory stores up to five runs and returns deduped avoid ids", () => {
   const sessionStorage = createStorage();
   const localStorage = createStorage();
 
@@ -35,7 +35,31 @@ test("recent run memory stores up to two runs and returns deduped avoid ids", ()
   storeRecentRunQuestionIds(["q-1", "q-2", "q-3"]);
   storeRecentRunQuestionIds(["q-4", "q-5", "q-6"]);
   storeRecentRunQuestionIds(["q-7", "q-8", "q-9"]);
+  storeRecentRunQuestionIds(["q-10", "q-11", "q-12"]);
+  storeRecentRunQuestionIds(["q-13", "q-14", "q-15"]);
+  storeRecentRunQuestionIds(["q-16", "q-17", "q-18"]);
 
   const avoidIds = getRecentRunAvoidIds();
-  assert.deepEqual(avoidIds.sort(), ["q-4", "q-5", "q-6", "q-7", "q-8", "q-9"]);
+  const avoidSet = new Set(avoidIds);
+
+  assert.equal(avoidSet.size, 15);
+  for (const questionId of [
+    "q-4",
+    "q-5",
+    "q-6",
+    "q-7",
+    "q-8",
+    "q-9",
+    "q-10",
+    "q-11",
+    "q-12",
+    "q-13",
+    "q-14",
+    "q-15",
+    "q-16",
+    "q-17",
+    "q-18"
+  ]) {
+    assert.equal(avoidSet.has(questionId), true);
+  }
 });
