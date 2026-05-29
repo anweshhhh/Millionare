@@ -7,7 +7,8 @@ export const MIND_READ_RULES = {
   lateResponseMs: 13000,
   highSwitchCount: 2,
   highSwitchRate: 0.95,
-  minimumSignalsForIdentity: 3
+  minimumSignalsForIdentity: 3,
+  minimumSignalsForMicroRead: 2
 } as const;
 
 export type MindReadRevealContext = {
@@ -69,6 +70,10 @@ export function deriveRevealMicroRead(
     return null;
   }
 
+  if (lastSignal.questionRank < MIND_READ_RULES.minimumSignalsForMicroRead && context.failureReason !== "timeout") {
+    return null;
+  }
+
   if (context.failureReason === "timeout") {
     return pickVariant(`${lastSignal.questionId}:timeout`, [
       "No lock. Pressure owned this read.",
@@ -98,10 +103,7 @@ export function deriveRevealMicroRead(
       ]);
     }
 
-    return pickVariant(`${lastSignal.questionId}:correct:composed`, [
-      "Composed lock. Clear read.",
-      "Steady tempo. Read confirmed."
-    ]);
+    return null;
   }
 
   if (lastSignal.selectionChangeCount >= MIND_READ_RULES.highSwitchCount) {
@@ -133,7 +135,7 @@ export function deriveTransitionRead(
   }
 
   if (!lastSignal) {
-    return "The table adjusts.";
+    return null;
   }
 
   if (lastSignal.lockedWithUnder5s) {
@@ -157,10 +159,7 @@ export function deriveTransitionRead(
     ]);
   }
 
-  return pickVariant(`${lastSignal.questionId}:transition:neutral`, [
-    "The table adjusts.",
-    "The next read shifts tone."
-  ]);
+  return null;
 }
 
 export function deriveRunIdentity(

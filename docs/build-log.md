@@ -1050,3 +1050,19 @@
 - variation keeps semantic meaning stable while avoiding identical sentence reuse across adjacent runs when signals are similar
 - updated mind-read tests to assert semantic class rather than one hardcoded phrase variant
 - verified `npm test` and `npm run build`
+
+## 2026-05-29 — `mmrm-phase7-06-mind-read-calibration-and-ux-closure`
+- tightened Phase 7 mind-read suppression so low-signal reveals stay quiet instead of filling space:
+  - early low-evidence correct reveals now suppress micro-read copy
+  - neutral correct reveals now suppress transition cues
+- preserved strong-signal surfaced moments:
+  - timeout pressure
+  - late switch behavior
+  - under-5s pressure locks
+- added focused tests for:
+  - low-signal reveal suppression
+  - neutral transition suppression
+- improved mobile readability for surfaced reads:
+  - compact line-height tuning
+  - hide transition cue on short-height viewports to protect action hierarchy
+- verified `npm test` and `npm run build`

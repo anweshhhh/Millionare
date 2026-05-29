@@ -960,3 +960,15 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - no gameplay-rule changes
   - no schema/auth/persistence changes
   - no new UI surfaces
+
+## Latest Phase 7 calibration closure decisions (2026-05-29)
+- Phase 7 surfaced reads are now more conservative to avoid generic/filler feel:
+  - low-signal early correct reveals suppress micro-read copy
+  - neutral correct reveals suppress transition cues
+- Strong-signal reads remain surfaced, preserving differentiation:
+  - timeout-pressure breaks
+  - late-switch drift/hold patterns
+  - under-5s pressure lock moments
+- Mobile hierarchy remained protected:
+  - transition cue hidden on short-height viewports
+  - lock-first action posture unchanged

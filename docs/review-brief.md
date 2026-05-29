@@ -1,18 +1,21 @@
 # Review Brief
 
 ## Slice
-`mmrm-phase7-05-mind-read-feedback-variation`
+`mmrm-phase7-06-mind-read-calibration-and-ux-closure`
 
 ## Goal
-Reduce repeated-feeling mind-read copy across adjacent runs without changing gameplay logic or insight signal meaning.
+Calibrate Phase 7 surfaced reads so insight copy feels earned, compact, and less repetitive without adding new product surface area.
 
 ## What changed
-- Added deterministic phrase variation for:
-  - reveal micro reads
-  - transition reads
-  - run-identity sublabels
-- Variation is seeded by run/question context, so outputs are stable but less repetitive.
-- Updated tests to validate semantic class of feedback rather than one fixed sentence variant.
+- Tightened suppression behavior:
+  - low-signal early correct reveals now suppress micro-read text
+  - neutral correct reveals now suppress transition text
+- Kept strong-signal read surfacing intact:
+  - timeout-pressure outcomes
+  - late-switch patterns
+  - under-5s pressure lock moments
+- Added focused deterministic tests for suppression scenarios.
+- Tuned mobile readability for surfaced lines while preserving lock-first action hierarchy.
 
 ## Scope guard
 - No gameplay-rule changes

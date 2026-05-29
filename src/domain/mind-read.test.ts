@@ -89,6 +89,56 @@ test("deriveTransitionRead stays null unless reveal-correct on non-final questio
   );
 });
 
+test("deriveRevealMicroRead suppresses low-signal early correct reveals", () => {
+  const signal = createSignal({
+    questionId: "q-1",
+    questionRank: 1,
+    category: "Science",
+    result: "correct",
+    responseTimeMs: 8200,
+    selectionChangeCount: 0,
+    lockedWithUnder5s: false
+  });
+
+  const read = deriveRevealMicroRead(
+    {
+      phase: "reveal",
+      revealResult: "correct",
+      failureReason: null,
+      pendingSecondChanceRecovery: false,
+      isFinalQuestion: false
+    },
+    signal
+  );
+
+  assert.equal(read, null);
+});
+
+test("deriveTransitionRead suppresses neutral correct reveals", () => {
+  const signal = createSignal({
+    questionId: "q-6",
+    questionRank: 6,
+    category: "History",
+    result: "correct",
+    responseTimeMs: 7600,
+    selectionChangeCount: 0,
+    lockedWithUnder5s: false
+  });
+
+  const read = deriveTransitionRead(
+    {
+      phase: "reveal",
+      revealResult: "correct",
+      failureReason: null,
+      pendingSecondChanceRecovery: false,
+      isFinalQuestion: false
+    },
+    signal
+  );
+
+  assert.equal(read, null);
+});
+
 test("deriveRunIdentity returns clean-read identity for completed calm run", () => {
   const signals = [
     createSignal({ questionId: "q-1", category: "Science", result: "correct", lockedWithUnder5s: false }),
@@ -105,6 +155,7 @@ test("deriveMindReadPayload combines reveal, transition, and identity safely", (
   const signals = [
     createSignal({
       questionId: "q-1",
+      questionRank: 3,
       category: "Science",
       result: "correct",
       selectionChangeCount: 2,
@@ -113,6 +164,7 @@ test("deriveMindReadPayload combines reveal, transition, and identity safely", (
     }),
     createSignal({
       questionId: "q-2",
+      questionRank: 4,
       category: "History",
       result: "correct",
       selectionChangeCount: 2,
@@ -121,6 +173,7 @@ test("deriveMindReadPayload combines reveal, transition, and identity safely", (
     }),
     createSignal({
       questionId: "q-3",
+      questionRank: 5,
       category: "Math",
       result: "incorrect",
       selectionChangeCount: 2,

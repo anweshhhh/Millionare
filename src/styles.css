@@ -837,12 +837,14 @@ button {
 .mind-read-inline {
   font-size: 0.59rem;
   color: var(--accent-strong);
+  line-height: 1.35;
 }
 
 .mind-read-transition {
   font-size: 0.55rem;
   color: var(--muted);
   opacity: 0.88;
+  line-height: 1.3;
 }
 
 .state-panel.is-visible {
@@ -1690,6 +1692,10 @@ button {
 
   .lifeline-chip {
     min-height: 32px;
+  }
+
+  .mind-read-transition {
+    display: none;
   }
 }
 
