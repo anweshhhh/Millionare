@@ -920,3 +920,16 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - No product-scope expansion in this reconciliation slice:
   - docs-only update
   - no code or behavior changes
+
+## Latest Phase 7 player-facing differentiation decisions (2026-05-29)
+- Completed initial Phase 7 slices for visible mind-read differentiation without changing core gameplay rules.
+- New user-facing mind-read layer now surfaces in compact form:
+  - reveal-state micro read line (when evidence is available)
+  - between-question transition cue on correct reveals
+  - result-screen run identity label paired with existing insight summary
+- Implementation posture remains intentionally narrow:
+  - no new screens
+  - no dashboard/admin exposure
+  - no chat/coach behavior
+  - no persistence/schema changes
+- Derivation logic is deterministic and test-backed, with conservative defaults when signals are thin.

@@ -995,3 +995,35 @@
   - lighter button weight/sizing
   - faster press feedback for mobile tap responsiveness
 - re-verified `npm test` and `npm run build`
+
+## 2026-05-29 — `mmrm-phase7-01-player-facing-mind-read-foundation`
+- created a dedicated Phase 7 planning doc:
+  - `docs/phase-7-player-facing-mind-read-layer-v1.md`
+- locked narrow user-facing surfaces for v1:
+  - reveal-state micro read
+  - between-question transition read
+  - result-screen run identity payoff
+- kept explicit guardrails:
+  - no dashboards
+  - no coaching chat posture
+  - no gameplay-rule changes
+
+## 2026-05-29 — `mmrm-phase7-02-mind-read-derivation-and-surface`
+- added deterministic Phase 7 mind-read derivation foundation:
+  - reveal micro read derivation
+  - between-question transition line derivation
+  - run identity derivation
+- added focused tests for:
+  - timeout pressure read
+  - transition gating behavior
+  - completed-run identity assignment
+  - combined payload derivation
+- integrated player-facing mind-read surfaces:
+  - reveal-state compact read line in hot-seat state panel
+  - between-question transition cue during reveal-to-advance beat
+  - run identity line in result insight block
+- preserved scope:
+  - no new pages
+  - no gameplay rule changes
+  - no schema/auth/persistence changes
+- verified `npm test` and `npm run build`

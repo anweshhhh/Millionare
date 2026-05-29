@@ -12,7 +12,7 @@ The core idea is not just trivia progression. The game quietly models how each p
 The long-term product goal is to create a quiz experience that feels like a psychological duel between the player and the game.
 
 ## Current status
-Phase 1 is complete. Phase 2 is complete enough to close with live auth/save, persisted landing summary, and lightweight recent runs. Hidden Phase 3 player-model instrumentation and persistence are wired behind the existing save path, hidden Phase 4 adaptive between-question selection is integrated into gameplay, and Phase 5 surfaces compact post-run insights on the result screen. Phase 6 private admin intelligence is now underway with a hidden deterministic signal-derivation foundation for question review, drop-off concentration, and adaptation fairness checks. A Supabase-backed `questions` storage foundation, curated JSON question bank, typed repository/bootstrap layer, and hidden gameplay source-selection fallback are now wired behind the current MVP flow, and the live `launch-v1` question bank is now imported, calibrated, and expanded for stronger replay.
+Phase 1 is complete. Phase 2 is complete enough to close with live auth/save, persisted landing summary, and lightweight recent runs. Hidden Phase 3 player-model instrumentation and persistence are wired behind the existing save path, hidden Phase 4 adaptive between-question selection is integrated into gameplay, and Phase 5 surfaces compact post-run insights on the result screen. Phase 6 private admin intelligence is now underway with a hidden deterministic signal-derivation foundation for question review, drop-off concentration, and adaptation fairness checks. Phase 7 player-facing mind-read v1 has begun with compact reveal reads, between-question transition cues, and a run-identity layer on result. A Supabase-backed `questions` storage foundation, curated JSON question bank, typed repository/bootstrap layer, and hidden gameplay source-selection fallback are now wired behind the current MVP flow, and the live `launch-v1` question bank is now imported, calibrated, and expanded for stronger replay.
 
 ## Planned pillars
 - premium hot-seat gameplay
@@ -37,6 +37,7 @@ Phase 1 is complete. Phase 2 is complete enough to close with live auth/save, pe
 - `docs/phase-4-adaptive-engine-v1.md` — Phase 4 adaptive engine v1 plan
 - `docs/phase-5-insight-summaries-v1.md` — Phase 5 insight summaries v1 plan
 - `docs/phase-6-private-admin-intelligence-v1.md` — Phase 6 private admin intelligence v1 plan
+- `docs/phase-7-player-facing-mind-read-layer-v1.md` — Phase 7 player-facing mind-read v1 plan
 - `AGENTS.md` — operating rules for Codex and contributors
 
 ## Current loop
@@ -63,6 +64,8 @@ Phase 1 is complete. Phase 2 is complete enough to close with live auth/save, pe
 - signed-in recent-runs memory strip on landing
 - signed-in landing/result status hints
 - authenticated completed runs prepared to persist from the result state
+- reveal-state mind-read micro reads and adaptive transition cues
+- result-screen run identity label layered into the existing insight payoff
 
 ## Local setup
 ```bash
