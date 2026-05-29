@@ -1,27 +1,24 @@
 # Review Brief
 
 ## Slice
-`mmrm-phase8-02-question-bank-quality-remediation`
+`mmrm-phase8-03-question-bank-spec-lock`
 
 ## Goal
-Resolve current launch-bank quality warnings so the bank is cleaner, less repetitive, and less biased before larger expansion.
+Lock a clear, quality-gated Phase 8 expansion spec before scaling the live question bank.
 
 ## What changed
-- Updated `content/question-bank-v1.json` to remove normalized duplicate prompts.
-- Replaced repeated rows with unique curated prompts in the same categories.
-- Rebalanced correct-answer index distribution to reduce answer-position bias.
-- Re-ran quality tooling:
-  - `npm run content:audit` now reports `Warnings: none`
-  - `npm run content:simulate` remains stable with zero overlap in the default replay window.
+- Added `docs/phase-8-question-bank-expansion-v1.md`.
+- Defined:
+  - expansion objective and non-goals
+  - required content contract fields
+  - deterministic quality gates (`content:audit`, `content:simulate`, test/build)
+  - rollout/activation sequence for new question-set versions
+  - next PR-sized implementation slices
 
 ## Scope guard
-- No gameplay/reducer changes
-- No UI changes
+- Docs-only
+- No gameplay/UI changes
 - No schema/persistence changes
-- No new dependencies
 
 ## Verification
-- `npm run content:audit` passed with no warnings
-- `npm run content:simulate` passed
-- `npm test` passed
-- `npm run build` passed
+- Planning/doc slice complete and aligned to current repo architecture

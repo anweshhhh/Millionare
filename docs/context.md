@@ -161,6 +161,14 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - Correct-answer index spread has been rebalanced to reduce option-position bias.
 - Replay/selection architecture is unchanged; this is a content-quality correction slice only.
 
+## Latest content planning decisions (2026-05-29)
+- Phase 8 now has an explicit expansion spec in:
+  - `docs/phase-8-question-bank-expansion-v1.md`
+- Expansion rollout is now documented as:
+  1. expand + validate a new set version
+  2. bootstrap to Supabase
+  3. activate only after deterministic quality gates pass
+
 ## Latest auth decisions (2026-04-05)
 - Completed first user-facing Phase 2 slice: `mmrm-phase2-03-auth-shell-and-save-run`
 - Guest-first entry remains unchanged:

@@ -285,6 +285,15 @@
   - no gameplay/reducer/UI changes
   - no schema/persistence changes
 - verified `npm test` and `npm run build`
+
+## 2026-05-29 — `mmrm-phase8-03-question-bank-spec-lock`
+- created a dedicated Phase 8 planning/spec doc:
+  - `docs/phase-8-question-bank-expansion-v1.md`
+- locked v1 expansion posture:
+  - JSON-first curated bank expansion
+  - deterministic quality gates (`content:audit`, `content:simulate`, test/build)
+  - no gameplay/UI rule changes in this phase
+- documented rollout sequence for safe set-version activation after quality gates pass
 - confirmed a real `profiles` row now exists for the signed-in app user
 - confirmed a real `runs` row now exists for the signed-in app user
 - confirmed the saved profile aggregates match the persisted run state for the latest live save:
