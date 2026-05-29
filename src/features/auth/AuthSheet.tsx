@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type AuthSheetProps = {
   isConfigured: boolean;
@@ -13,10 +13,64 @@ type AuthSheetProps = {
 export function AuthSheet(props: AuthSheetProps) {
   const { isConfigured, isOpen, requestedEmail, saveStateStatus, saveMessage, onClose, onSubmit } = props;
   const [email, setEmail] = useState(requestedEmail);
+  const sheetRef = useRef<HTMLElement | null>(null);
+  const emailInputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     setEmail(requestedEmail);
   }, [requestedEmail]);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return undefined;
+    }
+
+    const focusTimer = window.setTimeout(() => {
+      emailInputRef.current?.focus();
+    }, 0);
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onClose();
+        return;
+      }
+
+      if (event.key !== "Tab") {
+        return;
+      }
+
+      const focusableElements = sheetRef.current?.querySelectorAll<HTMLElement>(
+        'button:not([disabled]), input:not([disabled]), [href], [tabindex]:not([tabindex="-1"])'
+      );
+
+      if (!focusableElements || focusableElements.length === 0) {
+        return;
+      }
+
+      const firstFocusable = focusableElements[0];
+      const lastFocusable = focusableElements[focusableElements.length - 1];
+      const activeElement = document.activeElement as HTMLElement | null;
+
+      if (event.shiftKey && activeElement === firstFocusable) {
+        event.preventDefault();
+        lastFocusable.focus();
+        return;
+      }
+
+      if (!event.shiftKey && activeElement === lastFocusable) {
+        event.preventDefault();
+        firstFocusable.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.clearTimeout(focusTimer);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
 
   if (!isOpen) {
     return null;
@@ -27,6 +81,7 @@ export function AuthSheet(props: AuthSheetProps) {
   return (
     <div className="auth-sheet-backdrop" role="presentation" onClick={onClose}>
       <section
+        ref={sheetRef}
         className="auth-sheet"
         role="dialog"
         aria-modal="true"
@@ -57,6 +112,7 @@ export function AuthSheet(props: AuthSheetProps) {
           <label className="auth-field">
             <span>Email</span>
             <input
+              ref={emailInputRef}
               autoComplete="email"
               inputMode="email"
               name="email"

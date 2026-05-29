@@ -258,6 +258,19 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - post-run user-facing insights
   - dashboards / admin intelligence UI
 
+## Latest UX and reliability slice (2026-05-29)
+- completed a narrow mobile-focused polish slice without changing gameplay rules:
+  - reduced pressure on the hot-seat action dock in mobile viewports
+  - added modal keyboard behavior to the secure-save auth sheet
+  - hardened redirect-safe pending-run recovery so one corrupted storage copy does not block the other
+- kept the scope intentionally small:
+  - no new gameplay systems
+  - no auth model changes
+  - no new landing or result surfaces
+- verification posture for this slice remains:
+  - `npm test`
+  - `npm run build`
+
 ## Latest Phase 3 instrumentation decisions (2026-04-06)
 - Completed Phase 3 foundation slice: `mmrm-phase3-02-foundation-instrumentation`
 - The current hot-seat UX remains unchanged:

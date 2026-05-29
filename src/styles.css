@@ -1439,6 +1439,30 @@ button {
     gap: 10px;
   }
 
+  .play-stage {
+    padding-bottom: calc(134px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .action-dock {
+    width: min(calc(100% - 16px), 560px);
+    bottom: calc(4px + env(safe-area-inset-bottom, 0px));
+    gap: 5px;
+    padding: 7px 7px 8px;
+  }
+
+  .hot-seat-cta {
+    min-height: 44px;
+  }
+
+  .lifeline-strip {
+    gap: 5px;
+  }
+
+  .lifeline-chip {
+    min-height: 32px;
+    font-size: 0.56rem;
+  }
+
   .ladder-rail {
     order: -1;
     position: relative;
@@ -1487,6 +1511,16 @@ button {
 
   .answer-tag {
     display: none;
+  }
+
+  .auth-sheet-backdrop {
+    padding: 12px;
+  }
+
+  .auth-sheet {
+    width: min(100%, 520px);
+    max-height: calc(100dvh - 24px);
+    overflow-y: auto;
   }
 }
 

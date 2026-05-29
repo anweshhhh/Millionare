@@ -232,6 +232,16 @@
 - added focused catalog tests for uniqueness, balance posture, and run-seed variation
 - verified `npm test` and `npm run build`
 
+## 2026-05-29 — mobile layout and save-flow hardening slice
+- tightened the hot-seat mobile action dock so the lock CTA and lifeline strip breathe better on narrow viewports
+- added keyboard support to the secure-save auth sheet:
+  - Escape closes the modal
+  - focus lands on the email field when the sheet opens
+  - tab focus is contained inside the modal
+- hardened pending-run recovery so a corrupt storage copy cannot block a valid one in the other browser storage bucket
+- added a focused regression test for the pending-run storage fallback path
+- verified the current slice with `npm test` and `npm run build`
+
 ## 2026-04-05 — Live save path verification after migration
 - reused the current authenticated app session to verify live authenticated reads against the connected Supabase project
 - confirmed a real `profiles` row now exists for the signed-in app user

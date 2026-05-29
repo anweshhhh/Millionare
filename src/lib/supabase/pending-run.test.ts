@@ -97,3 +97,18 @@ test("pending run bridge survives local storage reads", () => {
   clearPendingRunBridge();
   assert.equal(readPendingRunBridge(), null);
 });
+
+test("pending run bridge falls back to the remaining storage copy", () => {
+  const sessionStorage = createStorage();
+  const localStorage = createStorage();
+
+  globalThis.window = {
+    sessionStorage,
+    localStorage
+  } as typeof window;
+
+  sessionStorage.setItem("mmrm.pending-run.v1", "not-json");
+  writePendingRunBridge(sampleRun);
+
+  assert.deepEqual(readPendingRunBridge(), sampleRun);
+});

@@ -26,6 +26,10 @@ function clearStorageValue() {
   }
 }
 
+function clearStorageValueFor(storage: Storage) {
+  storage.removeItem(PENDING_RUN_STORAGE_KEY);
+}
+
 export function readPendingRunBridge() {
   for (const storage of getStorages()) {
     const serialized = storage.getItem(PENDING_RUN_STORAGE_KEY);
@@ -52,16 +56,18 @@ export function readPendingRunBridge() {
         typeof run.totalQuestions !== "number" ||
         typeof run.questionSetVersion !== "string"
       ) {
-        clearStorageValue();
-        return null;
+        clearStorageValueFor(storage);
+        continue;
       }
 
       return run as PendingRunBridge;
     } catch {
-      clearStorageValue();
-      return null;
+      clearStorageValueFor(storage);
+      continue;
     }
   }
+
+  clearStorageValue();
 
   return null;
 }
