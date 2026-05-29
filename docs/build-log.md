@@ -310,6 +310,22 @@
   - `npm run content:simulate -- content/question-bank-v2.json 60 6` -> zero overlap in simulation window
 - added a focused content test to validate launch-v2 normalization and coverage posture
 - no gameplay/UI behavior changes in this slice
+
+## 2026-05-29 — `mmrm-phase8-05-launch-v2-activation`
+- activated `launch-v2` as the live default Supabase question-set target in gameplay catalog loading
+- kept safe behavior intact:
+  - if live Supabase data is unavailable or thin, fallback catalog behavior remains unchanged
+- updated content tooling defaults to the new bank:
+  - `content:bootstrap` now defaults to `question-bank-v2.json`
+  - `content:audit` and `content:simulate` now default to `question-bank-v2.json`
+- added explicit bootstrap convenience commands:
+  - `npm run content:bootstrap:v1`
+  - `npm run content:bootstrap:v2`
+- re-verified quality and app checks:
+  - `npm run content:audit`
+  - `npm run content:simulate`
+  - `npm test`
+  - `npm run build`
 - confirmed a real `profiles` row now exists for the signed-in app user
 - confirmed a real `runs` row now exists for the signed-in app user
 - confirmed the saved profile aggregates match the persisted run state for the latest live save:

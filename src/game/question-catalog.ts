@@ -6,7 +6,7 @@ import { getCurrentQuestionId } from "./game-state.ts";
 import type { GameState } from "../domain/game.ts";
 
 export const RUN_QUESTION_COUNT = PROGRESSION_LADDER.length;
-export const LIVE_QUESTION_SET_VERSION = "launch-v1";
+export const LIVE_QUESTION_SET_VERSION = "launch-v2";
 const MAX_CATEGORY_OCCURRENCES = 2;
 const TARGET_PER_DIFFICULTY_BAND = 4;
 

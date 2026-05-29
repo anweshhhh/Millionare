@@ -83,7 +83,7 @@ function main() {
   const inputArg = process.argv[2];
   const bankPath = inputArg
     ? path.resolve(repoRoot, inputArg)
-    : path.join(repoRoot, "content", "question-bank-v1.json");
+    : path.join(repoRoot, "content", "question-bank-v2.json");
 
   const raw = loadBank(bankPath);
   const rows = prepareQuestionImportRows(raw);

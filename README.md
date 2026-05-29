@@ -12,7 +12,7 @@ The core idea is not just trivia progression. The game quietly models how each p
 The long-term product goal is to create a quiz experience that feels like a psychological duel between the player and the game.
 
 ## Current status
-Phase 1 is complete. Phase 2 is complete enough to close with live auth/save, persisted landing summary, and lightweight recent runs. Hidden Phase 3 player-model instrumentation and persistence are wired behind the existing save path, hidden Phase 4 adaptive between-question selection is integrated into gameplay, and Phase 5 surfaces compact post-run insights on the result screen. Phase 6 private admin intelligence is now underway with a hidden deterministic signal-derivation foundation for question review, drop-off concentration, and adaptation fairness checks. Phase 7 player-facing mind-read v1 has begun with compact reveal reads, between-question transition cues, and a run-identity layer on result. A Supabase-backed `questions` storage foundation, curated JSON question bank, typed repository/bootstrap layer, and hidden gameplay source-selection fallback are now wired behind the current MVP flow, and the live `launch-v1` question bank is now imported, calibrated, and expanded for stronger replay.
+Phase 1 is complete. Phase 2 is complete enough to close with live auth/save, persisted landing summary, and lightweight recent runs. Hidden Phase 3 player-model instrumentation and persistence are wired behind the existing save path, hidden Phase 4 adaptive between-question selection is integrated into gameplay, and Phase 5 surfaces compact post-run insights on the result screen. Phase 6 private admin intelligence is now underway with a hidden deterministic signal-derivation foundation for question review, drop-off concentration, and adaptation fairness checks. Phase 7 player-facing mind-read v1 has begun with compact reveal reads, between-question transition cues, and a run-identity layer on result. A Supabase-backed `questions` storage foundation, curated JSON question bank, typed repository/bootstrap layer, and hidden gameplay source-selection fallback are now wired behind the current MVP flow, and the live default set is now `launch-v2` for stronger replay breadth.
 
 ## Planned pillars
 - premium hot-seat gameplay
@@ -44,7 +44,7 @@ Phase 1 is complete. Phase 2 is complete enough to close with live auth/save, pe
 - entry screen with immediate start CTA
 - hot-seat gameplay screen with right-side progression ladder
 - 12-question run with Supabase-backed question sourcing when available, otherwise seeded fallback
-- Supabase-backed runs now sample a deterministic per-run 12-question pool for replay variety
+- Supabase-backed runs now sample a deterministic per-run 12-question pool from `launch-v2` for replay variety
 - recent runs now avoid immediate repeats across a wider multi-run memory window when the live pool can support it
 - 20 second timer
 - explicit select then `LOCK ANSWER` interaction
@@ -95,6 +95,7 @@ Notes:
 npm test
 npm run build
 npm run content:bootstrap
+npm run content:bootstrap:v2
 npm run content:generate:v2
 npm run content:audit
 npm run content:simulate

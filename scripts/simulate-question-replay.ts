@@ -97,7 +97,7 @@ function main() {
   const windowArg = process.argv[4];
   const bankPath = inputArg
     ? path.resolve(repoRoot, inputArg)
-    : path.join(repoRoot, "content", "question-bank-v1.json");
+    : path.join(repoRoot, "content", "question-bank-v2.json");
   const runCount = runCountArg ? Number(runCountArg) : DEFAULT_RUNS;
   const windowSize = windowArg ? Number(windowArg) : DEFAULT_WINDOW;
 

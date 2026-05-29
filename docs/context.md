@@ -177,6 +177,13 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - `npm run content:generate:v2`
 - Current checked-in content volume is now 406 total rows with 250 new `launch-v2` rows ready for bootstrap/activation.
 
+## Latest content activation decisions (2026-05-29)
+- Live default Supabase set target has moved from `launch-v1` to `launch-v2`.
+- Fallback posture remains unchanged:
+  - when Supabase content is unavailable or insufficient, gameplay still falls back safely to seed content.
+- Content operations defaults now track the new target set:
+  - `content:bootstrap` / `content:audit` / `content:simulate` default to `question-bank-v2.json`.
+
 ## Latest auth decisions (2026-04-05)
 - Completed first user-facing Phase 2 slice: `mmrm-phase2-03-auth-shell-and-save-run`
 - Guest-first entry remains unchanged:

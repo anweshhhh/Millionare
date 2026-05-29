@@ -67,7 +67,7 @@ async function main() {
   const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
   const env = loadLocalEnv(repoRoot);
   const bankArg = process.argv[2];
-  const bankPath = bankArg ? path.resolve(repoRoot, bankArg) : path.join(repoRoot, "content", "question-bank-v1.json");
+  const bankPath = bankArg ? path.resolve(repoRoot, bankArg) : path.join(repoRoot, "content", "question-bank-v2.json");
   const supabaseUrl = env.SUPABASE_URL ?? env.VITE_SUPABASE_URL ?? "";
   const serviceRoleKey = env.SUPABASE_SERVICE_ROLE_KEY ?? "";
 
