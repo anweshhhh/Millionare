@@ -45,7 +45,7 @@ Phase 1 is complete. Phase 2 is complete enough to close with live auth/save, pe
 - hot-seat gameplay screen with right-side progression ladder
 - 12-question run with Supabase-backed question sourcing when available, otherwise seeded fallback
 - Supabase-backed runs now sample a deterministic per-run 12-question pool for replay variety
-- adjacent replays now avoid immediate question repeats when the live pool can support it
+- recent runs now avoid immediate repeats across a wider multi-run memory window when the live pool can support it
 - 20 second timer
 - explicit select then `LOCK ANSWER` interaction
 - mobile-first fast-play layout keeps `LOCK ANSWER` in a lock-first mobile action dock with reduced scrolling friction
@@ -66,6 +66,7 @@ Phase 1 is complete. Phase 2 is complete enough to close with live auth/save, pe
 - authenticated completed runs prepared to persist from the result state
 - reveal-state mind-read micro reads and adaptive transition cues
 - result-screen run identity label layered into the existing insight payoff
+- adaptive difficulty targeting now adjusts challenge band by observed player profile with anti-spiral guardrails
 
 ## Local setup
 ```bash

@@ -1,26 +1,29 @@
 # Review Brief
 
 ## Slice
-`mmrm-phase7-02-mind-read-derivation-and-surface`
+`mmrm-phase7-03-and-04-variety-and-difficulty`
 
 ## Goal
-Make the hidden adaptive/player-model work feel visible to players in compact, earned moments so the experience is less generic.
+Reduce replay repetition and personalize challenge level so the game feels less generic across repeated runs.
 
 ## What changed
-- Added deterministic Phase 7 mind-read derivation logic:
-  - reveal micro read
-  - between-question transition cue
-  - run identity label
-- Added focused tests for the new derivation behavior.
-- Integrated compact player-facing surfaces:
-  - reveal-state read line in hot-seat
-  - transition cue before auto-advance on correct reveals
-  - run identity line in the result insight block
+- Replay variety hardening:
+  - expanded recent-run memory from 2 runs to 5 runs
+  - fixed start/replay sampling flow to consistently use persisted multi-run avoid IDs
+- Adaptive difficulty personalization:
+  - target band now includes profile-based shift signals
+  - high-accuracy/low-timeout users can be nudged up
+  - struggling/timeout-heavy users can be nudged down
+  - bounded one-step shifts preserve fairness
+- Added deterministic test coverage for:
+  - wider replay memory behavior
+  - high-skill upward target behavior
+  - struggling-profile recovery target behavior
 
 ## Scope guard
-- No gameplay-rule changes
-- No new pages or dashboard surfaces
-- No auth/persistence/schema changes
+- No new gameplay mechanics
+- No schema/auth/persistence changes
+- No new UI surfaces
 - No new dependencies
 
 ## Verification

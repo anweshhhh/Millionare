@@ -1027,3 +1027,20 @@
   - no gameplay rule changes
   - no schema/auth/persistence changes
 - verified `npm test` and `npm run build`
+
+## 2026-05-29 — `mmrm-phase7-03-replay-variety-hardening`
+- expanded recent-run replay memory from 2 runs to 5 runs
+- fixed run-start/replay selection flow so sampling consistently uses persisted multi-run avoid IDs instead of only the immediate current run set
+- this reduces near-term repetition in the 12-question loop when the live pool can support broader avoidance
+- verified `npm test` and `npm run build`
+
+## 2026-05-29 — `mmrm-phase7-04-personalized-difficulty-banding`
+- upgraded adaptive difficulty targeting so challenge band reflects player profile evidence, not one fixed baseline for every user
+- added deterministic model-based difficulty shift rules:
+  - high-accuracy, low-timeout profiles can nudge upward
+  - struggling or timeout-heavy profiles can recover toward calmer bands
+  - bounded one-step shift with existing wrong-answer/timeout recovery guardrails preserved
+- added focused tests for:
+  - high-skill profile upward targeting
+  - struggling profile downward recovery targeting
+- verified `npm test` and `npm run build`

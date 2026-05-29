@@ -933,3 +933,20 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - no chat/coach behavior
   - no persistence/schema changes
 - Derivation logic is deterministic and test-backed, with conservative defaults when signals are thin.
+
+## Latest replay-variety hardening decisions (2026-05-29)
+- Replay avoidance now uses a wider recent-run memory window (5 runs) instead of only short adjacency.
+- Run start and replay now consistently read persisted multi-run avoid IDs before sampling, so in-session run setup does not collapse back to only the latest sampled set.
+- Scope remained narrow:
+  - no new gameplay rules
+  - no schema/auth changes
+  - no new UI surfaces
+
+## Latest adaptive difficulty banding decisions (2026-05-29)
+- Adaptive question difficulty now respects player profile evidence in addition to rank baseline.
+- Personalized targeting posture:
+  - high-accuracy, low-timeout profiles can receive harder next-band targets
+  - struggling or timeout-prone profiles can recover toward calmer bands
+  - one-step bounded shifts preserve fairness and avoid punitive jumps
+- Existing recovery guardrails remain intact:
+  - wrong-answer and timeout cooldown behavior still softens immediate rebounds
