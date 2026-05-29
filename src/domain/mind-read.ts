@@ -30,6 +30,25 @@ export type MindReadPayload = {
   insightLabel: string;
 };
 
+function hashString(value: string) {
+  let hash = 2166136261;
+
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  return hash >>> 0;
+}
+
+function pickVariant(seed: string, variants: string[]) {
+  if (variants.length === 0) {
+    return null;
+  }
+
+  return variants[hashString(seed) % variants.length] ?? variants[0] ?? null;
+}
+
 function getLastSignal(questionSignals: QuestionBehaviorSignal[]) {
   return questionSignals.at(-1) ?? null;
 }
@@ -51,34 +70,58 @@ export function deriveRevealMicroRead(
   }
 
   if (context.failureReason === "timeout") {
-    return "No lock. Pressure owned this read.";
+    return pickVariant(`${lastSignal.questionId}:timeout`, [
+      "No lock. Pressure owned this read.",
+      "Clock overrun. The read never locked."
+    ]);
   }
 
   if (context.revealResult === "correct") {
     if (lastSignal.selectionChangeCount >= MIND_READ_RULES.highSwitchCount) {
-      return "Late switch. Clean hold.";
+      return pickVariant(`${lastSignal.questionId}:correct:late-switch`, [
+        "Late switch. Clean hold.",
+        "Read shifted late, then stabilized."
+      ]);
     }
 
     if (lastSignal.lockedWithUnder5s) {
-      return "Fast lock under pressure.";
+      return pickVariant(`${lastSignal.questionId}:correct:pressure-lock`, [
+        "Fast lock under pressure.",
+        "Clock tightened. You held the read."
+      ]);
     }
 
     if (lastSignal.responseTimeMs <= MIND_READ_RULES.fastResponseMs) {
-      return "First read, clean strike.";
+      return pickVariant(`${lastSignal.questionId}:correct:first-read`, [
+        "First read, clean strike.",
+        "Immediate commit. Clean conversion."
+      ]);
     }
 
-    return "Composed lock. Clear read.";
+    return pickVariant(`${lastSignal.questionId}:correct:composed`, [
+      "Composed lock. Clear read.",
+      "Steady tempo. Read confirmed."
+    ]);
   }
 
   if (lastSignal.selectionChangeCount >= MIND_READ_RULES.highSwitchCount) {
-    return "Late switch. Read drifted.";
+    return pickVariant(`${lastSignal.questionId}:incorrect:late-switch`, [
+      "Late switch. Read drifted.",
+      "Certainty moved late and broke."
+    ]);
   }
 
   if (lastSignal.lockedWithUnder5s) {
-    return "Pressure narrowed the read.";
+    return pickVariant(`${lastSignal.questionId}:incorrect:pressure`, [
+      "Pressure narrowed the read.",
+      "Late pressure bent the lock."
+    ]);
   }
 
-  return "Certainty broke on this rung.";
+  return pickVariant(`${lastSignal.questionId}:incorrect:certainty`, [
+    "Certainty broke on this rung.",
+    "This lock cracked before the climb held."
+  ]);
 }
 
 export function deriveTransitionRead(
@@ -94,18 +137,30 @@ export function deriveTransitionRead(
   }
 
   if (lastSignal.lockedWithUnder5s) {
-    return "Next read pushes pressure.";
+    return pickVariant(`${lastSignal.questionId}:transition:pressure`, [
+      "Next read pushes pressure.",
+      "The next rung tests composure."
+    ]);
   }
 
   if (lastSignal.selectionChangeCount >= MIND_READ_RULES.highSwitchCount) {
-    return "Next read tests certainty.";
+    return pickVariant(`${lastSignal.questionId}:transition:certainty`, [
+      "Next read tests certainty.",
+      "The next lock probes commitment."
+    ]);
   }
 
   if (lastSignal.responseTimeMs >= MIND_READ_RULES.lateResponseMs) {
-    return "Next read rewards quicker commitment.";
+    return pickVariant(`${lastSignal.questionId}:transition:pace`, [
+      "Next read rewards quicker commitment.",
+      "The table now favors faster reads."
+    ]);
   }
 
-  return "The table adjusts.";
+  return pickVariant(`${lastSignal.questionId}:transition:neutral`, [
+    "The table adjusts.",
+    "The next read shifts tone."
+  ]);
 }
 
 export function deriveRunIdentity(
@@ -117,24 +172,38 @@ export function deriveRunIdentity(
     return null;
   }
 
+  const seedSignal = questionSignals.at(-1)?.questionId ?? "run";
+
   if (outcome === "completed" && runSummary.timeoutCount === 0 && runSummary.pressureMissCount === 0) {
     return {
       label: "The Clean Read",
-      sublabel: "You gave the clock no opening."
+      sublabel:
+        pickVariant(`${seedSignal}:identity:clean`, [
+          "You gave the clock no opening.",
+          "Control stayed with you through the final rung."
+        ]) ?? "You gave the clock no opening."
     };
   }
 
   if (runSummary.timeoutCount >= 2) {
     return {
       label: "The Clock Chaser",
-      sublabel: "Pressure set the pace of this run."
+      sublabel:
+        pickVariant(`${seedSignal}:identity:clock`, [
+          "Pressure set the pace of this run.",
+          "The timer dictated too many decisions."
+        ]) ?? "Pressure set the pace of this run."
     };
   }
 
   if (runSummary.selectionChangeRate >= MIND_READ_RULES.highSwitchRate) {
     return {
       label: "The Late Switch",
-      sublabel: "Certainty moved late and cost ground."
+      sublabel:
+        pickVariant(`${seedSignal}:identity:switch`, [
+          "Certainty moved late and cost ground.",
+          "Read reversals arrived too deep into the clock."
+        ]) ?? "Certainty moved late and cost ground."
     };
   }
 
@@ -144,13 +213,21 @@ export function deriveRunIdentity(
   ) {
     return {
       label: "The First Instinct",
-      sublabel: "You trusted fast reads and kept moving."
+      sublabel:
+        pickVariant(`${seedSignal}:identity:instinct`, [
+          "You trusted fast reads and kept moving.",
+          "Quick commitments carried the run."
+        ]) ?? "You trusted fast reads and kept moving."
     };
   }
 
   return {
     label: "The Pressure Climb",
-    sublabel: "You traded pace and control across the ladder."
+    sublabel:
+      pickVariant(`${seedSignal}:identity:pressure-climb`, [
+        "You traded pace and control across the ladder.",
+        "The climb held, but the rhythm kept shifting."
+      ]) ?? "You traded pace and control across the ladder."
   };
 }
 

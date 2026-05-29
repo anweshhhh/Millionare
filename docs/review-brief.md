@@ -1,27 +1,21 @@
 # Review Brief
 
 ## Slice
-`mmrm-phase7-03-and-04-variety-and-difficulty`
+`mmrm-phase7-05-mind-read-feedback-variation`
 
 ## Goal
-Reduce replay repetition and personalize challenge level so the game feels less generic across repeated runs.
+Reduce repeated-feeling mind-read copy across adjacent runs without changing gameplay logic or insight signal meaning.
 
 ## What changed
-- Replay variety hardening:
-  - expanded recent-run memory from 2 runs to 5 runs
-  - fixed start/replay sampling flow to consistently use persisted multi-run avoid IDs
-- Adaptive difficulty personalization:
-  - target band now includes profile-based shift signals
-  - high-accuracy/low-timeout users can be nudged up
-  - struggling/timeout-heavy users can be nudged down
-  - bounded one-step shifts preserve fairness
-- Added deterministic test coverage for:
-  - wider replay memory behavior
-  - high-skill upward target behavior
-  - struggling-profile recovery target behavior
+- Added deterministic phrase variation for:
+  - reveal micro reads
+  - transition reads
+  - run-identity sublabels
+- Variation is seeded by run/question context, so outputs are stable but less repetitive.
+- Updated tests to validate semantic class of feedback rather than one fixed sentence variant.
 
 ## Scope guard
-- No new gameplay mechanics
+- No gameplay-rule changes
 - No schema/auth/persistence changes
 - No new UI surfaces
 - No new dependencies

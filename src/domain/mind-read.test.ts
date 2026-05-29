@@ -50,7 +50,7 @@ test("deriveRevealMicroRead returns pressure timeout copy", () => {
     signal
   );
 
-  assert.equal(read, "No lock. Pressure owned this read.");
+  assert.match(read ?? "", /No lock|Clock overrun/i);
 });
 
 test("deriveTransitionRead stays null unless reveal-correct on non-final questions", () => {
@@ -152,8 +152,8 @@ test("deriveMindReadPayload combines reveal, transition, and identity safely", (
     }
   });
 
-  assert.equal(payload.revealMicroRead, "Late switch. Clean hold.");
-  assert.equal(payload.transitionRead, "Next read pushes pressure.");
+  assert.match(payload.revealMicroRead ?? "", /Late switch|Read shifted late/i);
+  assert.match(payload.transitionRead ?? "", /Next read pushes pressure|next rung tests composure/i);
   assert.equal(payload.insightLabel, "clear signal");
   assert.ok(payload.runIdentity);
 });

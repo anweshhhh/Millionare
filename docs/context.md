@@ -950,3 +950,13 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - one-step bounded shifts preserve fairness and avoid punitive jumps
 - Existing recovery guardrails remain intact:
   - wrong-answer and timeout cooldown behavior still softens immediate rebounds
+
+## Latest mind-read feedback-variation decisions (2026-05-29)
+- Phase 7 surfaced copy now uses deterministic variant selection keyed to run/question context.
+- Goal of this adjustment:
+  - keep insight meaning consistent
+  - reduce perceived repetition when adjacent runs land in similar behavioral buckets
+- Scope remained narrow:
+  - no gameplay-rule changes
+  - no schema/auth/persistence changes
+  - no new UI surfaces

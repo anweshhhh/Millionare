@@ -1044,3 +1044,9 @@
   - high-skill profile upward targeting
   - struggling profile downward recovery targeting
 - verified `npm test` and `npm run build`
+
+## 2026-05-29 — `mmrm-phase7-05-mind-read-feedback-variation`
+- reduced repetitive player-facing wording by adding deterministic phrase variation in Phase 7 mind-read copy
+- variation keeps semantic meaning stable while avoiding identical sentence reuse across adjacent runs when signals are similar
+- updated mind-read tests to assert semantic class rather than one hardcoded phrase variant
+- verified `npm test` and `npm run build`
