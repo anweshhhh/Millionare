@@ -258,6 +258,21 @@
 
 ## 2026-04-05 — Live save path verification after migration
 - reused the current authenticated app session to verify live authenticated reads against the connected Supabase project
+
+## 2026-05-29 — `mmrm-phase8-01-question-bank-quality-foundation`
+- started Phase 8 with a narrow behind-the-scenes content quality foundation slice
+- added `content:audit` command:
+  - validates the JSON bank through the existing typed import contract
+  - reports active-bank distribution across category, difficulty, pressure, and set version
+  - flags lightweight quality risks (duplicate normalized prompts, long prompts/options, skewed answer-index spread)
+- added `content:simulate` command:
+  - simulates repeated 12-question run sampling against a recent-run overlap window
+  - reports average and max overlap risk plus sampled distribution posture
+- kept scope intentionally narrow:
+  - no gameplay changes
+  - no UI changes
+  - no schema/persistence changes
+- verified `npm test` and `npm run build`
 - confirmed a real `profiles` row now exists for the signed-in app user
 - confirmed a real `runs` row now exists for the signed-in app user
 - confirmed the saved profile aggregates match the persisted run state for the latest live save:

@@ -147,6 +147,14 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - stabilize run-save/profile-update behavior against a live backend
 - decide whether the next user-facing addition should be lightweight landing summary or compact run history
 
+## Latest content scaling decisions (2026-05-29)
+- Phase 8 has started as a behind-the-scenes content-quality and replay-variety track.
+- Current bank posture is now explicitly measurable through local tooling:
+  - deterministic bank audit command for structure and distribution checks
+  - deterministic multi-run replay simulation command for overlap risk checks
+- This slice intentionally adds no gameplay/UI behavior changes.
+- Next Phase 8 slices should use these checks as merge gates while expanding curated question volume and balancing metadata coverage.
+
 ## Latest auth decisions (2026-04-05)
 - Completed first user-facing Phase 2 slice: `mmrm-phase2-03-auth-shell-and-save-run`
 - Guest-first entry remains unchanged:

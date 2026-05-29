@@ -1,26 +1,23 @@
 # Review Brief
 
 ## Slice
-`mmrm-phase7-06-mind-read-calibration-and-ux-closure`
+`mmrm-phase8-01-question-bank-quality-foundation`
 
 ## Goal
-Calibrate Phase 7 surfaced reads so insight copy feels earned, compact, and less repetitive without adding new product surface area.
+Start Phase 8 with a narrow content quality and replay-variety tooling foundation so larger bank expansion can be measured and gated deterministically.
 
 ## What changed
-- Tightened suppression behavior:
-  - low-signal early correct reveals now suppress micro-read text
-  - neutral correct reveals now suppress transition text
-- Kept strong-signal read surfacing intact:
-  - timeout-pressure outcomes
-  - late-switch patterns
-  - under-5s pressure lock moments
-- Added focused deterministic tests for suppression scenarios.
-- Tuned mobile readability for surfaced lines while preserving lock-first action hierarchy.
+- Added `scripts/audit-question-bank.ts`.
+- Added `scripts/simulate-question-replay.ts`.
+- Added npm script wiring:
+  - `npm run content:audit`
+  - `npm run content:simulate`
+- Updated docs context/build-log for Phase 8 kickoff.
 
 ## Scope guard
-- No gameplay-rule changes
-- No schema/auth/persistence changes
-- No new UI surfaces
+- No gameplay behavior changes
+- No UI changes
+- No schema/persistence changes
 - No new dependencies
 
 ## Verification
