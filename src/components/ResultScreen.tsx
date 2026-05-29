@@ -1,4 +1,5 @@
 import type { InsightSummaryPayload } from "../domain/insights.ts";
+import type { RunIdentity } from "../domain/mind-read.ts";
 import { BASELINE_STEP, getStepByRank, PROGRESSION_LADDER } from "../domain/progression.ts";
 import { ResultInsightSummary } from "./ResultInsightSummary.tsx";
 import { getResultAuthMessage } from "./result-screen-view.ts";
@@ -17,6 +18,8 @@ type ResultScreenProps = {
   saveMessage: string | null;
   signedInEmail: string | null;
   insightSummary: InsightSummaryPayload;
+  runIdentity: RunIdentity | null;
+  insightLabel: string;
   onSaveRun?: () => void;
 };
 
@@ -35,6 +38,8 @@ export function ResultScreen(props: ResultScreenProps) {
     saveMessage,
     signedInEmail,
     insightSummary,
+    runIdentity,
+    insightLabel,
     onSaveRun
   } = props;
   const highestStep = getStepByRank(highestClearedRank);
@@ -115,7 +120,11 @@ export function ResultScreen(props: ResultScreenProps) {
           </article>
         </div>
 
-        <ResultInsightSummary insightSummary={insightSummary} />
+        <ResultInsightSummary
+          insightSummary={insightSummary}
+          runIdentity={runIdentity}
+          insightLabel={insightLabel}
+        />
       </div>
     </section>
   );

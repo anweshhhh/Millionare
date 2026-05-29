@@ -21,6 +21,8 @@ type HotSeatScreenProps = {
   lifelines: LifelineState;
   lifelineUsedOnCurrentQuestion: boolean;
   eliminatedAnswerIndexes: number[];
+  revealMicroRead: string | null;
+  transitionRead: string | null;
   onSelectAnswer: (answerIndex: number) => void;
   onLockAnswer: () => void;
   onUseFiftyFifty: () => void;
@@ -56,6 +58,8 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
     lifelines,
     lifelineUsedOnCurrentQuestion,
     eliminatedAnswerIndexes,
+    revealMicroRead,
+    transitionRead,
     onSelectAnswer,
     onLockAnswer,
     onUseFiftyFifty,
@@ -289,6 +293,8 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
                           ? "Time expired."
                   : "Wrong read."}
               </p>
+              {revealMicroRead ? <p className="mind-read-inline">{revealMicroRead}</p> : null}
+              {transitionRead ? <p className="mind-read-transition">{transitionRead}</p> : null}
             </div>
 
             <div className={["action-dock", hasSelectedAnswer ? "is-sticky" : ""].filter(Boolean).join(" ")} aria-label="Primary answer controls">

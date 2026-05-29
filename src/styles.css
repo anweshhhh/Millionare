@@ -826,6 +826,25 @@ button {
   line-height: 1.55;
 }
 
+.mind-read-inline,
+.mind-read-transition {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mind-read-inline {
+  font-size: 0.59rem;
+  color: var(--accent-strong);
+}
+
+.mind-read-transition {
+  font-size: 0.55rem;
+  color: var(--muted);
+  opacity: 0.88;
+}
+
 .state-panel.is-visible {
   border-style: dashed;
   border-color: rgba(173, 255, 246, 0.26);
@@ -1166,6 +1185,28 @@ button {
   display: grid;
   gap: 10px;
   margin-top: 12px;
+}
+
+.result-identity-line {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(173, 255, 246, 0.13);
+  background: rgba(123, 214, 207, 0.05);
+  display: grid;
+  gap: 5px;
+}
+
+.result-identity-line strong {
+  font-size: 0.96rem;
+  line-height: 1.2;
+}
+
+.result-identity-line p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--muted);
 }
 
 .result-insight-line {

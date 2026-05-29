@@ -6,6 +6,7 @@ import { AuthSheet } from "./features/auth/AuthSheet.tsx";
 import { useAuth } from "./features/auth/AuthProvider.tsx";
 import type { PendingRunBridge } from "./domain/persistence.ts";
 import { deriveInsightSummary } from "./domain/insights.ts";
+import { deriveMindReadPayload } from "./domain/mind-read.ts";
 import {
   buildRunBehaviorSummary,
   createTransientQuestionCapture,
@@ -304,6 +305,32 @@ export default function App() {
     state.phase,
     state.questionCount
   ]);
+  const mindReadPayload = useMemo(() => {
+    return deriveMindReadPayload({
+      revealContext: {
+        phase: state.phase === "entry" || state.phase === "result" ? "active" : state.phase,
+        revealResult: state.revealResult,
+        failureReason: state.failureReason,
+        pendingSecondChanceRecovery: state.pendingSecondChanceRecovery,
+        isFinalQuestion: state.questionIndex + 1 >= state.questionCount
+      },
+      questionSignals: questionBehaviorSignals,
+      runSummary: runBehaviorSummary,
+      outcome: state.outcome,
+      insightSummary
+    });
+  }, [
+    insightSummary,
+    questionBehaviorSignals,
+    runBehaviorSummary,
+    state.failureReason,
+    state.outcome,
+    state.pendingSecondChanceRecovery,
+    state.phase,
+    state.questionCount,
+    state.questionIndex,
+    state.revealResult
+  ]);
 
   const completedRun = useMemo(() => {
     if (state.phase !== "result" || !state.outcome) {
@@ -429,6 +456,8 @@ export default function App() {
           lifelines={state.lifelines}
           lifelineUsedOnCurrentQuestion={state.lifelineUsedOnCurrentQuestion}
           eliminatedAnswerIndexes={state.eliminatedAnswerIndexes}
+          revealMicroRead={mindReadPayload.revealMicroRead}
+          transitionRead={mindReadPayload.transitionRead}
           onSelectAnswer={(answerIndex) => dispatch({ type: "SELECT_ANSWER", answerIndex })}
           onLockAnswer={() => dispatch({ type: "LOCK_ANSWER" })}
           onUseFiftyFifty={() => dispatch({ type: "USE_LIFELINE_50_50", correctIndex: currentQuestion.correctIndex })}
@@ -452,6 +481,8 @@ export default function App() {
           saveMessage={saveState.message}
           signedInEmail={session?.user.email ?? null}
           insightSummary={insightSummary}
+          runIdentity={mindReadPayload.runIdentity}
+          insightLabel={mindReadPayload.insightLabel}
           isSaveConfigured={isConfigured}
           onSaveRun={
             completedRun
