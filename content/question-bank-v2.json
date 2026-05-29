@@ -1,0 +1,6904 @@
+[
+  {
+    "external_key": "launch-q-001",
+    "prompt": "Which planet in our solar system is known for its prominent rings?",
+    "options": [
+      "Mars",
+      "Mercury",
+      "Venus",
+      "Saturn"
+    ],
+    "correct_answer_index": 3,
+    "category": "Science",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-002",
+    "prompt": "Which city serves as the capital of Canada?",
+    "options": [
+      "Ottawa",
+      "Montreal",
+      "Toronto",
+      "Vancouver"
+    ],
+    "correct_answer_index": 0,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-003",
+    "prompt": "How many sides does a hexagon have?",
+    "options": [
+      "Five",
+      "Eight",
+      "Seven",
+      "Six"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-004",
+    "prompt": "What gas do plants primarily absorb from the atmosphere?",
+    "options": [
+      "Carbon dioxide",
+      "Nitrogen",
+      "Oxygen",
+      "Helium"
+    ],
+    "correct_answer_index": 0,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-005",
+    "prompt": "Which instrument typically has eighty-eight keys?",
+    "options": [
+      "Piano",
+      "Trumpet",
+      "Violin",
+      "Flute"
+    ],
+    "correct_answer_index": 0,
+    "category": "Music",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-006",
+    "prompt": "In computing, what does CPU stand for?",
+    "options": [
+      "Central Process Unit",
+      "Control Program Upload",
+      "Computer Power Utility",
+      "Central Processing Unit"
+    ],
+    "correct_answer_index": 3,
+    "category": "Technology",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-007",
+    "prompt": "Who wrote the novel '1984'?",
+    "options": [
+      "George Orwell",
+      "Aldous Huxley",
+      "Ray Bradbury",
+      "Mary Shelley"
+    ],
+    "correct_answer_index": 0,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-008",
+    "prompt": "Which museum is home to the Mona Lisa?",
+    "options": [
+      "The Louvre",
+      "The Met",
+      "The Prado",
+      "The Uffizi"
+    ],
+    "correct_answer_index": 0,
+    "category": "Art",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-009",
+    "prompt": "Which language has the most native speakers worldwide?",
+    "options": [
+      "English",
+      "Spanish",
+      "Hindi",
+      "Mandarin Chinese"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-010",
+    "prompt": "Which ocean lies between eastern Africa and western Australia?",
+    "options": [
+      "Atlantic Ocean",
+      "Southern Ocean",
+      "Arctic Ocean",
+      "Indian Ocean"
+    ],
+    "correct_answer_index": 3,
+    "category": "Geography",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-011",
+    "prompt": "What is the square root of 144?",
+    "options": [
+      "12",
+      "11",
+      "10",
+      "14"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-012",
+    "prompt": "What is the chemical symbol for sodium?",
+    "options": [
+      "So",
+      "Sm",
+      "Sd",
+      "Na"
+    ],
+    "correct_answer_index": 3,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-013",
+    "prompt": "Genghis Khan founded which empire?",
+    "options": [
+      "Mongol Empire",
+      "Roman Empire",
+      "Ottoman Empire",
+      "Persian Empire"
+    ],
+    "correct_answer_index": 0,
+    "category": "History",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-014",
+    "prompt": "What does HTML stand for?",
+    "options": [
+      "HyperText Markup Language",
+      "Home Tool Markup Logic",
+      "Hyper Trainer Marking Language",
+      "High Text Markdown Language"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-015",
+    "prompt": "Which playwright wrote 'Hamlet'?",
+    "options": [
+      "Christopher Marlowe",
+      "Oscar Wilde",
+      "Ben Jonson",
+      "William Shakespeare"
+    ],
+    "correct_answer_index": 3,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-016",
+    "prompt": "Which artist painted the ceiling of the Sistine Chapel?",
+    "options": [
+      "Michelangelo",
+      "Raphael",
+      "Leonardo da Vinci",
+      "Caravaggio"
+    ],
+    "correct_answer_index": 0,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-017",
+    "prompt": "In which year did the Berlin Wall fall?",
+    "options": [
+      "1989",
+      "1987",
+      "1985",
+      "1991"
+    ],
+    "correct_answer_index": 0,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-018",
+    "prompt": "Which blood type is considered the universal donor for red blood cell transfusions?",
+    "options": [
+      "AB positive",
+      "B positive",
+      "A negative",
+      "O negative"
+    ],
+    "correct_answer_index": 3,
+    "category": "Biology",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-019",
+    "prompt": "What is the longest river in South America?",
+    "options": [
+      "Orinoco",
+      "Parana",
+      "Magdalena",
+      "Amazon"
+    ],
+    "correct_answer_index": 3,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-020",
+    "prompt": "Which composer wrote the 'Moonlight Sonata'?",
+    "options": [
+      "Beethoven",
+      "Bach",
+      "Mozart",
+      "Chopin"
+    ],
+    "correct_answer_index": 0,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-021",
+    "prompt": "Which element has the atomic number 79?",
+    "options": [
+      "Silver",
+      "Platinum",
+      "Mercury",
+      "Gold"
+    ],
+    "correct_answer_index": 3,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-022",
+    "prompt": "Which country hosted the 2016 Summer Olympics in Rio de Janeiro?",
+    "options": [
+      "China",
+      "Japan",
+      "United Kingdom",
+      "Brazil"
+    ],
+    "correct_answer_index": 3,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-023",
+    "prompt": "What is the term for a word that sounds the same as another word but has a different meaning?",
+    "options": [
+      "Antonym",
+      "Metaphor",
+      "Synonym",
+      "Homophone"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-024",
+    "prompt": "Which constellation contains the bright star Betelgeuse?",
+    "options": [
+      "Orion",
+      "Lyra",
+      "Cassiopeia",
+      "Cygnus"
+    ],
+    "correct_answer_index": 0,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-025",
+    "prompt": "What force keeps planets in orbit around the Sun?",
+    "options": [
+      "Magnetism",
+      "Radiation",
+      "Friction",
+      "Gravity"
+    ],
+    "correct_answer_index": 3,
+    "category": "Science",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-026",
+    "prompt": "What is the SI unit of electric current?",
+    "options": [
+      "Ampere",
+      "Watt",
+      "Volt",
+      "Ohm"
+    ],
+    "correct_answer_index": 0,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-027",
+    "prompt": "Which country is home to the city of Kyoto?",
+    "options": [
+      "China",
+      "South Korea",
+      "Thailand",
+      "Japan"
+    ],
+    "correct_answer_index": 3,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-028",
+    "prompt": "Which country has Manila as its capital city?",
+    "options": [
+      "Malaysia",
+      "Vietnam",
+      "Indonesia",
+      "Philippines"
+    ],
+    "correct_answer_index": 3,
+    "category": "World Facts",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-029",
+    "prompt": "What is 15 percent of 200?",
+    "options": [
+      "30",
+      "25",
+      "20",
+      "35"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-030",
+    "prompt": "What is 12 cubed?",
+    "options": [
+      "1,728",
+      "1,440",
+      "1,248",
+      "1,872"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-031",
+    "prompt": "Which organ pumps blood through the human body?",
+    "options": [
+      "Heart",
+      "Lung",
+      "Liver",
+      "Kidney"
+    ],
+    "correct_answer_index": 0,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-032",
+    "prompt": "Which organ filters waste from the blood to produce urine?",
+    "options": [
+      "Pancreas",
+      "Gallbladder",
+      "Spleen",
+      "Kidney"
+    ],
+    "correct_answer_index": 3,
+    "category": "Biology",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-033",
+    "prompt": "How many lines are in a standard musical staff?",
+    "options": [
+      "Four",
+      "Seven",
+      "Six",
+      "Five"
+    ],
+    "correct_answer_index": 3,
+    "category": "Music",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-034",
+    "prompt": "Who composed 'The Four Seasons'?",
+    "options": [
+      "Bach",
+      "Mozart",
+      "Vivaldi",
+      "Handel"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-035",
+    "prompt": "What does USB stand for?",
+    "options": [
+      "Universal Serial Bus",
+      "Unified System Board",
+      "User Storage Block",
+      "Universal Signal Base"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-036",
+    "prompt": "In a web address, what does HTTP stand for?",
+    "options": [
+      "HyperText Transfer Protocol",
+      "High Transfer Text Process",
+      "Hosted Transmission Type Path",
+      "Hyperlink Transit Terminal Program"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-037",
+    "prompt": "Who wrote 'Pride and Prejudice'?",
+    "options": [
+      "Jane Austen",
+      "Charlotte Bronte",
+      "Emily Dickinson",
+      "Mary Wollstonecraft"
+    ],
+    "correct_answer_index": 0,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-038",
+    "prompt": "Which epic poem features Achilles and Hector as central figures?",
+    "options": [
+      "The Odyssey",
+      "Beowulf",
+      "The Aeneid",
+      "The Iliad"
+    ],
+    "correct_answer_index": 3,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-039",
+    "prompt": "In painting, red and blue combine with which third color to form the primary color trio?",
+    "options": [
+      "Green",
+      "Black",
+      "Orange",
+      "Yellow"
+    ],
+    "correct_answer_index": 3,
+    "category": "Art",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-040",
+    "prompt": "Which Dutch painter created 'The Night Watch'?",
+    "options": [
+      "Vermeer",
+      "Frans Hals",
+      "Van Gogh",
+      "Rembrandt"
+    ],
+    "correct_answer_index": 3,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-041",
+    "prompt": "What is the term for a word spelled the same forward and backward?",
+    "options": [
+      "Anagram",
+      "Homonym",
+      "Acronym",
+      "Palindrome"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-042",
+    "prompt": "What is the term for a word formed from the initial letters of a phrase, like NASA?",
+    "options": [
+      "Metaphor",
+      "Clause",
+      "Prefix",
+      "Acronym"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-043",
+    "prompt": "Which continent is Egypt located in?",
+    "options": [
+      "Europe",
+      "Asia",
+      "Africa",
+      "South America"
+    ],
+    "correct_answer_index": 2,
+    "category": "Geography",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-044",
+    "prompt": "Which mountain range is commonly considered the boundary between Europe and Asia in Russia?",
+    "options": [
+      "Alps",
+      "Caucasus",
+      "Carpathians",
+      "Urals"
+    ],
+    "correct_answer_index": 3,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-045",
+    "prompt": "Who was the first president of the United States?",
+    "options": [
+      "Thomas Jefferson",
+      "James Madison",
+      "John Adams",
+      "George Washington"
+    ],
+    "correct_answer_index": 3,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-046",
+    "prompt": "Which treaty formally ended World War I?",
+    "options": [
+      "Treaty of Tordesillas",
+      "Treaty of Utrecht",
+      "Treaty of Paris",
+      "Treaty of Versailles"
+    ],
+    "correct_answer_index": 3,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-047",
+    "prompt": "What is the name of the galaxy that contains our solar system?",
+    "options": [
+      "Andromeda",
+      "Whirlpool",
+      "Milky Way",
+      "Triangulum"
+    ],
+    "correct_answer_index": 2,
+    "category": "Astronomy",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-048",
+    "prompt": "What is the term for a star that suddenly becomes much brighter because of a catastrophic explosion?",
+    "options": [
+      "Nebula",
+      "Pulsar",
+      "Supernova",
+      "Quasar"
+    ],
+    "correct_answer_index": 2,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-049",
+    "prompt": "What is the chemical symbol for gold?",
+    "options": [
+      "Ag",
+      "Au",
+      "Gd",
+      "Go"
+    ],
+    "correct_answer_index": 1,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-050",
+    "prompt": "What is the pH of pure water at room temperature?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correct_answer_index": 2,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-051",
+    "prompt": "Which country is represented by the maple leaf on its national flag?",
+    "options": [
+      "Canada",
+      "Switzerland",
+      "Austria",
+      "Denmark"
+    ],
+    "correct_answer_index": 0,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-052",
+    "prompt": "Which country is the smallest in the world by land area?",
+    "options": [
+      "Monaco",
+      "San Marino",
+      "Liechtenstein",
+      "Vatican City"
+    ],
+    "correct_answer_index": 3,
+    "category": "World Facts",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-053",
+    "prompt": "What is the cube root of 27?",
+    "options": [
+      "2",
+      "3",
+      "6",
+      "9"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-054",
+    "prompt": "What is 7 factorial?",
+    "options": [
+      "720",
+      "840",
+      "5040",
+      "6720"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-055",
+    "prompt": "Which organ pumps blood throughout the human body?",
+    "options": [
+      "Liver",
+      "Lung",
+      "Heart",
+      "Kidney"
+    ],
+    "correct_answer_index": 2,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-056",
+    "prompt": "What does DNA stand for?",
+    "options": [
+      "Deoxyribonucleic acid",
+      "Dynamic nitrogen acid",
+      "Dual ribose nucleic agent",
+      "Deoxygenated nucleic array"
+    ],
+    "correct_answer_index": 0,
+    "category": "Biology",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-057",
+    "prompt": "How many lines are on a standard musical staff?",
+    "options": [
+      "Four",
+      "Seven",
+      "Six",
+      "Five"
+    ],
+    "correct_answer_index": 3,
+    "category": "Music",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-058",
+    "prompt": "Which clef is also known as the G clef?",
+    "options": [
+      "Bass clef",
+      "Alto clef",
+      "Treble clef",
+      "Tenor clef"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-059",
+    "prompt": "What does URL stand for?",
+    "options": [
+      "Universal Reference Link",
+      "User Request Line",
+      "Unified Routing Language",
+      "Uniform Resource Locator"
+    ],
+    "correct_answer_index": 3,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-060",
+    "prompt": "What does RAM stand for in computing?",
+    "options": [
+      "Random Access Memory",
+      "Rapid Array Module",
+      "Remote Application Method",
+      "Readily Available Matrix"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-061",
+    "prompt": "Who wrote \"1984\"?",
+    "options": [
+      "George Orwell",
+      "Aldous Huxley",
+      "Ray Bradbury",
+      "H. G. Wells"
+    ],
+    "correct_answer_index": 0,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-062",
+    "prompt": "In Homer's epics, what is the name of Odysseus's wife?",
+    "options": [
+      "Helen",
+      "Clytemnestra",
+      "Andromache",
+      "Penelope"
+    ],
+    "correct_answer_index": 3,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-063",
+    "prompt": "What color do you get by mixing blue and yellow paint?",
+    "options": [
+      "Purple",
+      "Brown",
+      "Orange",
+      "Green"
+    ],
+    "correct_answer_index": 3,
+    "category": "Art",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-064",
+    "prompt": "Which Spanish artist painted 'Guernica'?",
+    "options": [
+      "Salvador Dali",
+      "Diego Velazquez",
+      "Pablo Picasso",
+      "Joan Miro"
+    ],
+    "correct_answer_index": 2,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-065",
+    "prompt": "Which language is primarily spoken in Brazil?",
+    "options": [
+      "Spanish",
+      "Italian",
+      "French",
+      "Portuguese"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-066",
+    "prompt": "Which Romance language has the most native speakers?",
+    "options": [
+      "French",
+      "Italian",
+      "Portuguese",
+      "Spanish"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-067",
+    "prompt": "Mount Everest lies on the border of Nepal and which region of China?",
+    "options": [
+      "Xinjiang",
+      "Inner Mongolia",
+      "Tibet",
+      "Sichuan"
+    ],
+    "correct_answer_index": 2,
+    "category": "Geography",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-068",
+    "prompt": "What is the capital of New Zealand?",
+    "options": [
+      "Auckland",
+      "Hamilton",
+      "Christchurch",
+      "Wellington"
+    ],
+    "correct_answer_index": 3,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-069",
+    "prompt": "Which ship sank on its maiden voyage in 1912?",
+    "options": [
+      "Lusitania",
+      "Britannic",
+      "Titanic",
+      "Bismarck"
+    ],
+    "correct_answer_index": 2,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-070",
+    "prompt": "Which war formally ended with the Treaty of Versailles?",
+    "options": [
+      "World War I",
+      "World War II",
+      "The Crimean War",
+      "The Franco-Prussian War"
+    ],
+    "correct_answer_index": 0,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-071",
+    "prompt": "Which planet is the largest in our solar system?",
+    "options": [
+      "Earth",
+      "Saturn",
+      "Mars",
+      "Jupiter"
+    ],
+    "correct_answer_index": 3,
+    "category": "Astronomy",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-072",
+    "prompt": "What is the name of the point in an orbit closest to the Sun?",
+    "options": [
+      "Aphelion",
+      "Zenith",
+      "Equinox",
+      "Perihelion"
+    ],
+    "correct_answer_index": 3,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-073",
+    "prompt": "What is the primary gas found in the Earth's atmosphere?",
+    "options": [
+      "Oxygen",
+      "Hydrogen",
+      "Carbon dioxide",
+      "Nitrogen"
+    ],
+    "correct_answer_index": 3,
+    "category": "Science",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-074",
+    "prompt": "Which part of the cell contains genetic material?",
+    "options": [
+      "Mitochondria",
+      "Cell membrane",
+      "Ribosome",
+      "Nucleus"
+    ],
+    "correct_answer_index": 3,
+    "category": "Science",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-075",
+    "prompt": "What is the SI unit of force?",
+    "options": [
+      "Joule",
+      "Watt",
+      "Newton",
+      "Pascal"
+    ],
+    "correct_answer_index": 2,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-076",
+    "prompt": "Which phenomenon causes a rainbow?",
+    "options": [
+      "Diffraction",
+      "Refraction and reflection",
+      "Conduction",
+      "Magnetism"
+    ],
+    "correct_answer_index": 1,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-077",
+    "prompt": "Which law states that every action has an equal and opposite reaction?",
+    "options": [
+      "Newton's First Law",
+      "Newton's Second Law",
+      "Newton's Third Law",
+      "Boyle's Law"
+    ],
+    "correct_answer_index": 2,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-078",
+    "prompt": "What is the atomic number of oxygen?",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "correct_answer_index": 2,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-079",
+    "prompt": "Which particle has a negative charge?",
+    "options": [
+      "Proton",
+      "Neutron",
+      "Electron",
+      "Photon"
+    ],
+    "correct_answer_index": 2,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-080",
+    "prompt": "Which country has the largest population in the world as of the mid-2020s?",
+    "options": [
+      "India",
+      "China",
+      "United States",
+      "Indonesia"
+    ],
+    "correct_answer_index": 0,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-081",
+    "prompt": "Which currency is used in Japan?",
+    "options": [
+      "Yuan",
+      "Won",
+      "Yen",
+      "Ringgit"
+    ],
+    "correct_answer_index": 2,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-082",
+    "prompt": "Which country is famous for the city of Marrakech?",
+    "options": [
+      "Morocco",
+      "Egypt",
+      "Jordan",
+      "Turkey"
+    ],
+    "correct_answer_index": 0,
+    "category": "World Facts",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-083",
+    "prompt": "Which country has the city of Buenos Aires as its capital?",
+    "options": [
+      "Chile",
+      "Peru",
+      "Argentina",
+      "Uruguay"
+    ],
+    "correct_answer_index": 2,
+    "category": "World Facts",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-084",
+    "prompt": "Which nation is known as the Land of the Rising Sun?",
+    "options": [
+      "South Korea",
+      "Japan",
+      "Thailand",
+      "Vietnam"
+    ],
+    "correct_answer_index": 1,
+    "category": "World Facts",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-085",
+    "prompt": "Which country has the most time zones when overseas territories are included?",
+    "options": [
+      "Russia",
+      "United States",
+      "France",
+      "United Kingdom"
+    ],
+    "correct_answer_index": 2,
+    "category": "World Facts",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-086",
+    "prompt": "Which country is home to the ancient city of Petra?",
+    "options": [
+      "Jordan",
+      "Lebanon",
+      "Syria",
+      "Iraq"
+    ],
+    "correct_answer_index": 0,
+    "category": "World Facts",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-087",
+    "prompt": "What is 9 multiplied by 8?",
+    "options": [
+      "64",
+      "72",
+      "81",
+      "88"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-088",
+    "prompt": "What is 100 divided by 4?",
+    "options": [
+      "20",
+      "25",
+      "30",
+      "40"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-089",
+    "prompt": "What is the value of pi rounded to two decimal places?",
+    "options": [
+      "3.12",
+      "3.14",
+      "3.16",
+      "3.18"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-090",
+    "prompt": "What is the next prime number after 19?",
+    "options": [
+      "21",
+      "22",
+      "23",
+      "29"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-091",
+    "prompt": "If x + 7 = 15, what is x?",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-092",
+    "prompt": "What is the area of a rectangle with length 9 and width 4?",
+    "options": [
+      "13",
+      "26",
+      "32",
+      "36"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-093",
+    "prompt": "What is the cube of 5?",
+    "options": [
+      "25",
+      "75",
+      "100",
+      "125"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-094",
+    "prompt": "Which organ is primarily responsible for filtering blood?",
+    "options": [
+      "Liver",
+      "Kidney",
+      "Pancreas",
+      "Spleen"
+    ],
+    "correct_answer_index": 1,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-095",
+    "prompt": "What is the basic unit of life?",
+    "options": [
+      "Atom",
+      "Cell",
+      "Tissue",
+      "Organ"
+    ],
+    "correct_answer_index": 1,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-096",
+    "prompt": "Which blood cells help fight infection?",
+    "options": [
+      "Red blood cells",
+      "White blood cells",
+      "Platelets",
+      "Plasma cells"
+    ],
+    "correct_answer_index": 1,
+    "category": "Biology",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-097",
+    "prompt": "Photosynthesis mainly occurs in which plant organ?",
+    "options": [
+      "Root",
+      "Stem",
+      "Leaf",
+      "Flower"
+    ],
+    "correct_answer_index": 2,
+    "category": "Biology",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-098",
+    "prompt": "What is the largest organ in the human body?",
+    "options": [
+      "Liver",
+      "Brain",
+      "Skin",
+      "Lung"
+    ],
+    "correct_answer_index": 2,
+    "category": "Biology",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-099",
+    "prompt": "What molecule carries genetic instructions in most living organisms?",
+    "options": [
+      "RNA",
+      "DNA",
+      "ATP",
+      "Protein"
+    ],
+    "correct_answer_index": 1,
+    "category": "Biology",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-100",
+    "prompt": "Which part of the brain controls balance and coordination?",
+    "options": [
+      "Cerebrum",
+      "Cerebellum",
+      "Medulla",
+      "Thalamus"
+    ],
+    "correct_answer_index": 1,
+    "category": "Biology",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-101",
+    "prompt": "How many semitones are in a musical octave?",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "14"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-102",
+    "prompt": "Which instrument is commonly associated with jazz improvisation and has valves?",
+    "options": [
+      "Flute",
+      "Trumpet",
+      "Cello",
+      "Harp"
+    ],
+    "correct_answer_index": 1,
+    "category": "Music",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-103",
+    "prompt": "In orchestral strings, which instrument is the smallest?",
+    "options": [
+      "Viola",
+      "Cello",
+      "Violin",
+      "Double bass"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-104",
+    "prompt": "Which term means gradually getting louder?",
+    "options": [
+      "Diminuendo",
+      "Crescendo",
+      "Staccato",
+      "Legato"
+    ],
+    "correct_answer_index": 1,
+    "category": "Music",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-105",
+    "prompt": "Which composer wrote 'The Four Seasons'?",
+    "options": [
+      "Bach",
+      "Handel",
+      "Vivaldi",
+      "Haydn"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-106",
+    "prompt": "What is the relative minor key of C major?",
+    "options": [
+      "D minor",
+      "A minor",
+      "E minor",
+      "G minor"
+    ],
+    "correct_answer_index": 1,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-107",
+    "prompt": "Which symbol raises a note by one semitone?",
+    "options": [
+      "Flat",
+      "Natural",
+      "Sharp",
+      "Rest"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-108",
+    "prompt": "What does CPU stand for?",
+    "options": [
+      "Central Processing Unit",
+      "Computer Primary Utility",
+      "Core Program Unit",
+      "Central Program Utility"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-109",
+    "prompt": "Which company developed the Windows operating system?",
+    "options": [
+      "Apple",
+      "Google",
+      "Microsoft",
+      "IBM"
+    ],
+    "correct_answer_index": 2,
+    "category": "Technology",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-110",
+    "prompt": "What does SSD stand for in storage devices?",
+    "options": [
+      "Solid State Drive",
+      "Secure Storage Disk",
+      "System Speed Device",
+      "Serial State Disk"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-111",
+    "prompt": "Which protocol is commonly used to load secure websites?",
+    "options": [
+      "FTP",
+      "HTTP",
+      "HTTPS",
+      "SMTP"
+    ],
+    "correct_answer_index": 2,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-112",
+    "prompt": "In networking, what does LAN stand for?",
+    "options": [
+      "Large Access Network",
+      "Local Area Network",
+      "Linked Application Node",
+      "Long Arc Network"
+    ],
+    "correct_answer_index": 1,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-113",
+    "prompt": "Which data structure follows First In, First Out (FIFO)?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Graph"
+    ],
+    "correct_answer_index": 1,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-114",
+    "prompt": "Which language runs natively in modern web browsers for interactivity?",
+    "options": [
+      "C",
+      "Java",
+      "JavaScript",
+      "Rust"
+    ],
+    "correct_answer_index": 2,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-115",
+    "prompt": "Who wrote 'The Great Gatsby'?",
+    "options": [
+      "Ernest Hemingway",
+      "F. Scott Fitzgerald",
+      "John Steinbeck",
+      "Mark Twain"
+    ],
+    "correct_answer_index": 1,
+    "category": "Literature",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-116",
+    "prompt": "'To Kill a Mockingbird' is set in which U.S. state?",
+    "options": [
+      "Alabama",
+      "Georgia",
+      "Mississippi",
+      "Texas"
+    ],
+    "correct_answer_index": 0,
+    "category": "Literature",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-117",
+    "prompt": "Who is the author of 'The Odyssey'?",
+    "options": [
+      "Socrates",
+      "Homer",
+      "Plato",
+      "Virgil"
+    ],
+    "correct_answer_index": 1,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-118",
+    "prompt": "Which novel begins with 'Call me Ishmael.'?",
+    "options": [
+      "Moby-Dick",
+      "The Old Man and the Sea",
+      "Treasure Island",
+      "Heart of Darkness"
+    ],
+    "correct_answer_index": 0,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-119",
+    "prompt": "Who wrote the dystopian novel 'Brave New World'?",
+    "options": [
+      "George Orwell",
+      "Aldous Huxley",
+      "Kurt Vonnegut",
+      "H.G. Wells"
+    ],
+    "correct_answer_index": 1,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-120",
+    "prompt": "In Shakespeare's tragedies, who is the Prince of Denmark?",
+    "options": [
+      "Macbeth",
+      "Othello",
+      "Hamlet",
+      "Lear"
+    ],
+    "correct_answer_index": 2,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-121",
+    "prompt": "Which author created Sherlock Holmes?",
+    "options": [
+      "Agatha Christie",
+      "Arthur Conan Doyle",
+      "Edgar Allan Poe",
+      "Wilkie Collins"
+    ],
+    "correct_answer_index": 1,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-122",
+    "prompt": "Which primary colors are mixed to make purple paint?",
+    "options": [
+      "Red and blue",
+      "Blue and yellow",
+      "Red and yellow",
+      "Green and blue"
+    ],
+    "correct_answer_index": 0,
+    "category": "Art",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-123",
+    "prompt": "Which artist is known for cutting off part of his own ear?",
+    "options": [
+      "Claude Monet",
+      "Vincent van Gogh",
+      "Paul Cezanne",
+      "Henri Matisse"
+    ],
+    "correct_answer_index": 1,
+    "category": "Art",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-124",
+    "prompt": "Which movement is Salvador Dali most associated with?",
+    "options": [
+      "Impressionism",
+      "Surrealism",
+      "Cubism",
+      "Baroque"
+    ],
+    "correct_answer_index": 1,
+    "category": "Art",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-125",
+    "prompt": "The statue 'David' was sculpted by which artist?",
+    "options": [
+      "Donatello",
+      "Michelangelo",
+      "Bernini",
+      "Rodin"
+    ],
+    "correct_answer_index": 1,
+    "category": "Art",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-126",
+    "prompt": "Which architect designed the Guggenheim Museum in Bilbao?",
+    "options": [
+      "Frank Gehry",
+      "Zaha Hadid",
+      "I.M. Pei",
+      "Le Corbusier"
+    ],
+    "correct_answer_index": 0,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-127",
+    "prompt": "Which painting technique uses small dots of color?",
+    "options": [
+      "Fresco",
+      "Pointillism",
+      "Impasto",
+      "Sfumato"
+    ],
+    "correct_answer_index": 1,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-128",
+    "prompt": "Which artist painted 'The Persistence of Memory'?",
+    "options": [
+      "Pablo Picasso",
+      "Salvador Dali",
+      "Joan Miro",
+      "Frida Kahlo"
+    ],
+    "correct_answer_index": 1,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-129",
+    "prompt": "Which language uses the Cyrillic alphabet?",
+    "options": [
+      "Spanish",
+      "Russian",
+      "German",
+      "Swedish"
+    ],
+    "correct_answer_index": 1,
+    "category": "Language",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-130",
+    "prompt": "What is the most widely learned second language globally?",
+    "options": [
+      "Mandarin Chinese",
+      "French",
+      "English",
+      "Arabic"
+    ],
+    "correct_answer_index": 2,
+    "category": "Language",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-131",
+    "prompt": "Which language family does Hindi belong to?",
+    "options": [
+      "Dravidian",
+      "Sino-Tibetan",
+      "Indo-European",
+      "Uralic"
+    ],
+    "correct_answer_index": 2,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-132",
+    "prompt": "What is the official language of Egypt?",
+    "options": [
+      "Arabic",
+      "French",
+      "English",
+      "Turkish"
+    ],
+    "correct_answer_index": 0,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-133",
+    "prompt": "Which language has grammatical genders for nouns and three articles der/die/das?",
+    "options": [
+      "Dutch",
+      "German",
+      "Danish",
+      "Norwegian"
+    ],
+    "correct_answer_index": 1,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-134",
+    "prompt": "Which language is primarily spoken in Iran?",
+    "options": [
+      "Arabic",
+      "Persian (Farsi)",
+      "Urdu",
+      "Pashto"
+    ],
+    "correct_answer_index": 1,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-135",
+    "prompt": "Which of these is a Semitic language?",
+    "options": [
+      "Hebrew",
+      "Hindi",
+      "Hungarian",
+      "Finnish"
+    ],
+    "correct_answer_index": 0,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-136",
+    "prompt": "Which desert is the largest hot desert on Earth?",
+    "options": [
+      "Gobi",
+      "Kalahari",
+      "Sahara",
+      "Atacama"
+    ],
+    "correct_answer_index": 2,
+    "category": "Geography",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-137",
+    "prompt": "Which river flows through the city of Cairo?",
+    "options": [
+      "Tigris",
+      "Nile",
+      "Euphrates",
+      "Jordan"
+    ],
+    "correct_answer_index": 1,
+    "category": "Geography",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-138",
+    "prompt": "Which U.S. state is known as the Grand Canyon State?",
+    "options": [
+      "Nevada",
+      "Utah",
+      "Arizona",
+      "Colorado"
+    ],
+    "correct_answer_index": 2,
+    "category": "Geography",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-139",
+    "prompt": "Which strait separates Europe and Africa at Spain and Morocco?",
+    "options": [
+      "Strait of Hormuz",
+      "Strait of Gibraltar",
+      "Bering Strait",
+      "Bosporus"
+    ],
+    "correct_answer_index": 1,
+    "category": "Geography",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-140",
+    "prompt": "Which mountain range forms a natural barrier between France and Spain?",
+    "options": [
+      "Alps",
+      "Carpathians",
+      "Pyrenees",
+      "Apennines"
+    ],
+    "correct_answer_index": 2,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-141",
+    "prompt": "Which African lake is the largest by surface area?",
+    "options": [
+      "Lake Victoria",
+      "Lake Tanganyika",
+      "Lake Malawi",
+      "Lake Turkana"
+    ],
+    "correct_answer_index": 0,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-142",
+    "prompt": "Which city is located on two continents, Europe and Asia?",
+    "options": [
+      "Athens",
+      "Istanbul",
+      "Cairo",
+      "Moscow"
+    ],
+    "correct_answer_index": 1,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-143",
+    "prompt": "In which year did World War II end?",
+    "options": [
+      "1942",
+      "1945",
+      "1948",
+      "1950"
+    ],
+    "correct_answer_index": 1,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-144",
+    "prompt": "Which empire built Machu Picchu?",
+    "options": [
+      "Maya",
+      "Aztec",
+      "Inca",
+      "Roman"
+    ],
+    "correct_answer_index": 2,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-145",
+    "prompt": "The Renaissance began in which country?",
+    "options": [
+      "France",
+      "Italy",
+      "Germany",
+      "England"
+    ],
+    "correct_answer_index": 1,
+    "category": "History",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-146",
+    "prompt": "Who was the British Prime Minister during most of World War II?",
+    "options": [
+      "Neville Chamberlain",
+      "Winston Churchill",
+      "Clement Attlee",
+      "Harold Macmillan"
+    ],
+    "correct_answer_index": 1,
+    "category": "History",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-147",
+    "prompt": "What year did the United States declare independence?",
+    "options": [
+      "1775",
+      "1776",
+      "1781",
+      "1789"
+    ],
+    "correct_answer_index": 1,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-148",
+    "prompt": "Which wall divided East and West Berlin until 1989?",
+    "options": [
+      "Iron Curtain",
+      "Berlin Wall",
+      "Great Wall",
+      "Hadrian's Wall"
+    ],
+    "correct_answer_index": 1,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-149",
+    "prompt": "Which civilization developed cuneiform writing?",
+    "options": [
+      "Egyptian",
+      "Greek",
+      "Sumerian",
+      "Roman"
+    ],
+    "correct_answer_index": 2,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-150",
+    "prompt": "Which planet is known as the Red Planet?",
+    "options": [
+      "Mars",
+      "Jupiter",
+      "Venus",
+      "Mercury"
+    ],
+    "correct_answer_index": 0,
+    "category": "Astronomy",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-151",
+    "prompt": "What is the closest star to Earth?",
+    "options": [
+      "Proxima Centauri",
+      "Sirius",
+      "The Sun",
+      "Polaris"
+    ],
+    "correct_answer_index": 2,
+    "category": "Astronomy",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-152",
+    "prompt": "Which planet has the most moons currently known in our solar system?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Saturn",
+      "Venus"
+    ],
+    "correct_answer_index": 2,
+    "category": "Astronomy",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-153",
+    "prompt": "What is the name of NASA's famous space telescope launched in 1990?",
+    "options": [
+      "Kepler",
+      "Hubble",
+      "Chandra",
+      "Voyager"
+    ],
+    "correct_answer_index": 1,
+    "category": "Astronomy",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-154",
+    "prompt": "Which phase comes after a new moon?",
+    "options": [
+      "Full moon",
+      "Waxing crescent",
+      "Waning gibbous",
+      "Last quarter"
+    ],
+    "correct_answer_index": 1,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-155",
+    "prompt": "What is a light-year a measure of?",
+    "options": [
+      "Time",
+      "Brightness",
+      "Distance",
+      "Mass"
+    ],
+    "correct_answer_index": 2,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-q-156",
+    "prompt": "Which planet is famous for its Great Red Spot storm?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Neptune",
+      "Uranus"
+    ],
+    "correct_answer_index": 0,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v1",
+    "source_label": "curated-launch"
+  },
+  {
+    "external_key": "launch-v2-q-001",
+    "prompt": "What is 12 squared?",
+    "options": [
+      "144",
+      "132",
+      "156",
+      "159"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-002",
+    "prompt": "What is 13 squared?",
+    "options": [
+      "156",
+      "169",
+      "182",
+      "185"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-003",
+    "prompt": "What is 14 squared?",
+    "options": [
+      "182",
+      "210",
+      "196",
+      "213"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-004",
+    "prompt": "What is 15 squared?",
+    "options": [
+      "210",
+      "243",
+      "240",
+      "225"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-005",
+    "prompt": "What is 16 squared?",
+    "options": [
+      "256",
+      "240",
+      "272",
+      "275"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-006",
+    "prompt": "What is 17 squared?",
+    "options": [
+      "272",
+      "289",
+      "306",
+      "309"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-007",
+    "prompt": "What is 18 squared?",
+    "options": [
+      "306",
+      "342",
+      "324",
+      "345"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-008",
+    "prompt": "What is 19 squared?",
+    "options": [
+      "342",
+      "383",
+      "380",
+      "361"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-009",
+    "prompt": "What is 20 squared?",
+    "options": [
+      "400",
+      "380",
+      "420",
+      "423"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-010",
+    "prompt": "What is 21 squared?",
+    "options": [
+      "420",
+      "441",
+      "462",
+      "465"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-011",
+    "prompt": "What is 22 squared?",
+    "options": [
+      "462",
+      "506",
+      "484",
+      "509"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-012",
+    "prompt": "What is 23 squared?",
+    "options": [
+      "506",
+      "555",
+      "552",
+      "529"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-013",
+    "prompt": "What is 24 squared?",
+    "options": [
+      "576",
+      "552",
+      "600",
+      "603"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-014",
+    "prompt": "What is 25 squared?",
+    "options": [
+      "600",
+      "625",
+      "650",
+      "653"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-015",
+    "prompt": "What is 26 squared?",
+    "options": [
+      "650",
+      "702",
+      "676",
+      "705"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-016",
+    "prompt": "What is 27 squared?",
+    "options": [
+      "702",
+      "759",
+      "756",
+      "729"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-017",
+    "prompt": "What is 28 squared?",
+    "options": [
+      "784",
+      "756",
+      "812",
+      "815"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-018",
+    "prompt": "What is 29 squared?",
+    "options": [
+      "812",
+      "841",
+      "870",
+      "873"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-019",
+    "prompt": "What is 30 squared?",
+    "options": [
+      "870",
+      "930",
+      "900",
+      "933"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-020",
+    "prompt": "What is 31 squared?",
+    "options": [
+      "930",
+      "995",
+      "992",
+      "961"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-021",
+    "prompt": "What is 32 squared?",
+    "options": [
+      "1024",
+      "992",
+      "1056",
+      "1059"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-022",
+    "prompt": "What is 33 squared?",
+    "options": [
+      "1056",
+      "1089",
+      "1122",
+      "1125"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-023",
+    "prompt": "What is 34 squared?",
+    "options": [
+      "1122",
+      "1190",
+      "1156",
+      "1193"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-024",
+    "prompt": "What is 35 squared?",
+    "options": [
+      "1190",
+      "1263",
+      "1260",
+      "1225"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-025",
+    "prompt": "What is 36 squared?",
+    "options": [
+      "1296",
+      "1260",
+      "1332",
+      "1335"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-026",
+    "prompt": "What is 37 squared?",
+    "options": [
+      "1332",
+      "1369",
+      "1406",
+      "1409"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-027",
+    "prompt": "What is 38 squared?",
+    "options": [
+      "1406",
+      "1482",
+      "1444",
+      "1485"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-028",
+    "prompt": "What is 39 squared?",
+    "options": [
+      "1482",
+      "1563",
+      "1560",
+      "1521"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-029",
+    "prompt": "What is 40 squared?",
+    "options": [
+      "1600",
+      "1560",
+      "1640",
+      "1643"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-030",
+    "prompt": "What is 41 squared?",
+    "options": [
+      "1640",
+      "1681",
+      "1722",
+      "1725"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-031",
+    "prompt": "What is 42 squared?",
+    "options": [
+      "1722",
+      "1806",
+      "1764",
+      "1809"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-032",
+    "prompt": "What is 43 squared?",
+    "options": [
+      "1806",
+      "1895",
+      "1892",
+      "1849"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-033",
+    "prompt": "What is 44 squared?",
+    "options": [
+      "1936",
+      "1892",
+      "1980",
+      "1983"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-034",
+    "prompt": "What is 45 squared?",
+    "options": [
+      "1980",
+      "2025",
+      "2070",
+      "2073"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-035",
+    "prompt": "What is 46 squared?",
+    "options": [
+      "2070",
+      "2162",
+      "2116",
+      "2165"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-036",
+    "prompt": "What is 47 squared?",
+    "options": [
+      "2162",
+      "2259",
+      "2256",
+      "2209"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-037",
+    "prompt": "What is 48 squared?",
+    "options": [
+      "2304",
+      "2256",
+      "2352",
+      "2355"
+    ],
+    "correct_answer_index": 0,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-038",
+    "prompt": "What is 49 squared?",
+    "options": [
+      "2352",
+      "2401",
+      "2450",
+      "2453"
+    ],
+    "correct_answer_index": 1,
+    "category": "Math",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-039",
+    "prompt": "What is 50 squared?",
+    "options": [
+      "2450",
+      "2550",
+      "2500",
+      "2553"
+    ],
+    "correct_answer_index": 2,
+    "category": "Math",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-040",
+    "prompt": "What is 51 squared?",
+    "options": [
+      "2550",
+      "2655",
+      "2652",
+      "2601"
+    ],
+    "correct_answer_index": 3,
+    "category": "Math",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-041",
+    "prompt": "What gas do plants primarily absorb for photosynthesis?",
+    "options": [
+      "Carbon dioxide",
+      "Oxygen",
+      "Nitrogen",
+      "Hydrogen"
+    ],
+    "correct_answer_index": 0,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-042",
+    "prompt": "Which blood cells mainly carry oxygen?",
+    "options": [
+      "Platelets",
+      "Red blood cells",
+      "White blood cells",
+      "Plasma cells"
+    ],
+    "correct_answer_index": 1,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-044",
+    "prompt": "Which planet has the shortest year in our solar system?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Mercury",
+      "Venus"
+    ],
+    "correct_answer_index": 2,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-045",
+    "prompt": "What force pulls objects toward Earth?",
+    "options": [
+      "Friction",
+      "Magnetism",
+      "Radiation",
+      "Gravity"
+    ],
+    "correct_answer_index": 3,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-046",
+    "prompt": "Which part of the cell contains most genetic material?",
+    "options": [
+      "Nucleus",
+      "Ribosome",
+      "Golgi body",
+      "Lysosome"
+    ],
+    "correct_answer_index": 0,
+    "category": "Science",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-047",
+    "prompt": "What is the chemical symbol for potassium?",
+    "options": [
+      "Po",
+      "K",
+      "Pt",
+      "P"
+    ],
+    "correct_answer_index": 1,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-048",
+    "prompt": "Which organ filters blood to make urine?",
+    "options": [
+      "Liver",
+      "Pancreas",
+      "Kidney",
+      "Lung"
+    ],
+    "correct_answer_index": 2,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-049",
+    "prompt": "What is the nearest star to Earth?",
+    "options": [
+      "Sirius",
+      "Polaris",
+      "Betelgeuse",
+      "Sun"
+    ],
+    "correct_answer_index": 3,
+    "category": "Science",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-050",
+    "prompt": "What state of matter has a definite volume but no fixed shape?",
+    "options": [
+      "Liquid",
+      "Gas",
+      "Plasma",
+      "Solid"
+    ],
+    "correct_answer_index": 0,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-051",
+    "prompt": "What is the boiling point of water at sea level in Celsius?",
+    "options": [
+      "90",
+      "100",
+      "95",
+      "105"
+    ],
+    "correct_answer_index": 1,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-052",
+    "prompt": "Which vitamin is produced in skin with sunlight exposure?",
+    "options": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin K"
+    ],
+    "correct_answer_index": 2,
+    "category": "Science",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-054",
+    "prompt": "Which layer of Earth is liquid iron-rich material?",
+    "options": [
+      "Crust",
+      "Mantle",
+      "Inner core",
+      "Outer core"
+    ],
+    "correct_answer_index": 3,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-055",
+    "prompt": "Which wave has the highest frequency?",
+    "options": [
+      "Gamma",
+      "Microwave",
+      "Visible light",
+      "Radio"
+    ],
+    "correct_answer_index": 0,
+    "category": "Science",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-056",
+    "prompt": "Which gas is most abundant in Earth’s atmosphere?",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon dioxide",
+      "Argon"
+    ],
+    "correct_answer_index": 1,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-057",
+    "prompt": "What unit measures electric current?",
+    "options": [
+      "Volt",
+      "Watt",
+      "Ampere",
+      "Ohm"
+    ],
+    "correct_answer_index": 2,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-058",
+    "prompt": "Which process turns liquid water into vapor?",
+    "options": [
+      "Condensation",
+      "Freezing",
+      "Sublimation",
+      "Evaporation"
+    ],
+    "correct_answer_index": 3,
+    "category": "Science",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-059",
+    "prompt": "What is the speed of light closest to?",
+    "options": [
+      "300,000 km/s",
+      "30,000 km/s",
+      "3,000 km/s",
+      "3,000,000 km/s"
+    ],
+    "correct_answer_index": 0,
+    "category": "Science",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-060",
+    "prompt": "Which blood type is known as the universal donor?",
+    "options": [
+      "AB positive",
+      "O negative",
+      "A positive",
+      "B negative"
+    ],
+    "correct_answer_index": 1,
+    "category": "Science",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-061",
+    "prompt": "Which wall fell in 1989, symbolizing the end of the Cold War split in Germany?",
+    "options": [
+      "Great Wall",
+      "Hadrian’s Wall",
+      "Berlin Wall",
+      "Western Wall"
+    ],
+    "correct_answer_index": 2,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-062",
+    "prompt": "Who was Britain’s prime minister for most of World War II?",
+    "options": [
+      "Harold Macmillan",
+      "Neville Chamberlain",
+      "Clement Attlee",
+      "Winston Churchill"
+    ],
+    "correct_answer_index": 3,
+    "category": "History",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-063",
+    "prompt": "In which year did the Titanic sink?",
+    "options": [
+      "1912",
+      "1905",
+      "1918",
+      "1924"
+    ],
+    "correct_answer_index": 0,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-064",
+    "prompt": "Which civilization built Machu Picchu?",
+    "options": [
+      "Aztec",
+      "Inca",
+      "Maya",
+      "Olmec"
+    ],
+    "correct_answer_index": 1,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-065",
+    "prompt": "Who wrote the Communist Manifesto with Karl Marx?",
+    "options": [
+      "Trotsky",
+      "Lenin",
+      "Friedrich Engels",
+      "Stalin"
+    ],
+    "correct_answer_index": 2,
+    "category": "History",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-066",
+    "prompt": "Which empire was ruled by Julius Caesar?",
+    "options": [
+      "Greek",
+      "Persian",
+      "Ottoman",
+      "Roman"
+    ],
+    "correct_answer_index": 3,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-067",
+    "prompt": "What year did India gain independence?",
+    "options": [
+      "1947",
+      "1942",
+      "1950",
+      "1955"
+    ],
+    "correct_answer_index": 0,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-068",
+    "prompt": "Who was known as the Maid of Orleans?",
+    "options": [
+      "Catherine de Medici",
+      "Joan of Arc",
+      "Eleanor of Aquitaine",
+      "Marie Antoinette"
+    ],
+    "correct_answer_index": 1,
+    "category": "History",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-069",
+    "prompt": "Which war was fought between the North and South regions in the United States?",
+    "options": [
+      "War of 1812",
+      "Revolutionary War",
+      "Civil War",
+      "Spanish-American War"
+    ],
+    "correct_answer_index": 2,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-070",
+    "prompt": "Which ancient city was buried by Mount Vesuvius in 79 CE?",
+    "options": [
+      "Athens",
+      "Sparta",
+      "Carthage",
+      "Pompeii"
+    ],
+    "correct_answer_index": 3,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-071",
+    "prompt": "Which treaty ended World War I?",
+    "options": [
+      "Treaty of Versailles",
+      "Treaty of Paris",
+      "Treaty of Ghent",
+      "Treaty of Tordesillas"
+    ],
+    "correct_answer_index": 0,
+    "category": "History",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-072",
+    "prompt": "Who was the first woman to fly solo across the Atlantic?",
+    "options": [
+      "Bessie Coleman",
+      "Amelia Earhart",
+      "Sally Ride",
+      "Valentina Tereshkova"
+    ],
+    "correct_answer_index": 1,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-073",
+    "prompt": "Which dynasty built much of the Great Wall sections seen today?",
+    "options": [
+      "Han",
+      "Qin",
+      "Ming",
+      "Tang"
+    ],
+    "correct_answer_index": 2,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-074",
+    "prompt": "What event began on July 14, 1789, in France?",
+    "options": [
+      "Reign of Terror",
+      "Congress of Vienna",
+      "Napoleonic Wars",
+      "Storming of the Bastille"
+    ],
+    "correct_answer_index": 3,
+    "category": "History",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-075",
+    "prompt": "Which explorer completed the first circumnavigation expedition?",
+    "options": [
+      "Ferdinand Magellan’s expedition",
+      "Christopher Columbus",
+      "Vasco da Gama",
+      "James Cook"
+    ],
+    "correct_answer_index": 0,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-076",
+    "prompt": "Who was the first emperor of unified China?",
+    "options": [
+      "Kublai Khan",
+      "Qin Shi Huang",
+      "Sun Yat-sen",
+      "Emperor Wu"
+    ],
+    "correct_answer_index": 1,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-077",
+    "prompt": "Which city served as the capital of the Byzantine Empire?",
+    "options": [
+      "Rome",
+      "Athens",
+      "Constantinople",
+      "Alexandria"
+    ],
+    "correct_answer_index": 2,
+    "category": "History",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-078",
+    "prompt": "Who led the Salt March in 1930?",
+    "options": [
+      "Jawaharlal Nehru",
+      "Subhas Chandra Bose",
+      "Sardar Patel",
+      "Mahatma Gandhi"
+    ],
+    "correct_answer_index": 3,
+    "category": "History",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-079",
+    "prompt": "Which country gifted the Statue of Liberty to the U.S.?",
+    "options": [
+      "France",
+      "Spain",
+      "Italy",
+      "Germany"
+    ],
+    "correct_answer_index": 0,
+    "category": "History",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-080",
+    "prompt": "What was the primary language of the Roman Empire?",
+    "options": [
+      "Greek",
+      "Latin",
+      "Aramaic",
+      "French"
+    ],
+    "correct_answer_index": 1,
+    "category": "History",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-081",
+    "prompt": "Which river is the longest in the world by common textbook convention?",
+    "options": [
+      "Amazon",
+      "Yangtze",
+      "Nile",
+      "Mississippi"
+    ],
+    "correct_answer_index": 2,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-082",
+    "prompt": "What is the capital of Canada?",
+    "options": [
+      "Toronto",
+      "Vancouver",
+      "Montreal",
+      "Ottawa"
+    ],
+    "correct_answer_index": 3,
+    "category": "Geography",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-083",
+    "prompt": "Which desert is the largest hot desert?",
+    "options": [
+      "Sahara",
+      "Kalahari",
+      "Atacama",
+      "Gobi"
+    ],
+    "correct_answer_index": 0,
+    "category": "Geography",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-084",
+    "prompt": "Mount Kilimanjaro is located in which country?",
+    "options": [
+      "Kenya",
+      "Tanzania",
+      "Ethiopia",
+      "Uganda"
+    ],
+    "correct_answer_index": 1,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-085",
+    "prompt": "Which ocean lies between Africa and Australia?",
+    "options": [
+      "Atlantic",
+      "Pacific",
+      "Indian",
+      "Arctic"
+    ],
+    "correct_answer_index": 2,
+    "category": "Geography",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-086",
+    "prompt": "What is the smallest country in the world by area?",
+    "options": [
+      "Monaco",
+      "San Marino",
+      "Liechtenstein",
+      "Vatican City"
+    ],
+    "correct_answer_index": 3,
+    "category": "Geography",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-087",
+    "prompt": "Which U.S. state has the most volcanoes?",
+    "options": [
+      "Alaska",
+      "Hawaii",
+      "California",
+      "Washington"
+    ],
+    "correct_answer_index": 0,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-088",
+    "prompt": "What is the capital of Japan?",
+    "options": [
+      "Seoul",
+      "Tokyo",
+      "Osaka",
+      "Kyoto"
+    ],
+    "correct_answer_index": 1,
+    "category": "Geography",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-089",
+    "prompt": "Which continent has the most countries?",
+    "options": [
+      "Asia",
+      "Europe",
+      "Africa",
+      "South America"
+    ],
+    "correct_answer_index": 2,
+    "category": "Geography",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-090",
+    "prompt": "The Danube River flows into which sea?",
+    "options": [
+      "Aegean Sea",
+      "Baltic Sea",
+      "Adriatic Sea",
+      "Black Sea"
+    ],
+    "correct_answer_index": 3,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-091",
+    "prompt": "Which line divides Earth into northern and southern hemispheres?",
+    "options": [
+      "Equator",
+      "Tropic of Cancer",
+      "Prime Meridian",
+      "International Date Line"
+    ],
+    "correct_answer_index": 0,
+    "category": "Geography",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-092",
+    "prompt": "What is the capital of Australia?",
+    "options": [
+      "Sydney",
+      "Canberra",
+      "Melbourne",
+      "Perth"
+    ],
+    "correct_answer_index": 1,
+    "category": "Geography",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-093",
+    "prompt": "Which country has the largest population?",
+    "options": [
+      "United States",
+      "China",
+      "India",
+      "Indonesia"
+    ],
+    "correct_answer_index": 2,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-094",
+    "prompt": "Which mountain range separates Europe and Asia in Russia?",
+    "options": [
+      "Alps",
+      "Andes",
+      "Himalayas",
+      "Urals"
+    ],
+    "correct_answer_index": 3,
+    "category": "Geography",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-095",
+    "prompt": "Which African lake is the largest by area?",
+    "options": [
+      "Lake Victoria",
+      "Lake Tanganyika",
+      "Lake Malawi",
+      "Lake Chad"
+    ],
+    "correct_answer_index": 0,
+    "category": "Geography",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-096",
+    "prompt": "What is the capital of Brazil?",
+    "options": [
+      "Rio de Janeiro",
+      "Brasilia",
+      "Sao Paulo",
+      "Salvador"
+    ],
+    "correct_answer_index": 1,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-097",
+    "prompt": "Which country is known as the Land of the Rising Sun?",
+    "options": [
+      "China",
+      "Thailand",
+      "Japan",
+      "South Korea"
+    ],
+    "correct_answer_index": 2,
+    "category": "Geography",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-098",
+    "prompt": "What is the deepest known ocean trench?",
+    "options": [
+      "Puerto Rico Trench",
+      "Java Trench",
+      "Tonga Trench",
+      "Mariana Trench"
+    ],
+    "correct_answer_index": 3,
+    "category": "Geography",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-099",
+    "prompt": "Which sea is shrinking due to diversion of rivers in Central Asia?",
+    "options": [
+      "Aral Sea",
+      "Caspian Sea",
+      "Dead Sea",
+      "Red Sea"
+    ],
+    "correct_answer_index": 0,
+    "category": "Geography",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-100",
+    "prompt": "What is the capital city of Egypt?",
+    "options": [
+      "Alexandria",
+      "Cairo",
+      "Giza",
+      "Luxor"
+    ],
+    "correct_answer_index": 1,
+    "category": "Geography",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-101",
+    "prompt": "What does RAM stand for?",
+    "options": [
+      "Read Access Memory",
+      "Rapid Array Module",
+      "Random Access Memory",
+      "Runtime Allocation Matrix"
+    ],
+    "correct_answer_index": 2,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-102",
+    "prompt": "Which company created the Linux kernel?",
+    "options": [
+      "Apple",
+      "Microsoft",
+      "IBM",
+      "Linus Torvalds-led open source community"
+    ],
+    "correct_answer_index": 3,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-103",
+    "prompt": "What does HTTP stand for?",
+    "options": [
+      "HyperText Transfer Protocol",
+      "High Transfer Text Process",
+      "Host Transmission Type Protocol",
+      "Hyper Transfer Terminal Process"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-104",
+    "prompt": "Which language powers most modern web page styling?",
+    "options": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SQL"
+    ],
+    "correct_answer_index": 1,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-105",
+    "prompt": "What is two-factor authentication primarily used for?",
+    "options": [
+      "Faster downloads",
+      "Battery saving",
+      "Account security",
+      "Image compression"
+    ],
+    "correct_answer_index": 2,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-106",
+    "prompt": "Which storage type has no moving mechanical parts?",
+    "options": [
+      "HDD",
+      "Blu-ray",
+      "Magnetic tape",
+      "SSD"
+    ],
+    "correct_answer_index": 3,
+    "category": "Technology",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-107",
+    "prompt": "What does VPN stand for?",
+    "options": [
+      "Virtual Private Network",
+      "Variable Proxy Node",
+      "Visual Protocol Network",
+      "Verified Personal Network"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-108",
+    "prompt": "Which company develops the Android operating system?",
+    "options": [
+      "Apple",
+      "Google",
+      "Microsoft",
+      "Samsung"
+    ],
+    "correct_answer_index": 1,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-109",
+    "prompt": "What does AI stand for?",
+    "options": [
+      "Automated Internet",
+      "Adaptive Interface",
+      "Artificial Intelligence",
+      "Algorithmic Input"
+    ],
+    "correct_answer_index": 2,
+    "category": "Technology",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-110",
+    "prompt": "Which protocol secures website traffic with encryption?",
+    "options": [
+      "FTP",
+      "HTTP",
+      "SMTP",
+      "HTTPS"
+    ],
+    "correct_answer_index": 3,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-111",
+    "prompt": "What is the main purpose of a firewall in computing?",
+    "options": [
+      "Filter network traffic",
+      "Manage display color",
+      "Enhance speakers",
+      "Defragment storage"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-112",
+    "prompt": "Which file format is typically used for lossless text documents?",
+    "options": [
+      ".mp3",
+      ".pdf",
+      ".exe",
+      ".png"
+    ],
+    "correct_answer_index": 1,
+    "category": "Technology",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-113",
+    "prompt": "What does GPU stand for?",
+    "options": [
+      "Graph Program Unit",
+      "General Purpose Utility",
+      "Graphics Processing Unit",
+      "Global Pixel Unit"
+    ],
+    "correct_answer_index": 2,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-114",
+    "prompt": "Which command-line tool tracks source code changes in many projects?",
+    "options": [
+      "Docker",
+      "Webpack",
+      "Nginx",
+      "Git"
+    ],
+    "correct_answer_index": 3,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-116",
+    "prompt": "Which database language is used to query relational data?",
+    "options": [
+      "SQL",
+      "CSS",
+      "JSON",
+      "YAML"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-117",
+    "prompt": "What is phishing in cybersecurity?",
+    "options": [
+      "A backup strategy",
+      "A social engineering scam",
+      "A hardware failure",
+      "A database migration"
+    ],
+    "correct_answer_index": 1,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-118",
+    "prompt": "Which company originally created the iPhone?",
+    "options": [
+      "Nokia",
+      "Samsung",
+      "Apple",
+      "Motorola"
+    ],
+    "correct_answer_index": 2,
+    "category": "Technology",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-119",
+    "prompt": "What does API stand for?",
+    "options": [
+      "Application Process Internet",
+      "Automated Program Input",
+      "Applied Process Integration",
+      "Application Programming Interface"
+    ],
+    "correct_answer_index": 3,
+    "category": "Technology",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-120",
+    "prompt": "What is cloud computing primarily about?",
+    "options": [
+      "On-demand remote computing resources",
+      "Local-only execution",
+      "Mechanical networking",
+      "Offline storage only"
+    ],
+    "correct_answer_index": 0,
+    "category": "Technology",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-121",
+    "prompt": "What is the official currency of the United Kingdom?",
+    "options": [
+      "Euro",
+      "Pound sterling",
+      "Dollar",
+      "Franc"
+    ],
+    "correct_answer_index": 1,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-122",
+    "prompt": "How many continents are there on Earth?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correct_answer_index": 2,
+    "category": "World Facts",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-123",
+    "prompt": "Which language has the most native speakers globally by common estimates?",
+    "options": [
+      "English",
+      "Hindi",
+      "Spanish",
+      "Mandarin Chinese"
+    ],
+    "correct_answer_index": 3,
+    "category": "World Facts",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-124",
+    "prompt": "What is the busiest ocean for global shipping lanes?",
+    "options": [
+      "Pacific",
+      "Atlantic",
+      "Indian",
+      "Arctic"
+    ],
+    "correct_answer_index": 0,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-125",
+    "prompt": "Which country hosts the city of Barcelona?",
+    "options": [
+      "Portugal",
+      "Spain",
+      "Italy",
+      "France"
+    ],
+    "correct_answer_index": 1,
+    "category": "World Facts",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-126",
+    "prompt": "What does UNESCO primarily focus on?",
+    "options": [
+      "Weather forecasting",
+      "Space launches",
+      "Education, science, and culture",
+      "Trade tariffs"
+    ],
+    "correct_answer_index": 2,
+    "category": "World Facts",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-127",
+    "prompt": "Which country is both in Europe and Asia?",
+    "options": [
+      "Norway",
+      "Poland",
+      "Sweden",
+      "Turkey"
+    ],
+    "correct_answer_index": 3,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-128",
+    "prompt": "What is the most spoken language in South America?",
+    "options": [
+      "Portuguese",
+      "Spanish",
+      "English",
+      "French"
+    ],
+    "correct_answer_index": 0,
+    "category": "World Facts",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-129",
+    "prompt": "Which city is known as the City of Canals?",
+    "options": [
+      "Prague",
+      "Venice",
+      "Amsterdam",
+      "Bruges"
+    ],
+    "correct_answer_index": 1,
+    "category": "World Facts",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-130",
+    "prompt": "What is the global emergency phone number in many countries?",
+    "options": [
+      "911",
+      "999",
+      "112",
+      "110"
+    ],
+    "correct_answer_index": 2,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-131",
+    "prompt": "Which country has maple leaf on its flag?",
+    "options": [
+      "United States",
+      "New Zealand",
+      "Australia",
+      "Canada"
+    ],
+    "correct_answer_index": 3,
+    "category": "World Facts",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-132",
+    "prompt": "Which is the largest island in the world?",
+    "options": [
+      "Greenland",
+      "Borneo",
+      "Madagascar",
+      "New Guinea"
+    ],
+    "correct_answer_index": 0,
+    "category": "World Facts",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-133",
+    "prompt": "Which nation is famous for tulip fields and windmills?",
+    "options": [
+      "Belgium",
+      "Netherlands",
+      "Denmark",
+      "Austria"
+    ],
+    "correct_answer_index": 1,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-134",
+    "prompt": "Which city hosts the Eiffel Tower?",
+    "options": [
+      "Rome",
+      "Madrid",
+      "Paris",
+      "Vienna"
+    ],
+    "correct_answer_index": 2,
+    "category": "World Facts",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-135",
+    "prompt": "What is the largest ocean on Earth?",
+    "options": [
+      "Atlantic",
+      "Indian",
+      "Arctic",
+      "Pacific"
+    ],
+    "correct_answer_index": 3,
+    "category": "World Facts",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-136",
+    "prompt": "Which country is home to the Great Barrier Reef?",
+    "options": [
+      "Australia",
+      "South Africa",
+      "Mexico",
+      "Indonesia"
+    ],
+    "correct_answer_index": 0,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-137",
+    "prompt": "What is the main language of Brazil?",
+    "options": [
+      "Spanish",
+      "Portuguese",
+      "French",
+      "Italian"
+    ],
+    "correct_answer_index": 1,
+    "category": "World Facts",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-138",
+    "prompt": "Which nation is known for fjords and midnight sun routes?",
+    "options": [
+      "Turkey",
+      "Greece",
+      "Norway",
+      "Morocco"
+    ],
+    "correct_answer_index": 2,
+    "category": "World Facts",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-139",
+    "prompt": "Which city is the capital of South Korea?",
+    "options": [
+      "Busan",
+      "Daegu",
+      "Incheon",
+      "Seoul"
+    ],
+    "correct_answer_index": 3,
+    "category": "World Facts",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-140",
+    "prompt": "Which country has the city of Marrakech?",
+    "options": [
+      "Morocco",
+      "Algeria",
+      "Tunisia",
+      "Libya"
+    ],
+    "correct_answer_index": 0,
+    "category": "World Facts",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-141",
+    "prompt": "Which punctuation mark ends a direct question?",
+    "options": [
+      "Comma",
+      "Question mark",
+      "Semicolon",
+      "Colon"
+    ],
+    "correct_answer_index": 1,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-142",
+    "prompt": "What is the plural of 'analysis'?",
+    "options": [
+      "Analysises",
+      "Analysis",
+      "Analyses",
+      "Analysi"
+    ],
+    "correct_answer_index": 2,
+    "category": "Language",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-143",
+    "prompt": "Which part of speech names a person, place, or thing?",
+    "options": [
+      "Verb",
+      "Adjective",
+      "Adverb",
+      "Noun"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-144",
+    "prompt": "What is the opposite of 'ancient'?",
+    "options": [
+      "Modern",
+      "Narrow",
+      "Vast",
+      "Calm"
+    ],
+    "correct_answer_index": 0,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-145",
+    "prompt": "Which word is a synonym for 'brief'?",
+    "options": [
+      "Lengthy",
+      "Short",
+      "Complex",
+      "Hidden"
+    ],
+    "correct_answer_index": 1,
+    "category": "Language",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-146",
+    "prompt": "What does the prefix 'pre-' usually mean?",
+    "options": [
+      "After",
+      "Under",
+      "Before",
+      "Without"
+    ],
+    "correct_answer_index": 2,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-147",
+    "prompt": "Which word is an antonym of 'expand'?",
+    "options": [
+      "Enlarge",
+      "Stretch",
+      "Increase",
+      "Contract"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-148",
+    "prompt": "In English, which article is indefinite?",
+    "options": [
+      "A",
+      "The",
+      "Those",
+      "This"
+    ],
+    "correct_answer_index": 0,
+    "category": "Language",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-149",
+    "prompt": "Which sentence is in past tense?",
+    "options": [
+      "I walk home",
+      "I walked home",
+      "I am walking home",
+      "I will walk home"
+    ],
+    "correct_answer_index": 1,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-150",
+    "prompt": "What is the adjective form of 'danger'?",
+    "options": [
+      "Dangered",
+      "Dangerly",
+      "Dangerous",
+      "Dangerness"
+    ],
+    "correct_answer_index": 2,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-151",
+    "prompt": "Which word is a conjunction?",
+    "options": [
+      "Teacher",
+      "Quickly",
+      "Bright",
+      "And"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-152",
+    "prompt": "What is the comparative form of 'good'?",
+    "options": [
+      "Better",
+      "More good",
+      "Gooder",
+      "Best"
+    ],
+    "correct_answer_index": 0,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-153",
+    "prompt": "Which symbol is used for an apostrophe?",
+    "options": [
+      "\"",
+      "'",
+      "-",
+      "/"
+    ],
+    "correct_answer_index": 1,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-154",
+    "prompt": "Which is a proper noun?",
+    "options": [
+      "city",
+      "river",
+      "India",
+      "book"
+    ],
+    "correct_answer_index": 2,
+    "category": "Language",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-155",
+    "prompt": "What does 'bilingual' mean?",
+    "options": [
+      "Speaking one language",
+      "Reading silently",
+      "Writing in symbols",
+      "Speaking two languages"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-156",
+    "prompt": "Which word is a verb?",
+    "options": [
+      "Run",
+      "Blue",
+      "Quiet",
+      "Table"
+    ],
+    "correct_answer_index": 0,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-157",
+    "prompt": "What is a synonym of 'rapid'?",
+    "options": [
+      "Slow",
+      "Swift",
+      "Heavy",
+      "Tiny"
+    ],
+    "correct_answer_index": 1,
+    "category": "Language",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-158",
+    "prompt": "Which sentence is imperative?",
+    "options": [
+      "Is the door closed?",
+      "The door is closed.",
+      "Close the door.",
+      "The door closes slowly."
+    ],
+    "correct_answer_index": 2,
+    "category": "Language",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-159",
+    "prompt": "Which pronoun is first person singular?",
+    "options": [
+      "They",
+      "We",
+      "You",
+      "I"
+    ],
+    "correct_answer_index": 3,
+    "category": "Language",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-160",
+    "prompt": "What is the past tense of 'teach'?",
+    "options": [
+      "Taught",
+      "Teached",
+      "Teachen",
+      "Teaching"
+    ],
+    "correct_answer_index": 0,
+    "category": "Language",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-161",
+    "prompt": "Who wrote 'To Kill a Mockingbird'?",
+    "options": [
+      "Toni Morrison",
+      "Harper Lee",
+      "Maya Angelou",
+      "Emily Dickinson"
+    ],
+    "correct_answer_index": 1,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-162",
+    "prompt": "Who wrote 'The Odyssey'?",
+    "options": [
+      "Virgil",
+      "Socrates",
+      "Homer",
+      "Plato"
+    ],
+    "correct_answer_index": 2,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-164",
+    "prompt": "Who wrote 'Moby-Dick'?",
+    "options": [
+      "Jack London",
+      "Mark Twain",
+      "Nathaniel Hawthorne",
+      "Herman Melville"
+    ],
+    "correct_answer_index": 3,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-165",
+    "prompt": "Who authored 'The Great Gatsby'?",
+    "options": [
+      "F. Scott Fitzgerald",
+      "Ernest Hemingway",
+      "John Steinbeck",
+      "J. D. Salinger"
+    ],
+    "correct_answer_index": 0,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-166",
+    "prompt": "Who wrote 'The Divine Comedy'?",
+    "options": [
+      "Boccaccio",
+      "Dante Alighieri",
+      "Petrarch",
+      "Machiavelli"
+    ],
+    "correct_answer_index": 1,
+    "category": "Literature",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-167",
+    "prompt": "Who is the author of 'Frankenstein'?",
+    "options": [
+      "Jane Austen",
+      "Bram Stoker",
+      "Mary Shelley",
+      "Virginia Woolf"
+    ],
+    "correct_answer_index": 2,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-168",
+    "prompt": "Who wrote 'War and Peace'?",
+    "options": [
+      "Fyodor Dostoevsky",
+      "Nikolai Gogol",
+      "Anton Chekhov",
+      "Leo Tolstoy"
+    ],
+    "correct_answer_index": 3,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-169",
+    "prompt": "Who created detective Sherlock Holmes?",
+    "options": [
+      "Arthur Conan Doyle",
+      "Agatha Christie",
+      "Ian Fleming",
+      "Dorothy L. Sayers"
+    ],
+    "correct_answer_index": 0,
+    "category": "Literature",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-170",
+    "prompt": "Who wrote 'One Hundred Years of Solitude'?",
+    "options": [
+      "Isabel Allende",
+      "Gabriel García Márquez",
+      "Mario Vargas Llosa",
+      "Pablo Neruda"
+    ],
+    "correct_answer_index": 1,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-171",
+    "prompt": "Who wrote 'The Catcher in the Rye'?",
+    "options": [
+      "Ray Bradbury",
+      "Kurt Vonnegut",
+      "J. D. Salinger",
+      "Ken Kesey"
+    ],
+    "correct_answer_index": 2,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-173",
+    "prompt": "Who wrote 'Animal Farm'?",
+    "options": [
+      "H. G. Wells",
+      "Aldous Huxley",
+      "Ayn Rand",
+      "George Orwell"
+    ],
+    "correct_answer_index": 3,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-174",
+    "prompt": "Who wrote 'The Trial'?",
+    "options": [
+      "Franz Kafka",
+      "Albert Camus",
+      "Thomas Mann",
+      "Hermann Hesse"
+    ],
+    "correct_answer_index": 0,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-175",
+    "prompt": "Who wrote 'The Old Man and the Sea'?",
+    "options": [
+      "John Steinbeck",
+      "Ernest Hemingway",
+      "William Faulkner",
+      "Joseph Conrad"
+    ],
+    "correct_answer_index": 1,
+    "category": "Literature",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-176",
+    "prompt": "Who wrote 'Don Quixote'?",
+    "options": [
+      "Jorge Luis Borges",
+      "Federico Garcia Lorca",
+      "Miguel de Cervantes",
+      "Pablo Picasso"
+    ],
+    "correct_answer_index": 2,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-177",
+    "prompt": "Who wrote 'The Iliad'?",
+    "options": [
+      "Aristophanes",
+      "Sophocles",
+      "Euripides",
+      "Homer"
+    ],
+    "correct_answer_index": 3,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-178",
+    "prompt": "Who wrote 'The Metamorphosis'?",
+    "options": [
+      "Franz Kafka",
+      "Rainer Maria Rilke",
+      "Thomas Mann",
+      "Hermann Hesse"
+    ],
+    "correct_answer_index": 0,
+    "category": "Literature",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-179",
+    "prompt": "Who wrote 'The Alchemist'?",
+    "options": [
+      "José Saramago",
+      "Paulo Coelho",
+      "Umberto Eco",
+      "Italo Calvino"
+    ],
+    "correct_answer_index": 1,
+    "category": "Literature",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-180",
+    "prompt": "Who wrote 'Jane Eyre'?",
+    "options": [
+      "Jane Austen",
+      "Emily Bronte",
+      "Charlotte Bronte",
+      "George Eliot"
+    ],
+    "correct_answer_index": 2,
+    "category": "Literature",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-181",
+    "prompt": "Who painted the 'Mona Lisa'?",
+    "options": [
+      "Vincent van Gogh",
+      "Raphael",
+      "Michelangelo",
+      "Leonardo da Vinci"
+    ],
+    "correct_answer_index": 3,
+    "category": "Art",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-182",
+    "prompt": "Which art movement is Pablo Picasso strongly associated with?",
+    "options": [
+      "Cubism",
+      "Impressionism",
+      "Surrealism",
+      "Baroque"
+    ],
+    "correct_answer_index": 0,
+    "category": "Art",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-183",
+    "prompt": "What medium is traditionally used in fresco painting?",
+    "options": [
+      "Marble",
+      "Wet plaster",
+      "Bronze",
+      "Charcoal"
+    ],
+    "correct_answer_index": 1,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-184",
+    "prompt": "Who sculpted 'David' in Renaissance Florence?",
+    "options": [
+      "Donatello",
+      "Bernini",
+      "Michelangelo",
+      "Rodin"
+    ],
+    "correct_answer_index": 2,
+    "category": "Art",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-185",
+    "prompt": "Which Dutch painter cut off part of his ear?",
+    "options": [
+      "Rembrandt",
+      "Frans Hals",
+      "Vermeer",
+      "Vincent van Gogh"
+    ],
+    "correct_answer_index": 3,
+    "category": "Art",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-186",
+    "prompt": "What is the Louvre primarily known as?",
+    "options": [
+      "A museum",
+      "A cathedral",
+      "A library",
+      "A palace hotel"
+    ],
+    "correct_answer_index": 0,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-188",
+    "prompt": "Which period came first?",
+    "options": [
+      "Baroque",
+      "Renaissance",
+      "Romanticism",
+      "Modernism"
+    ],
+    "correct_answer_index": 1,
+    "category": "Art",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-189",
+    "prompt": "Which painter is known for water lilies series?",
+    "options": [
+      "Paul Cezanne",
+      "Edgar Degas",
+      "Claude Monet",
+      "Henri Matisse"
+    ],
+    "correct_answer_index": 2,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-190",
+    "prompt": "What is pottery hardened by heat called?",
+    "options": [
+      "Textile",
+      "Fresco",
+      "Mosaic",
+      "Ceramic"
+    ],
+    "correct_answer_index": 3,
+    "category": "Art",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-191",
+    "prompt": "Who painted 'The Starry Night'?",
+    "options": [
+      "Vincent van Gogh",
+      "Paul Gauguin",
+      "Claude Monet",
+      "Salvador Dali"
+    ],
+    "correct_answer_index": 0,
+    "category": "Art",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-192",
+    "prompt": "Which country is artist Frida Kahlo from?",
+    "options": [
+      "Spain",
+      "Mexico",
+      "Argentina",
+      "Peru"
+    ],
+    "correct_answer_index": 1,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-193",
+    "prompt": "What does 'avant-garde' usually imply in art?",
+    "options": [
+      "Traditional imitation",
+      "Religious-only themes",
+      "Experimental innovation",
+      "Industrial design only"
+    ],
+    "correct_answer_index": 2,
+    "category": "Art",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-194",
+    "prompt": "Which sculptor created 'The Thinker'?",
+    "options": [
+      "Alberto Giacometti",
+      "Constantin Brancusi",
+      "Henry Moore",
+      "Auguste Rodin"
+    ],
+    "correct_answer_index": 3,
+    "category": "Art",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-195",
+    "prompt": "Which museum houses Van Gogh’s 'Sunflowers' (one major version)?",
+    "options": [
+      "The National Gallery, London",
+      "Uffizi Gallery",
+      "Prado Museum",
+      "Rijksmuseum"
+    ],
+    "correct_answer_index": 0,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-196",
+    "prompt": "What is chiaroscuro in painting?",
+    "options": [
+      "Use of bright neon only",
+      "Strong contrast of light and dark",
+      "Painting on wet plaster",
+      "Abstract geometric style"
+    ],
+    "correct_answer_index": 1,
+    "category": "Art",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-197",
+    "prompt": "Which movement focused on dream-like imagery?",
+    "options": [
+      "Realism",
+      "Neoclassicism",
+      "Surrealism",
+      "Rococo"
+    ],
+    "correct_answer_index": 2,
+    "category": "Art",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-198",
+    "prompt": "Who painted 'The Persistence of Memory'?",
+    "options": [
+      "Joan Miro",
+      "Henri Rousseau",
+      "Marc Chagall",
+      "Salvador Dali"
+    ],
+    "correct_answer_index": 3,
+    "category": "Art",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-199",
+    "prompt": "Which artist painted 'Guernica'?",
+    "options": [
+      "Pablo Picasso",
+      "Diego Rivera",
+      "Henri Matisse",
+      "Amedeo Modigliani"
+    ],
+    "correct_answer_index": 0,
+    "category": "Art",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-200",
+    "prompt": "What does a triptych contain?",
+    "options": [
+      "Two panels",
+      "Three panels",
+      "Four panels",
+      "One circular panel"
+    ],
+    "correct_answer_index": 1,
+    "category": "Art",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-201",
+    "prompt": "How many lines does a standard musical staff have?",
+    "options": [
+      "4",
+      "6",
+      "5",
+      "7"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-202",
+    "prompt": "Which clef is commonly used for higher-pitched instruments?",
+    "options": [
+      "Bass clef",
+      "Tenor clef",
+      "Alto clef",
+      "Treble clef"
+    ],
+    "correct_answer_index": 3,
+    "category": "Music",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-203",
+    "prompt": "Who composed the 'Moonlight Sonata'?",
+    "options": [
+      "Beethoven",
+      "Bach",
+      "Mozart",
+      "Chopin"
+    ],
+    "correct_answer_index": 0,
+    "category": "Music",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-204",
+    "prompt": "What is the tempo term for very fast?",
+    "options": [
+      "Adagio",
+      "Presto",
+      "Largo",
+      "Andante"
+    ],
+    "correct_answer_index": 1,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-205",
+    "prompt": "Which instrument has 88 keys in a standard form?",
+    "options": [
+      "Violin",
+      "Flute",
+      "Piano",
+      "Trumpet"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-206",
+    "prompt": "Which family does the clarinet belong to?",
+    "options": [
+      "Brass",
+      "Percussion",
+      "String",
+      "Woodwind"
+    ],
+    "correct_answer_index": 3,
+    "category": "Music",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-208",
+    "prompt": "What does 'forte' indicate in sheet music?",
+    "options": [
+      "Loud",
+      "Soft",
+      "Slow",
+      "Fast"
+    ],
+    "correct_answer_index": 0,
+    "category": "Music",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-209",
+    "prompt": "Which note value is half of a whole note?",
+    "options": [
+      "Quarter note",
+      "Half note",
+      "Eighth note",
+      "Sixteenth note"
+    ],
+    "correct_answer_index": 1,
+    "category": "Music",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-210",
+    "prompt": "Which composer became deaf later in life?",
+    "options": [
+      "Mozart",
+      "Brahms",
+      "Beethoven",
+      "Liszt"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-211",
+    "prompt": "What does BPM stand for in music timing?",
+    "options": [
+      "Balance per movement",
+      "Bars per measure",
+      "Bass per mode",
+      "Beats per minute"
+    ],
+    "correct_answer_index": 3,
+    "category": "Music",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-212",
+    "prompt": "Which instrument is known as the king of instruments?",
+    "options": [
+      "Organ",
+      "Piano",
+      "Violin",
+      "Cello"
+    ],
+    "correct_answer_index": 0,
+    "category": "Music",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-213",
+    "prompt": "What is a duet?",
+    "options": [
+      "A piece for one performer",
+      "A piece for two performers",
+      "A piece for three performers",
+      "A piece without rhythm"
+    ],
+    "correct_answer_index": 1,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-214",
+    "prompt": "Which symbol raises a note by a semitone?",
+    "options": [
+      "Flat",
+      "Natural",
+      "Sharp",
+      "Rest"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-215",
+    "prompt": "Which era includes composers like Mozart and Haydn?",
+    "options": [
+      "Baroque",
+      "Modern",
+      "Romantic",
+      "Classical"
+    ],
+    "correct_answer_index": 3,
+    "category": "Music",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-216",
+    "prompt": "Which instrument keeps rhythm in many bands?",
+    "options": [
+      "Drums",
+      "Oboe",
+      "Harp",
+      "Bassoon"
+    ],
+    "correct_answer_index": 0,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-217",
+    "prompt": "What does 'a cappella' mean?",
+    "options": [
+      "With orchestra",
+      "Without instrumental accompaniment",
+      "Played very fast",
+      "In triple meter"
+    ],
+    "correct_answer_index": 1,
+    "category": "Music",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-218",
+    "prompt": "What is the relative minor of C major?",
+    "options": [
+      "D minor",
+      "E minor",
+      "A minor",
+      "G minor"
+    ],
+    "correct_answer_index": 2,
+    "category": "Music",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-219",
+    "prompt": "Which composer wrote many famous waltzes and was nicknamed the Waltz King?",
+    "options": [
+      "Claude Debussy",
+      "Richard Wagner",
+      "Anton Bruckner",
+      "Johann Strauss II"
+    ],
+    "correct_answer_index": 3,
+    "category": "Music",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-220",
+    "prompt": "What does a metronome help musicians maintain?",
+    "options": [
+      "Tempo",
+      "Pitch",
+      "Volume",
+      "Timbre"
+    ],
+    "correct_answer_index": 0,
+    "category": "Music",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-221",
+    "prompt": "What is the name of our galaxy?",
+    "options": [
+      "Andromeda",
+      "Milky Way",
+      "Whirlpool",
+      "Triangulum"
+    ],
+    "correct_answer_index": 1,
+    "category": "Astronomy",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-223",
+    "prompt": "What causes tides on Earth most directly?",
+    "options": [
+      "Solar wind",
+      "Earth’s core heat",
+      "Moon’s gravity",
+      "Comet paths"
+    ],
+    "correct_answer_index": 2,
+    "category": "Astronomy",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-224",
+    "prompt": "Which planet has the most prominent ring system?",
+    "options": [
+      "Mercury",
+      "Mars",
+      "Neptune",
+      "Saturn"
+    ],
+    "correct_answer_index": 3,
+    "category": "Astronomy",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-225",
+    "prompt": "What is a supernova?",
+    "options": [
+      "An exploding star",
+      "A newborn planet",
+      "A moon shadow",
+      "A comet tail"
+    ],
+    "correct_answer_index": 0,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-226",
+    "prompt": "Which body orbits a planet?",
+    "options": [
+      "Asteroid belt",
+      "Moon",
+      "Nebula",
+      "Galaxy"
+    ],
+    "correct_answer_index": 1,
+    "category": "Astronomy",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-227",
+    "prompt": "What is the Sun mostly made of?",
+    "options": [
+      "Oxygen and nitrogen",
+      "Iron and nickel",
+      "Hydrogen and helium",
+      "Carbon and silicon"
+    ],
+    "correct_answer_index": 2,
+    "category": "Astronomy",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-228",
+    "prompt": "What term describes a path around a star or planet?",
+    "options": [
+      "Vector",
+      "Pulse",
+      "Axis",
+      "Orbit"
+    ],
+    "correct_answer_index": 3,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-229",
+    "prompt": "Which mission first landed humans on the Moon?",
+    "options": [
+      "Apollo 11",
+      "Apollo 8",
+      "Gemini 4",
+      "Soyuz 1"
+    ],
+    "correct_answer_index": 0,
+    "category": "Astronomy",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-231",
+    "prompt": "Which planet is closest to the Sun?",
+    "options": [
+      "Venus",
+      "Mercury",
+      "Earth",
+      "Mars"
+    ],
+    "correct_answer_index": 1,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-232",
+    "prompt": "Which planet is famous for its Great Red Spot?",
+    "options": [
+      "Saturn",
+      "Uranus",
+      "Jupiter",
+      "Neptune"
+    ],
+    "correct_answer_index": 2,
+    "category": "Astronomy",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-233",
+    "prompt": "What is the term for a rocky object entering Earth’s atmosphere?",
+    "options": [
+      "Asteroid",
+      "Planet",
+      "Comet",
+      "Meteor"
+    ],
+    "correct_answer_index": 3,
+    "category": "Astronomy",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-234",
+    "prompt": "Which telescope launched in 2021 to observe deep space infrared?",
+    "options": [
+      "James Webb",
+      "Chandra",
+      "Hubble",
+      "Kepler"
+    ],
+    "correct_answer_index": 0,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-235",
+    "prompt": "What lies at the center of many galaxies?",
+    "options": [
+      "White dwarf",
+      "Black hole",
+      "Neutron cloud",
+      "Comet cluster"
+    ],
+    "correct_answer_index": 1,
+    "category": "Astronomy",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-236",
+    "prompt": "Which phase comes after first quarter moon?",
+    "options": [
+      "New moon",
+      "Full moon",
+      "Waxing gibbous",
+      "Waning crescent"
+    ],
+    "correct_answer_index": 2,
+    "category": "Astronomy",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-237",
+    "prompt": "What do we call a system of millions or billions of stars bound by gravity?",
+    "options": [
+      "Nebula",
+      "Eclipse",
+      "Orbit",
+      "Galaxy"
+    ],
+    "correct_answer_index": 3,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-238",
+    "prompt": "Which planet rotates on its side with an extreme axial tilt?",
+    "options": [
+      "Uranus",
+      "Earth",
+      "Mars",
+      "Venus"
+    ],
+    "correct_answer_index": 0,
+    "category": "Astronomy",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-239",
+    "prompt": "What causes a solar eclipse?",
+    "options": [
+      "Earth between sun and moon",
+      "Moon between sun and Earth",
+      "Cloud cover",
+      "Sunspot activity"
+    ],
+    "correct_answer_index": 1,
+    "category": "Astronomy",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-240",
+    "prompt": "What is the nearest large galaxy to the Milky Way?",
+    "options": [
+      "Sombrero",
+      "Triangulum",
+      "Andromeda",
+      "Large Magellanic Cloud"
+    ],
+    "correct_answer_index": 2,
+    "category": "Astronomy",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-242",
+    "prompt": "DNA stands for deoxyribonucleic what?",
+    "options": [
+      "Base",
+      "Salt",
+      "Protein",
+      "Acid"
+    ],
+    "correct_answer_index": 3,
+    "category": "Biology",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-243",
+    "prompt": "Which organ pumps blood through the body?",
+    "options": [
+      "Heart",
+      "Lung",
+      "Kidney",
+      "Liver"
+    ],
+    "correct_answer_index": 0,
+    "category": "Biology",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-244",
+    "prompt": "Photosynthesis mainly occurs in which plant organelle?",
+    "options": [
+      "Mitochondria",
+      "Chloroplast",
+      "Nucleus",
+      "Ribosome"
+    ],
+    "correct_answer_index": 1,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-245",
+    "prompt": "What type of blood vessel carries blood away from the heart?",
+    "options": [
+      "Vein",
+      "Capillary",
+      "Artery",
+      "Ventricle"
+    ],
+    "correct_answer_index": 2,
+    "category": "Biology",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-246",
+    "prompt": "Which molecule carries genetic instructions?",
+    "options": [
+      "RNA",
+      "Glucose",
+      "ATP",
+      "DNA"
+    ],
+    "correct_answer_index": 3,
+    "category": "Biology",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-247",
+    "prompt": "What process do cells use to divide for growth and repair?",
+    "options": [
+      "Mitosis",
+      "Meiosis",
+      "Fermentation",
+      "Diffusion"
+    ],
+    "correct_answer_index": 0,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-248",
+    "prompt": "What is the largest part of the human brain?",
+    "options": [
+      "Cerebellum",
+      "Cerebrum",
+      "Brainstem",
+      "Medulla"
+    ],
+    "correct_answer_index": 1,
+    "category": "Biology",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-249",
+    "prompt": "Which system includes bones and joints?",
+    "options": [
+      "Circulatory",
+      "Digestive",
+      "Skeletal",
+      "Nervous"
+    ],
+    "correct_answer_index": 2,
+    "category": "Biology",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-250",
+    "prompt": "What is the function of red blood cells?",
+    "options": [
+      "Fight infection",
+      "Digest food",
+      "Form antibodies",
+      "Carry oxygen"
+    ],
+    "correct_answer_index": 3,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-251",
+    "prompt": "Which macromolecule is made of amino acids?",
+    "options": [
+      "Protein",
+      "Lipid",
+      "Carbohydrate",
+      "Nucleic acid"
+    ],
+    "correct_answer_index": 0,
+    "category": "Biology",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-252",
+    "prompt": "What is the powerhouse of the cell?",
+    "options": [
+      "Nucleus",
+      "Mitochondria",
+      "Golgi apparatus",
+      "Lysosome"
+    ],
+    "correct_answer_index": 1,
+    "category": "Biology",
+    "difficulty_band": "hard",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-253",
+    "prompt": "Which process converts glucose into usable cellular energy?",
+    "options": [
+      "Transpiration",
+      "Pollination",
+      "Respiration",
+      "Mutation"
+    ],
+    "correct_answer_index": 2,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-254",
+    "prompt": "What is the main gas humans exhale?",
+    "options": [
+      "Nitrogen",
+      "Helium",
+      "Hydrogen",
+      "Carbon dioxide"
+    ],
+    "correct_answer_index": 3,
+    "category": "Biology",
+    "difficulty_band": "medium",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-255",
+    "prompt": "Which blood cells help defend against pathogens?",
+    "options": [
+      "White blood cells",
+      "Red blood cells",
+      "Platelets",
+      "Plasma"
+    ],
+    "correct_answer_index": 0,
+    "category": "Biology",
+    "difficulty_band": "hard",
+    "pressure_tag": "calm",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-256",
+    "prompt": "Which kingdom do mushrooms belong to?",
+    "options": [
+      "Plantae",
+      "Fungi",
+      "Protista",
+      "Animalia"
+    ],
+    "correct_answer_index": 1,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-257",
+    "prompt": "What is the inherited material passed from parents to offspring?",
+    "options": [
+      "Hormones",
+      "Minerals",
+      "Genes",
+      "Vitamins"
+    ],
+    "correct_answer_index": 2,
+    "category": "Biology",
+    "difficulty_band": "medium",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-258",
+    "prompt": "What process moves water through a selectively permeable membrane?",
+    "options": [
+      "Combustion",
+      "Sedimentation",
+      "Sublimation",
+      "Osmosis"
+    ],
+    "correct_answer_index": 3,
+    "category": "Biology",
+    "difficulty_band": "hard",
+    "pressure_tag": "neutral",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-259",
+    "prompt": "Which organ is central to detoxification in the body?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Skin",
+      "Pancreas"
+    ],
+    "correct_answer_index": 0,
+    "category": "Biology",
+    "difficulty_band": "easy",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  },
+  {
+    "external_key": "launch-v2-q-260",
+    "prompt": "What is the name of the pigment that gives plants green color?",
+    "options": [
+      "Melanin",
+      "Chlorophyll",
+      "Keratin",
+      "Hemoglobin"
+    ],
+    "correct_answer_index": 1,
+    "category": "Biology",
+    "difficulty_band": "medium",
+    "pressure_tag": "spiky",
+    "is_active": true,
+    "question_set_version": "launch-v2",
+    "source_label": "curated-launch-v2"
+  }
+]

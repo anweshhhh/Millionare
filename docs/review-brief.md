@@ -1,24 +1,26 @@
 # Review Brief
 
 ## Slice
-`mmrm-phase8-03-question-bank-spec-lock`
+`mmrm-phase8-04-launch-v2-bank-expansion`
 
 ## Goal
-Lock a clear, quality-gated Phase 8 expansion spec before scaling the live question bank.
+Expand the question bank in a deterministic, quality-gated way to materially reduce replay repetition.
 
 ## What changed
-- Added `docs/phase-8-question-bank-expansion-v1.md`.
-- Defined:
-  - expansion objective and non-goals
-  - required content contract fields
-  - deterministic quality gates (`content:audit`, `content:simulate`, test/build)
-  - rollout/activation sequence for new question-set versions
-  - next PR-sized implementation slices
+- Added expanded bank artifact: `content/question-bank-v2.json`.
+- Added deterministic generation helper: `scripts/generate-question-bank-v2.ts`.
+- Added npm command: `npm run content:generate:v2`.
+- Added launch-v2 coverage test in `src/domain/content.test.ts`.
+- Updated docs and command references.
 
 ## Scope guard
-- Docs-only
-- No gameplay/UI changes
+- No gameplay/reducer rule changes
+- No UI changes
 - No schema/persistence changes
+- No new dependencies
 
 ## Verification
-- Planning/doc slice complete and aligned to current repo architecture
+- `npm run content:audit -- content/question-bank-v2.json` passed with no warnings
+- `npm run content:simulate -- content/question-bank-v2.json 60 6` passed
+- `npm test` passed
+- `npm run build` passed

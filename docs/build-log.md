@@ -294,6 +294,22 @@
   - deterministic quality gates (`content:audit`, `content:simulate`, test/build)
   - no gameplay/UI rule changes in this phase
 - documented rollout sequence for safe set-version activation after quality gates pass
+
+## 2026-05-29 — `mmrm-phase8-04-launch-v2-bank-expansion`
+- added a new expanded question-bank artifact:
+  - `content/question-bank-v2.json`
+- added a deterministic generation helper:
+  - `scripts/generate-question-bank-v2.ts`
+  - `npm run content:generate:v2`
+- expansion outcome:
+  - merged existing `launch-v1` rows with a new curated `launch-v2` set
+  - total checked-in rows now: `406`
+  - active `launch-v2` rows: `250`
+- kept quality gates explicit and passing for the new bank:
+  - `npm run content:audit -- content/question-bank-v2.json` -> warnings none
+  - `npm run content:simulate -- content/question-bank-v2.json 60 6` -> zero overlap in simulation window
+- added a focused content test to validate launch-v2 normalization and coverage posture
+- no gameplay/UI behavior changes in this slice
 - confirmed a real `profiles` row now exists for the signed-in app user
 - confirmed a real `runs` row now exists for the signed-in app user
 - confirmed the saved profile aggregates match the persisted run state for the latest live save:

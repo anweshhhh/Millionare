@@ -210,3 +210,19 @@ test("checked-in question bank preserves full-run and metadata coverage", () => 
   assert.deepEqual([...difficultyBands].sort(), ["easy", "hard", "medium"]);
   assert.deepEqual([...pressureTags].sort(), ["calm", "neutral", "spiky"]);
 });
+
+test("launch-v2 bank normalizes cleanly with expanded coverage", () => {
+  const filePath = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../content/question-bank-v2.json");
+  const parsed = JSON.parse(readFileSync(filePath, "utf8")) as QuestionImportRecord[];
+  const prepared = prepareQuestionImportRows(parsed);
+  const activeRows = prepared.filter((row) => row.is_active !== false && row.question_set_version === "launch-v2");
+  const categories = new Set(activeRows.map((row) => row.category));
+  const difficultyBands = new Set(activeRows.map((row) => row.difficulty_band));
+  const pressureTags = new Set(activeRows.map((row) => row.pressure_tag));
+
+  assert.ok(prepared.length >= 400);
+  assert.ok(activeRows.length >= 240);
+  assert.ok(categories.size >= 10);
+  assert.deepEqual([...difficultyBands].sort(), ["easy", "hard", "medium"]);
+  assert.deepEqual([...pressureTags].sort(), ["calm", "neutral", "spiky"]);
+});

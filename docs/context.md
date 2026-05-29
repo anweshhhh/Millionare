@@ -169,6 +169,14 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   2. bootstrap to Supabase
   3. activate only after deterministic quality gates pass
 
+## Latest content expansion decisions (2026-05-29)
+- Added an expanded bank artifact at:
+  - `content/question-bank-v2.json`
+- Added deterministic generation tooling at:
+  - `scripts/generate-question-bank-v2.ts`
+  - `npm run content:generate:v2`
+- Current checked-in content volume is now 406 total rows with 250 new `launch-v2` rows ready for bootstrap/activation.
+
 ## Latest auth decisions (2026-04-05)
 - Completed first user-facing Phase 2 slice: `mmrm-phase2-03-auth-shell-and-save-run`
 - Guest-first entry remains unchanged:

@@ -95,6 +95,7 @@ Notes:
 npm test
 npm run build
 npm run content:bootstrap
+npm run content:generate:v2
 npm run content:audit
 npm run content:simulate
 npm run admin:intelligence
