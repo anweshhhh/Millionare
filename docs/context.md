@@ -271,6 +271,14 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
   - `npm test`
   - `npm run build`
 
+## Latest mobile hot-seat follow-up (2026-05-29)
+- the mobile hot-seat action dock now switches to a sticky presentation once an answer is selected
+- this keeps the lock CTA easier to reach without making the pre-selection state feel heavier than it should
+- gameplay behavior remains unchanged:
+  - explicit selection still required
+  - explicit lock still required
+  - suspense and reveal timing unchanged
+
 ## Latest Phase 3 instrumentation decisions (2026-04-06)
 - Completed Phase 3 foundation slice: `mmrm-phase3-02-foundation-instrumentation`
 - The current hot-seat UX remains unchanged:

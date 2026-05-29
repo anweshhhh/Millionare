@@ -1434,24 +1434,56 @@ button {
 }
 
 @media (max-width: 959px) {
+  .game-shell {
+    padding: 12px;
+  }
+
+  .status-bar {
+    gap: 10px;
+    padding: 2px 0 12px;
+  }
+
+  .timer-card {
+    min-width: 104px;
+    padding: 9px 10px;
+  }
+
+  .timer-card strong {
+    font-size: 1.02rem;
+  }
+
+  .status-progress {
+    width: min(156px, 48vw);
+  }
+
   .question-layout {
     grid-template-columns: minmax(0, 1fr);
     gap: 10px;
   }
 
   .play-stage {
-    padding-bottom: calc(134px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(126px + env(safe-area-inset-bottom, 0px));
   }
 
   .action-dock {
     width: min(calc(100% - 16px), 560px);
     bottom: calc(4px + env(safe-area-inset-bottom, 0px));
     gap: 5px;
-    padding: 7px 7px 8px;
+    padding: 6px 6px 7px;
+  }
+
+  .action-dock.is-sticky {
+    position: sticky;
+    bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+    left: auto;
+    transform: none;
+    margin-top: 4px;
+    width: 100%;
   }
 
   .hot-seat-cta {
-    min-height: 44px;
+    min-height: 40px;
+    padding: 12px 14px;
   }
 
   .lifeline-strip {
@@ -1459,8 +1491,8 @@ button {
   }
 
   .lifeline-chip {
-    min-height: 32px;
-    font-size: 0.56rem;
+    min-height: 30px;
+    font-size: 0.52rem;
   }
 
   .ladder-rail {
@@ -1507,6 +1539,30 @@ button {
   .result-action {
     margin-top: 10px;
     margin-bottom: 12px;
+  }
+
+  .question-card {
+    padding: 14px;
+  }
+
+  .question-card h2 {
+    font-size: clamp(1.55rem, 6vw, 2.05rem);
+  }
+
+  .answer-card {
+    padding: 12px;
+  }
+
+  .answer-copy {
+    font-size: 0.9rem;
+  }
+
+  .decision-readout {
+    padding: 7px 8px;
+  }
+
+  .lifeline-meta {
+    display: none;
   }
 
   .answer-tag {

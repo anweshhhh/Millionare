@@ -146,6 +146,7 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
           : "Ending Run";
   const shouldMaskCorrectReveal = phase === "reveal" && pendingSecondChanceRecovery;
   const questionProgressPercent = Math.round((questionNumber / Math.max(totalQuestions, 1)) * 100);
+  const hasSelectedAnswer = selectedAnswer !== null;
 
   return (
     <section className={["screen", "hot-seat-screen", stageToneClass].join(" ")}>
@@ -290,7 +291,7 @@ export function HotSeatScreen(props: HotSeatScreenProps) {
               </p>
             </div>
 
-            <div className="action-dock" aria-label="Primary answer controls">
+            <div className={["action-dock", hasSelectedAnswer ? "is-sticky" : ""].filter(Boolean).join(" ")} aria-label="Primary answer controls">
               <div className="action-zone">
                 <button
                   className={[

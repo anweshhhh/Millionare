@@ -242,6 +242,12 @@
 - added a focused regression test for the pending-run storage fallback path
 - verified the current slice with `npm test` and `npm run build`
 
+## 2026-05-29 — mobile sticky lock-answer follow-up
+- made the hot-seat action dock switch to a sticky mobile presentation once a player has selected an answer
+- kept the pre-selection experience unchanged so the dock still feels light before commitment
+- preserved the existing lock/reveal rules and only changed the dock positioning behavior on mobile viewports
+- re-verified the app with `npm test` and `npm run build`
+
 ## 2026-04-05 — Live save path verification after migration
 - reused the current authenticated app session to verify live authenticated reads against the connected Supabase project
 - confirmed a real `profiles` row now exists for the signed-in app user
