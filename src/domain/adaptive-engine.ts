@@ -13,6 +13,11 @@ export const ADAPTIVE_ENGINE_RULES = {
   wrongAnswerRecoveryDifficultyShift: -1,
   timeoutRecoveryDifficultyShift: -1,
   steadyPressureDifficultyShift: 1,
+  highSkillAccuracyRate: 0.78,
+  highSkillTimeoutRate: 0.12,
+  strugglingAccuracyRate: 0.52,
+  strugglingTimeoutRate: 0.26,
+  maxModelDifficultyShift: 1,
   difficultyFitReward: 24,
   pressureFitReward: 16,
   weakSpotReward: 8
@@ -139,11 +144,36 @@ function getTargetDifficultyBand(model: PlayerModelSnapshot | null, context: Ada
     return shiftDifficultyBand(baseline, ADAPTIVE_ENGINE_RULES.timeoutRecoveryDifficultyShift);
   }
 
-  if (confidentModel.pressureStyle === "steady-under-pressure" && confidentModel.confidenceStyle === "decisive") {
-    return shiftDifficultyBand(baseline, ADAPTIVE_ENGINE_RULES.steadyPressureDifficultyShift);
+  let modelShift = 0;
+
+  if (
+    confidentModel.accuracyRate >= ADAPTIVE_ENGINE_RULES.highSkillAccuracyRate &&
+    confidentModel.timeoutRate <= ADAPTIVE_ENGINE_RULES.highSkillTimeoutRate
+  ) {
+    modelShift += 1;
   }
 
-  return baseline;
+  if (
+    confidentModel.accuracyRate <= ADAPTIVE_ENGINE_RULES.strugglingAccuracyRate ||
+    confidentModel.timeoutRate >= ADAPTIVE_ENGINE_RULES.strugglingTimeoutRate
+  ) {
+    modelShift -= 1;
+  }
+
+  if (confidentModel.pressureStyle === "steady-under-pressure" && confidentModel.confidenceStyle === "decisive") {
+    modelShift = Math.max(modelShift, ADAPTIVE_ENGINE_RULES.steadyPressureDifficultyShift);
+  }
+
+  if (confidentModel.pressureStyle === "timeout-prone") {
+    modelShift = Math.min(modelShift, ADAPTIVE_ENGINE_RULES.timeoutRecoveryDifficultyShift);
+  }
+
+  const boundedShift = Math.max(
+    -ADAPTIVE_ENGINE_RULES.maxModelDifficultyShift,
+    Math.min(ADAPTIVE_ENGINE_RULES.maxModelDifficultyShift, modelShift)
+  );
+
+  return shiftDifficultyBand(baseline, boundedShift);
 }
 
 function isAllowedPressureTag(model: PlayerModelSnapshot | null, context: AdaptiveRunContext, pressureTag: PressureTag) {

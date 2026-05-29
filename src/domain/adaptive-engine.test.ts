@@ -268,3 +268,69 @@ test("fallback freshness ordering still rotates away from repeated categories wh
 
   assert.equal(result.chosenQuestionId, "q-history");
 });
+
+test("high-skill profiles get a higher challenge target when pressure remains stable", () => {
+  const model = buildPlayerModelSnapshot({
+    runsObserved: 6,
+    questionSignals: [
+      createSignal({ questionId: "q-1", category: "Science", result: "correct", responseTimeMs: 4200 }),
+      createSignal({ questionId: "q-2", category: "Science", result: "correct", responseTimeMs: 4300 }),
+      createSignal({ questionId: "q-3", category: "History", result: "correct", responseTimeMs: 4400 }),
+      createSignal({ questionId: "q-4", category: "History", result: "correct", responseTimeMs: 4100 }),
+      createSignal({ questionId: "q-5", category: "Math", result: "correct", pressure: true, responseTimeMs: 4600 }),
+      createSignal({ questionId: "q-6", category: "Math", result: "correct", pressure: true, responseTimeMs: 4700 }),
+      createSignal({ questionId: "q-7", category: "Art", result: "correct", responseTimeMs: 4500 }),
+      createSignal({ questionId: "q-8", category: "Art", result: "correct", responseTimeMs: 4200 })
+    ]
+  });
+
+  const result = chooseAdaptiveQuestion({
+    playerModel: model,
+    runContext: {
+      currentRank: 6,
+      recentResults: ["correct", "correct"],
+      recentCategories: [],
+      recentlySeenQuestionIds: []
+    },
+    candidates: [
+      createQuestion({ id: "q-medium", category: "Geography", difficultyBand: "medium", pressureTag: "neutral" }),
+      createQuestion({ id: "q-hard", category: "Technology", difficultyBand: "hard", pressureTag: "neutral" })
+    ]
+  });
+
+  assert.equal(result.targetDifficultyBand, "hard");
+  assert.equal(result.chosenQuestionId, "q-hard");
+});
+
+test("struggling profiles recover toward a calmer band instead of staying max difficulty", () => {
+  const model = buildPlayerModelSnapshot({
+    runsObserved: 6,
+    questionSignals: [
+      createSignal({ questionId: "q-1", category: "Science", result: "incorrect", responseTimeMs: 13000 }),
+      createSignal({ questionId: "q-2", category: "Science", result: "timeout", pressure: true, firstSelectionTimeMs: null }),
+      createSignal({ questionId: "q-3", category: "History", result: "incorrect", responseTimeMs: 14000 }),
+      createSignal({ questionId: "q-4", category: "History", result: "timeout", pressure: true, firstSelectionTimeMs: null }),
+      createSignal({ questionId: "q-5", category: "Math", result: "incorrect", responseTimeMs: 12500 }),
+      createSignal({ questionId: "q-6", category: "Math", result: "correct", responseTimeMs: 11000 }),
+      createSignal({ questionId: "q-7", category: "Art", result: "incorrect", responseTimeMs: 13200 }),
+      createSignal({ questionId: "q-8", category: "Art", result: "timeout", pressure: true, firstSelectionTimeMs: null })
+    ]
+  });
+
+  const result = chooseAdaptiveQuestion({
+    playerModel: model,
+    runContext: {
+      currentRank: 9,
+      recentResults: ["correct", "correct"],
+      recentCategories: [],
+      recentlySeenQuestionIds: []
+    },
+    candidates: [
+      createQuestion({ id: "q-medium", category: "Geography", difficultyBand: "medium", pressureTag: "calm" }),
+      createQuestion({ id: "q-hard", category: "Technology", difficultyBand: "hard", pressureTag: "neutral" })
+    ]
+  });
+
+  assert.equal(result.targetDifficultyBand, "medium");
+  assert.equal(result.chosenQuestionId, "q-medium");
+});
