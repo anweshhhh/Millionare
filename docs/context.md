@@ -184,6 +184,13 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - Content operations defaults now track the new target set:
   - `content:bootstrap` / `content:audit` / `content:simulate` default to `question-bank-v2.json`.
 
+## Latest replay-variety fix (2026-05-30)
+- Resolved restart repetition cause:
+  - run sampling previously reused the same deterministic seed after full app reload.
+- Current behavior:
+  - run sampling now consumes a persistent cross-session run-seed counter from browser storage.
+  - each new start/replay receives a new seed even after browser restart, reducing repeated first-question perception.
+
 ## Latest auth decisions (2026-04-05)
 - Completed first user-facing Phase 2 slice: `mmrm-phase2-03-auth-shell-and-save-run`
 - Guest-first entry remains unchanged:

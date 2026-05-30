@@ -326,6 +326,16 @@
   - `npm run content:simulate`
   - `npm test`
   - `npm run build`
+
+## 2026-05-30 — run-seed persistence fix (restart repetition)
+- fixed repeated opening-question behavior after app restarts by adding a persistent cross-session run-seed counter.
+- gameplay still shows the same user-facing run count progression, but sampling now uses a storage-backed global seed that increments across fresh launches.
+- implemented in:
+  - `src/game/recent-run-memory.ts` (`reserveNextRunSeed`)
+  - `src/App.tsx` start/replay catalog seed wiring
+- added deterministic coverage:
+  - `src/game/recent-run-memory.test.ts` now verifies seed counter persistence across simulated restarts
+- verified `npm test` and `npm run build`
 - confirmed a real `profiles` row now exists for the signed-in app user
 - confirmed a real `runs` row now exists for the signed-in app user
 - confirmed the saved profile aggregates match the persisted run state for the latest live save:

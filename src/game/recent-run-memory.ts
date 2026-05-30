@@ -1,4 +1,5 @@
 const RECENT_RUN_MEMORY_KEY = "mmrm.recent-run-ids.v1";
+const RUN_SEED_COUNTER_KEY = "mmrm.run-seed-counter.v1";
 const MAX_TRACKED_RUNS = 5;
 
 type RecentRunMemory = {
@@ -54,6 +55,37 @@ function writeRawMemory(memory: RecentRunMemory) {
   }
 }
 
+function readRunSeedCounter() {
+  let highest = 0;
+
+  for (const storage of getStorages()) {
+    const raw = storage.getItem(RUN_SEED_COUNTER_KEY);
+    const value = Number(raw);
+
+    if (Number.isFinite(value) && value > highest) {
+      highest = Math.floor(value);
+    }
+  }
+
+  return highest;
+}
+
+function writeRunSeedCounter(counter: number) {
+  for (const storage of getStorages()) {
+    storage.setItem(RUN_SEED_COUNTER_KEY, String(counter));
+  }
+}
+
+export function reserveNextRunSeed() {
+  if (!canUseStorage()) {
+    return Date.now();
+  }
+
+  const next = readRunSeedCounter() + 1;
+  writeRunSeedCounter(next);
+  return next;
+}
+
 export function getRecentRunAvoidIds() {
   const memory = readRawMemory();
   return Array.from(new Set(memory.runs.flat()));
@@ -76,5 +108,6 @@ export function storeRecentRunQuestionIds(questionIds: string[]) {
 export function clearRecentRunMemory() {
   for (const storage of getStorages()) {
     storage.removeItem(RECENT_RUN_MEMORY_KEY);
+    storage.removeItem(RUN_SEED_COUNTER_KEY);
   }
 }

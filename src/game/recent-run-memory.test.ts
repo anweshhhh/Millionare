@@ -3,6 +3,7 @@ import test from "node:test";
 import {
   clearRecentRunMemory,
   getRecentRunAvoidIds,
+  reserveNextRunSeed,
   storeRecentRunQuestionIds
 } from "./recent-run-memory.ts";
 
@@ -62,4 +63,30 @@ test("recent run memory stores up to five runs and returns deduped avoid ids", (
   ]) {
     assert.equal(avoidSet.has(questionId), true);
   }
+});
+
+test("run seed counter persists across restarts and increments deterministically", () => {
+  const sharedLocalStorage = createStorage();
+  const firstSessionStorage = createStorage();
+  const secondSessionStorage = createStorage();
+
+  globalThis.window = {
+    sessionStorage: firstSessionStorage,
+    localStorage: sharedLocalStorage
+  } as typeof window;
+
+  clearRecentRunMemory();
+  const first = reserveNextRunSeed();
+  const second = reserveNextRunSeed();
+
+  assert.equal(first, 1);
+  assert.equal(second, 2);
+
+  globalThis.window = {
+    sessionStorage: secondSessionStorage,
+    localStorage: sharedLocalStorage
+  } as typeof window;
+
+  const afterRestart = reserveNextRunSeed();
+  assert.equal(afterRestart, 3);
 });

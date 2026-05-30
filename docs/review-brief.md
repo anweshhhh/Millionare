@@ -1,31 +1,26 @@
 # Review Brief
 
 ## Slice
-`mmrm-phase8-05-launch-v2-activation`
+`fix-restart-question-repeat-with-persistent-run-seed`
 
 ## Goal
-Activate the expanded launch-v2 question set as the live default while preserving existing safe fallback behavior.
+Stop repeated opening questions after full app restart while preserving deterministic sampling and current gameplay UX.
 
 ## What changed
-- Updated live default set target in gameplay catalog:
-  - `LIVE_QUESTION_SET_VERSION` now `launch-v2`.
-- Updated tooling defaults:
-  - `content:bootstrap` defaults to `content/question-bank-v2.json`
-  - `content:audit` defaults to `content/question-bank-v2.json`
-  - `content:simulate` defaults to `content/question-bank-v2.json`
-- Added explicit bootstrap convenience scripts:
-  - `content:bootstrap:v1`
-  - `content:bootstrap:v2`
-- Updated README/status wording for launch-v2 default posture.
+- Added persistent cross-session run-seed allocation in `src/game/recent-run-memory.ts`:
+  - `reserveNextRunSeed()`
+- Updated run catalog creation in `src/App.tsx`:
+  - `handleStartRun` now uses `reserveNextRunSeed()`
+  - `handleReplay` now uses `reserveNextRunSeed()`
+- Extended tests in `src/game/recent-run-memory.test.ts`:
+  - validates seed counter increments across simulated restart sessions
 
 ## Scope guard
-- No gameplay UI changes
-- No reducer rule changes
-- No schema changes
+- No UI changes
+- No gameplay rule changes
+- No schema/auth/persistence changes
 - No new dependencies
 
 ## Verification
-- `npm run content:audit` passed with no warnings
-- `npm run content:simulate` passed
 - `npm test` passed
 - `npm run build` passed

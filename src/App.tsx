@@ -30,7 +30,7 @@ import {
 } from "./game/game-state.ts";
 import { listActiveQuestions } from "./lib/supabase/repositories.ts";
 import { selectNextAdaptiveQuestionId } from "./game/adaptive-selection.ts";
-import { getRecentRunAvoidIds, storeRecentRunQuestionIds } from "./game/recent-run-memory.ts";
+import { getRecentRunAvoidIds, reserveNextRunSeed, storeRecentRunQuestionIds } from "./game/recent-run-memory.ts";
 import { QUESTION_SET_VERSION, SEEDED_QUESTIONS } from "./seed/questions.ts";
 import {
   createRunQuestionCatalog,
@@ -370,10 +370,11 @@ export default function App() {
   const handleStartRun = () => {
     resetSaveState();
     const avoidIds = getRecentRunAvoidIds();
+    const runSeed = reserveNextRunSeed();
     recentRunQuestionIdsRef.current = avoidIds;
     const nextCatalog = createRunQuestionCatalog({
       catalog: availableCatalog,
-      runNumber: state.runNumber,
+      runNumber: runSeed,
       recentlyUsedQuestionIds: avoidIds
     });
     setRunCatalog(nextCatalog);
@@ -387,10 +388,11 @@ export default function App() {
   const handleReplay = () => {
     resetSaveState();
     const avoidIds = getRecentRunAvoidIds();
+    const runSeed = reserveNextRunSeed();
     recentRunQuestionIdsRef.current = avoidIds;
     const nextCatalog = createRunQuestionCatalog({
       catalog: availableCatalog,
-      runNumber: state.runNumber + 1,
+      runNumber: runSeed,
       recentlyUsedQuestionIds: avoidIds
     });
     setRunCatalog(nextCatalog);
