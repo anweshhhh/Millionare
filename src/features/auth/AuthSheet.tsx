@@ -4,6 +4,7 @@ type AuthSheetProps = {
   isConfigured: boolean;
   isOpen: boolean;
   requestedEmail: string;
+  magicLinkCooldownUntilMs: number | null;
   saveStateStatus: "idle" | "sending-link" | "check-email" | "saving" | "saved" | "error";
   saveMessage: string | null;
   onClose: () => void;
@@ -11,14 +12,35 @@ type AuthSheetProps = {
 };
 
 export function AuthSheet(props: AuthSheetProps) {
-  const { isConfigured, isOpen, requestedEmail, saveStateStatus, saveMessage, onClose, onSubmit } = props;
+  const { isConfigured, isOpen, requestedEmail, magicLinkCooldownUntilMs, saveStateStatus, saveMessage, onClose, onSubmit } = props;
   const [email, setEmail] = useState(requestedEmail);
+  const [cooldownRemainingSeconds, setCooldownRemainingSeconds] = useState(0);
   const sheetRef = useRef<HTMLElement | null>(null);
   const emailInputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     setEmail(requestedEmail);
   }, [requestedEmail]);
+
+  useEffect(() => {
+    if (!isOpen || !magicLinkCooldownUntilMs) {
+      setCooldownRemainingSeconds(0);
+      return undefined;
+    }
+
+    const updateCooldown = () => {
+      const remainingMs = magicLinkCooldownUntilMs - Date.now();
+      const remainingSeconds = Math.max(0, Math.ceil(remainingMs / 1000));
+      setCooldownRemainingSeconds(remainingSeconds);
+    };
+
+    updateCooldown();
+    const intervalId = window.setInterval(updateCooldown, 1000);
+
+    return () => {
+      window.clearInterval(intervalId);
+    };
+  }, [isOpen, magicLinkCooldownUntilMs]);
 
   useEffect(() => {
     if (!isOpen) {
@@ -77,6 +99,7 @@ export function AuthSheet(props: AuthSheetProps) {
   }
 
   const isBusy = saveStateStatus === "sending-link" || saveStateStatus === "saving";
+  const isCoolingDown = cooldownRemainingSeconds > 0;
 
   return (
     <div className="auth-sheet-backdrop" role="presentation" onClick={onClose}>
@@ -126,9 +149,13 @@ export function AuthSheet(props: AuthSheetProps) {
           <button
             className="primary-cta auth-cta"
             type="submit"
-            disabled={!isConfigured || isBusy || email.trim().length === 0}
+            disabled={!isConfigured || isBusy || isCoolingDown || email.trim().length === 0}
           >
-            {saveStateStatus === "sending-link" ? "Sending Link" : "Send Magic Link"}
+            {saveStateStatus === "sending-link"
+              ? "Sending Link"
+              : isCoolingDown
+                ? `Retry in ${cooldownRemainingSeconds}s`
+                : "Send Magic Link"}
           </button>
         </form>
 
@@ -138,6 +165,7 @@ export function AuthSheet(props: AuthSheetProps) {
           {saveStateStatus === "check-email" ? (
             <p>Check your inbox, open the link on this device, and the just-finished run will save automatically.</p>
           ) : null}
+          {isCoolingDown ? <p>For security and deliverability, please wait before sending another link.</p> : null}
         </div>
       </section>
     </div>

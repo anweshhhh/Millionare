@@ -8,6 +8,7 @@ import { clearPendingRunBridge, readPendingRunBridge, writePendingRunBridge } fr
 import { fetchPlayerModel, fetchProfileSummary, fetchRecentRuns, RECENT_RUN_LIMIT, saveCompletedRunForUser } from "../../lib/supabase/repositories.ts";
 
 type SaveStateStatus = "idle" | "sending-link" | "check-email" | "saving" | "saved" | "error";
+const MAGIC_LINK_COOLDOWN_MS = 60_000;
 
 type SaveState = {
   status: SaveStateStatus;
@@ -24,6 +25,7 @@ type AuthContextValue = {
   recentRuns: PersistedRun[] | null;
   isAuthSheetOpen: boolean;
   requestedEmail: string;
+  magicLinkCooldownUntilMs: number | null;
   saveState: SaveState;
   openSaveSheet: (run: PendingRunBridge) => void;
   closeAuthSheet: () => void;
@@ -52,6 +54,11 @@ function getErrorMessage(error: unknown) {
   return "Something interrupted the secure save flow.";
 }
 
+function isRateLimitError(error: unknown) {
+  const message = getErrorMessage(error).toLowerCase();
+  return message.includes("rate limit") || message.includes("429");
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
   const [profile, setProfile] = useState<ProfileSummary | null>(null);
@@ -60,6 +67,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isReady, setIsReady] = useState(false);
   const [isAuthSheetOpen, setIsAuthSheetOpen] = useState(false);
   const [requestedEmail, setRequestedEmail] = useState("");
+  const [magicLinkCooldownUntilMs, setMagicLinkCooldownUntilMs] = useState<number | null>(null);
   const [saveState, setSaveState] = useState<SaveState>({
     status: "idle",
     runKey: null,
@@ -203,6 +211,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const sendMagicLink = useCallback(async (email: string) => {
     const trimmedEmail = email.trim();
+    const now = Date.now();
+
+    if (magicLinkCooldownUntilMs && magicLinkCooldownUntilMs > now) {
+      const remainingSeconds = Math.max(1, Math.ceil((magicLinkCooldownUntilMs - now) / 1000));
+      setSaveState((current) => ({
+        status: "error",
+        runKey: current.runKey,
+        message: `Please wait ${remainingSeconds}s before requesting another magic link.`
+      }));
+      return;
+    }
+
     setRequestedEmail(trimmedEmail);
     setSaveState((current) => ({
       status: "sending-link",
@@ -212,19 +232,26 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     try {
       await requestMagicLink(trimmedEmail);
+      setMagicLinkCooldownUntilMs(Date.now() + MAGIC_LINK_COOLDOWN_MS);
       setSaveState((current) => ({
         status: "check-email",
         runKey: current.runKey,
         message: `Magic link sent to ${trimmedEmail}.`
       }));
     } catch (error) {
+      if (isRateLimitError(error)) {
+        setMagicLinkCooldownUntilMs(Date.now() + MAGIC_LINK_COOLDOWN_MS);
+      }
+
       setSaveState((current) => ({
         status: "error",
         runKey: current.runKey,
-        message: `Magic link failed: ${getErrorMessage(error)}`
+        message: isRateLimitError(error)
+          ? "Too many requests. Please wait about 60 seconds and try again."
+          : `Magic link failed: ${getErrorMessage(error)}`
       }));
     }
-  }, []);
+  }, [magicLinkCooldownUntilMs]);
 
   const signOut = useCallback(async () => {
     await signOutSupabase();
@@ -260,6 +287,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       recentRuns,
       isAuthSheetOpen,
       requestedEmail,
+      magicLinkCooldownUntilMs,
       saveState,
       openSaveSheet,
       closeAuthSheet,
@@ -268,7 +296,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       signOut,
       resetSaveState
     }),
-    [closeAuthSheet, isAuthSheetOpen, isReady, openSaveSheet, persistCompletedRun, playerModel, profile, recentRuns, requestedEmail, resetSaveState, saveState, session, signOut]
+    [closeAuthSheet, isAuthSheetOpen, isReady, magicLinkCooldownUntilMs, openSaveSheet, persistCompletedRun, playerModel, profile, recentRuns, requestedEmail, resetSaveState, saveState, session, signOut]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

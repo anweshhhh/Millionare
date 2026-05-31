@@ -1,21 +1,22 @@
 # Review Brief
 
 ## Slice
-`fix-home-navigation-and-landing-signout`
+`fix-auth-magic-link-rate-limit-cooldown`
 
 ## Goal
-Reduce auth/session friction by adding a home return path after run end and a quick sign-out affordance on landing.
+Reduce Supabase OTP 429 failures by hardening the magic-link request UX with a deterministic resend cooldown and clearer user messaging.
 
 ## What changed
-- Added `Home` secondary CTA to result screen.
-- Added landing `Sign out` button for signed-in users.
-- Added reducer action `GO_HOME` to reset to entry state cleanly.
-- Wired App handlers for `onGoHome` and `onSignOut`.
-- Added minimal style support for landing header actions.
+- Added 60s cooldown state in auth provider.
+- Added explicit 429/rate-limit detection and friendly message.
+- Added cooldown wiring to auth sheet CTA:
+  - disables resend during cooldown
+  - shows countdown text (`Retry in Ns`)
+- Kept auth method unchanged (email magic-link).
 
 ## Scope guard
-- No gameplay rule changes
-- No persistence/schema/auth-provider changes
+- No gameplay changes
+- No schema/auth-provider changes
 - No new dependencies
 
 ## Verification

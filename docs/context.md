@@ -201,6 +201,12 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - Result screen now includes a secondary `Home` action so users can return to landing without immediately replaying.
 - Landing now includes a compact `Sign out` control for signed-in users to quickly test or switch accounts.
 
+## Latest auth reliability decision (2026-05-31)
+- Added a 60-second client resend cooldown for magic-link requests.
+- Purpose:
+  - reduce repeated OTP submissions that trigger Supabase email rate limits
+  - make retry expectations explicit in-sheet via countdown copy
+
 ## Latest auth decisions (2026-04-05)
 - Completed first user-facing Phase 2 slice: `mmrm-phase2-03-auth-shell-and-save-run`
 - Guest-first entry remains unchanged:

@@ -355,6 +355,18 @@
   - no gameplay loop changes
   - no persistence/schema changes
 - verified `npm test` and `npm run build`.
+
+## 2026-05-31 — auth rate-limit cooldown hardening
+- added a client-side magic-link resend cooldown (60s) to reduce accidental OTP spam and Supabase `429` rate-limit failures.
+- auth behavior updates:
+  - after send success, resend is disabled temporarily
+  - on detected rate-limit error, clear user-facing cooldown messaging is shown
+  - sheet CTA shows countdown (`Retry in Ns`) during cooldown
+- preserved current auth method and product scope:
+  - email magic-link only
+  - no provider changes
+  - no gameplay/UI expansion outside the auth sheet
+- verified `npm test` and `npm run build`.
 - confirmed a real `profiles` row now exists for the signed-in app user
 - confirmed a real `runs` row now exists for the signed-in app user
 - confirmed the saved profile aggregates match the persisted run state for the latest live save:

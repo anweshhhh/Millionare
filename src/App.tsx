@@ -53,6 +53,7 @@ export default function App() {
     recentRuns,
     isAuthSheetOpen,
     requestedEmail,
+    magicLinkCooldownUntilMs,
     saveState,
     openSaveSheet,
     closeAuthSheet,
@@ -511,6 +512,7 @@ export default function App() {
         isConfigured={isConfigured}
         isOpen={isAuthSheetOpen}
         requestedEmail={requestedEmail}
+        magicLinkCooldownUntilMs={magicLinkCooldownUntilMs}
         saveStateStatus={saveState.status}
         saveMessage={saveState.message}
         onClose={closeAuthSheet}
