@@ -345,6 +345,16 @@
   - if `VITE_SUPABASE_AUTH_REDIRECT_URL` is set, magic links use it
   - otherwise fallback remains `window.location.origin`
 - updated `.env.example` and `README.md` with setup guidance.
+
+## 2026-05-31 — result home action and landing sign-out affordance
+- added a direct `Home` action on the result screen while keeping `Play Again` as the primary CTA.
+- added a compact `Sign out` affordance on landing for signed-in users so account switching is fast.
+- introduced a narrow reducer action for returning from result to landing cleanly:
+  - `GO_HOME` resets game state to entry without changing gameplay rules.
+- preserved scope:
+  - no gameplay loop changes
+  - no persistence/schema changes
+- verified `npm test` and `npm run build`.
 - confirmed a real `profiles` row now exists for the signed-in app user
 - confirmed a real `runs` row now exists for the signed-in app user
 - confirmed the saved profile aggregates match the persisted run state for the latest live save:

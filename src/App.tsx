@@ -58,6 +58,7 @@ export default function App() {
     closeAuthSheet,
     sendMagicLink,
     persistCompletedRun,
+    signOut,
     resetSaveState
   } =
     useAuth();
@@ -403,6 +404,12 @@ export default function App() {
     });
   };
 
+  const handleGoHome = () => {
+    setRunCatalog(null);
+    resetSaveState();
+    dispatch({ type: "GO_HOME" });
+  };
+
   useEffect(() => {
     if (!session?.user.id || !completedRun) {
       return;
@@ -428,6 +435,7 @@ export default function App() {
       {state.phase === "entry" ? (
         <LandingScreen
           onStart={handleStartRun}
+          onSignOut={session?.user.email ? signOut : undefined}
           signedInEmail={session?.user.email ?? null}
           profile={profile}
           recentRuns={recentRuns}
@@ -480,6 +488,7 @@ export default function App() {
           bestReserve={bestReserve}
           failureReason={state.failureReason}
           onReplay={handleReplay}
+          onGoHome={handleGoHome}
           canSaveRun={Boolean(completedRun) && !session}
           saveState={saveState.status}
           saveMessage={saveState.message}

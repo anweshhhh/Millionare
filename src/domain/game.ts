@@ -62,6 +62,7 @@ export type GameState = {
 export type GameAction =
   | { type: "START_RUN"; firstQuestionId: string; questionCount: number }
   | { type: "REPLAY"; firstQuestionId: string; questionCount: number }
+  | { type: "GO_HOME" }
   | { type: "SELECT_ANSWER"; answerIndex: number }
   | { type: "LOCK_ANSWER" }
   | { type: "USE_LIFELINE_50_50"; correctIndex: number }

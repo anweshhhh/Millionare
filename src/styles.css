@@ -195,6 +195,31 @@ button {
   background: rgba(123, 214, 207, 0.08);
 }
 
+.hero-header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-signout {
+  min-height: 34px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(173, 255, 246, 0.18);
+  background: rgba(7, 16, 27, 0.6);
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.67rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.landing-signout:hover,
+.landing-signout:focus-visible {
+  border-color: rgba(173, 255, 246, 0.3);
+  color: var(--ink);
+}
+
 .hero-title {
   margin: 18px 0 0;
   font-size: clamp(3.1rem, 13vw, 6rem);

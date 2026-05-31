@@ -3,6 +3,7 @@ import { BASELINE_STEP, getStepByRank } from "../domain/progression.ts";
 
 type LandingScreenProps = {
   onStart: () => void;
+  onSignOut?: () => void;
   signedInEmail: string | null;
   authStatusMessage: string | null;
   profile: ProfileSummary | null;
@@ -77,7 +78,7 @@ function formatRecentRunTime(completedAt: string) {
   }).format(value);
 }
 
-export function LandingScreen({ onStart, signedInEmail, authStatusMessage, profile, recentRuns }: LandingScreenProps) {
+export function LandingScreen({ onStart, onSignOut, signedInEmail, authStatusMessage, profile, recentRuns }: LandingScreenProps) {
   const summaryProfile = signedInEmail && profile ? profile : null;
   const hasSummary = Boolean(summaryProfile);
   const showRecentRuns = Boolean(signedInEmail);
@@ -88,7 +89,14 @@ export function LandingScreen({ onStart, signedInEmail, authStatusMessage, profi
       <div className="hero-shell">
         <div className="hero-header">
           <div className="eyebrow">Mind Reader Protocol</div>
-          <div className="hero-chip">{signedInEmail ? "Signed In" : "Immediate Start"}</div>
+          <div className="hero-header-actions">
+            <div className="hero-chip">{signedInEmail ? "Signed In" : "Immediate Start"}</div>
+            {signedInEmail ? (
+              <button className="landing-signout" type="button" onClick={onSignOut}>
+                Sign out
+              </button>
+            ) : null}
+          </div>
         </div>
         <h1 className="hero-title">
           Millionaire

@@ -12,6 +12,7 @@ type ResultScreenProps = {
   bestReserve: number;
   failureReason: "wrong-answer" | "timeout" | null;
   onReplay: () => void;
+  onGoHome: () => void;
   canSaveRun: boolean;
   isSaveConfigured: boolean;
   saveState: "idle" | "sending-link" | "check-email" | "saving" | "saved" | "error";
@@ -32,6 +33,7 @@ export function ResultScreen(props: ResultScreenProps) {
     bestReserve,
     failureReason,
     onReplay,
+    onGoHome,
     canSaveRun,
     isSaveConfigured,
     saveState,
@@ -64,6 +66,9 @@ export function ResultScreen(props: ResultScreenProps) {
         <div className="result-action">
           <button className="primary-cta result-cta" type="button" onClick={onReplay}>
             Play Again
+          </button>
+          <button className="secondary-cta result-secondary-cta" type="button" onClick={onGoHome}>
+            Home
           </button>
           {canSaveRun ? (
             <button className="secondary-cta result-secondary-cta" type="button" onClick={onSaveRun} disabled={!isSaveConfigured}>

@@ -114,6 +114,8 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
       return createRunState(state.runNumber, action.firstQuestionId, action.questionCount);
     case "REPLAY":
       return createRunState(state.runNumber + 1, action.firstQuestionId, action.questionCount);
+    case "GO_HOME":
+      return createInitialGameState();
     case "SELECT_ANSWER":
       if (state.phase !== "active") {
         return state;

@@ -1,24 +1,21 @@
 # Review Brief
 
 ## Slice
-`fix-auth-magic-link-redirect-target`
+`fix-home-navigation-and-landing-signout`
 
 ## Goal
-Ensure Supabase magic-link emails return users to the correct deployed origin instead of localhost when links are triggered during local testing.
+Reduce auth/session friction by adding a home return path after run end and a quick sign-out affordance on landing.
 
 ## What changed
-- Added optional auth redirect env support in `src/lib/supabase/env.ts`:
-  - `VITE_SUPABASE_AUTH_REDIRECT_URL`
-- Updated magic-link request flow in `src/lib/supabase/auth.ts`:
-  - uses `VITE_SUPABASE_AUTH_REDIRECT_URL` when present
-  - falls back to `window.location.origin` when not set
-- Updated setup docs:
-  - `.env.example`
-  - `README.md`
+- Added `Home` secondary CTA to result screen.
+- Added landing `Sign out` button for signed-in users.
+- Added reducer action `GO_HOME` to reset to entry state cleanly.
+- Wired App handlers for `onGoHome` and `onSignOut`.
+- Added minimal style support for landing header actions.
 
 ## Scope guard
-- No gameplay/UI changes
-- No schema/persistence changes
+- No gameplay rule changes
+- No persistence/schema/auth-provider changes
 - No new dependencies
 
 ## Verification

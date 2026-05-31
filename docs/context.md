@@ -197,6 +197,10 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - Purpose:
   - local development can still work, but production sign-in links can consistently return to the deployed app origin instead of localhost.
 
+## Latest session UX decision (2026-05-31)
+- Result screen now includes a secondary `Home` action so users can return to landing without immediately replaying.
+- Landing now includes a compact `Sign out` control for signed-in users to quickly test or switch accounts.
+
 ## Latest auth decisions (2026-04-05)
 - Completed first user-facing Phase 2 slice: `mmrm-phase2-03-auth-shell-and-save-run`
 - Guest-first entry remains unchanged:
