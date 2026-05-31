@@ -80,6 +80,7 @@ Copy `.env.example` to `.env.local` and provide:
 ```bash
 VITE_SUPABASE_URL=
 VITE_SUPABASE_PUBLISHABLE_KEY=
+VITE_SUPABASE_AUTH_REDIRECT_URL=
 SUPABASE_SERVICE_ROLE_KEY=
 ```
 
@@ -89,6 +90,7 @@ Notes:
 - The content bootstrap script requires `SUPABASE_SERVICE_ROLE_KEY`.
 - The internal admin report command also requires `SUPABASE_SERVICE_ROLE_KEY`.
 - The client env layer also accepts legacy `VITE_SUPABASE_ANON_KEY` as a fallback, but the preferred variable is `VITE_SUPABASE_PUBLISHABLE_KEY`.
+- For magic-link auth, set `VITE_SUPABASE_AUTH_REDIRECT_URL` to your deployed app origin (for example `https://your-app.vercel.app`) so links sent while testing locally do not point back to localhost.
 
 ## Useful commands
 ```bash

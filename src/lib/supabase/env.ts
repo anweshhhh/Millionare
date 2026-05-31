@@ -6,10 +6,12 @@ const viteEnv: Record<string, string | undefined> =
 const supabaseUrl = viteEnv.VITE_SUPABASE_URL?.trim() ?? "";
 const supabasePublishableKey =
   viteEnv.VITE_SUPABASE_PUBLISHABLE_KEY?.trim() ?? viteEnv.VITE_SUPABASE_ANON_KEY?.trim() ?? "";
+const authRedirectUrl = viteEnv.VITE_SUPABASE_AUTH_REDIRECT_URL?.trim() ?? "";
 
 export type SupabaseEnv = {
   url: string;
   publishableKey: string;
+  authRedirectUrl: string;
   isConfigured: boolean;
 };
 
@@ -17,6 +19,7 @@ export function getSupabaseEnv(): SupabaseEnv {
   return {
     url: supabaseUrl,
     publishableKey: supabasePublishableKey,
+    authRedirectUrl,
     isConfigured: Boolean(supabaseUrl && supabasePublishableKey)
   };
 }

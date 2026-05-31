@@ -1,24 +1,24 @@
 # Review Brief
 
 ## Slice
-`fix-restart-question-repeat-with-persistent-run-seed`
+`fix-auth-magic-link-redirect-target`
 
 ## Goal
-Stop repeated opening questions after full app restart while preserving deterministic sampling and current gameplay UX.
+Ensure Supabase magic-link emails return users to the correct deployed origin instead of localhost when links are triggered during local testing.
 
 ## What changed
-- Added persistent cross-session run-seed allocation in `src/game/recent-run-memory.ts`:
-  - `reserveNextRunSeed()`
-- Updated run catalog creation in `src/App.tsx`:
-  - `handleStartRun` now uses `reserveNextRunSeed()`
-  - `handleReplay` now uses `reserveNextRunSeed()`
-- Extended tests in `src/game/recent-run-memory.test.ts`:
-  - validates seed counter increments across simulated restart sessions
+- Added optional auth redirect env support in `src/lib/supabase/env.ts`:
+  - `VITE_SUPABASE_AUTH_REDIRECT_URL`
+- Updated magic-link request flow in `src/lib/supabase/auth.ts`:
+  - uses `VITE_SUPABASE_AUTH_REDIRECT_URL` when present
+  - falls back to `window.location.origin` when not set
+- Updated setup docs:
+  - `.env.example`
+  - `README.md`
 
 ## Scope guard
-- No UI changes
-- No gameplay rule changes
-- No schema/auth/persistence changes
+- No gameplay/UI changes
+- No schema/persistence changes
 - No new dependencies
 
 ## Verification

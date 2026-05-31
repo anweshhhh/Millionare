@@ -336,6 +336,15 @@
 - added deterministic coverage:
   - `src/game/recent-run-memory.test.ts` now verifies seed counter persistence across simulated restarts
 - verified `npm test` and `npm run build`
+
+## 2026-05-31 — magic-link redirect target fix
+- fixed magic-link redirect targeting so auth links can point to the deployed app instead of localhost during local testing.
+- added env support:
+  - `VITE_SUPABASE_AUTH_REDIRECT_URL`
+- auth behavior now:
+  - if `VITE_SUPABASE_AUTH_REDIRECT_URL` is set, magic links use it
+  - otherwise fallback remains `window.location.origin`
+- updated `.env.example` and `README.md` with setup guidance.
 - confirmed a real `profiles` row now exists for the signed-in app user
 - confirmed a real `runs` row now exists for the signed-in app user
 - confirmed the saved profile aggregates match the persisted run state for the latest live save:

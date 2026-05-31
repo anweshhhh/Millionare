@@ -188,8 +188,14 @@ Move to the next narrow Phase 2 persistence slice after the first auth/save-run 
 - Resolved restart repetition cause:
   - run sampling previously reused the same deterministic seed after full app reload.
 - Current behavior:
-  - run sampling now consumes a persistent cross-session run-seed counter from browser storage.
-  - each new start/replay receives a new seed even after browser restart, reducing repeated first-question perception.
+- run sampling now consumes a persistent cross-session run-seed counter from browser storage.
+- each new start/replay receives a new seed even after browser restart, reducing repeated first-question perception.
+
+## Latest auth redirect decision (2026-05-31)
+- Magic-link redirect target is now configurable through:
+  - `VITE_SUPABASE_AUTH_REDIRECT_URL`
+- Purpose:
+  - local development can still work, but production sign-in links can consistently return to the deployed app origin instead of localhost.
 
 ## Latest auth decisions (2026-04-05)
 - Completed first user-facing Phase 2 slice: `mmrm-phase2-03-auth-shell-and-save-run`

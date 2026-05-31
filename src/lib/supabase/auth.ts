@@ -1,5 +1,6 @@
 import type { AuthChangeEvent, Session } from "@supabase/supabase-js";
 import { getSupabaseBrowserClient } from "./client.ts";
+import { getSupabaseEnv } from "./env.ts";
 
 export async function getCurrentSession() {
   const client = getSupabaseBrowserClient();
@@ -32,10 +33,13 @@ export async function requestMagicLink(email: string) {
     throw new Error("Supabase auth is not configured for this build.");
   }
 
+  const { authRedirectUrl } = getSupabaseEnv();
+  const redirectTo = authRedirectUrl || window.location.origin;
+
   const { error } = await client.auth.signInWithOtp({
     email,
     options: {
-      emailRedirectTo: window.location.origin
+      emailRedirectTo: redirectTo
     }
   });
 
